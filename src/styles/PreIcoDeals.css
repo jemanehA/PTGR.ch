@@ -1,0 +1,170 @@
+/* General styling for the service description */
+.container-fluid.pre-ico-deals {
+   
+    padding-top: 50px; /* Vertical padding to create space inside the container */
+    padding-bottom: 20px;
+  }
+.service-description {
+    margin-top: 60px;
+    display: flex;
+    
+    align-items: center;
+  }
+  
+  /* Flex container for text and image alignment */
+  .service-description .col-12 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .service-text {
+    flex: 1;
+    padding-right: 20px; /* Adds padding between text and image */
+  }
+  
+  .section-header {
+    font-size: 2rem;
+    color: #113353; /* Brand Color */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .service-description-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .service-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .service-list li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .service-list li strong {
+    font-weight: bold;
+  }
+  
+  /* Image styling */
+  .offer-icon {
+    display: flex;             /* Enables Flexbox */
+    align-items: center;       /* Vertically align content */
+    justify-content: center;   /* Horizontally align content (optional) */
+    text-align: center;   
+    flex: 1;
+    max-width: 400px; /* Restrict the image size */
+  }
+  
+  .offer-image {
+    display: flex;             /* Enables Flexbox */
+    align-items: center;       /* Vertically align content */
+    justify-content: center;   /* Horizontally align content (optional) */
+    text-align: center;        /* Ensures text inside is centered */
+    height: 250px;
+    width: 350px;
+    border-radius: 8px; /* Optional, to give the image rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional, subtle shadow for the image */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+  }
+  
+  .offer-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service-description {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .service-text {
+      margin-bottom: 30px; /* Add space between text and image on smaller screens */
+      padding-right: 0;
+    }
+  
+    .offer-icon {
+      max-width: 100%;
+    }
+  }
+  
+
+  /* Styling for the 'How It Works' section */
+.container-fluid.how-it-works-section {
+    background-color: #f5f5f5; /* Light background color */
+    padding: 50px 0;
+  }
+  
+  .how-it-works-content {
+   
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .how-it-works-title {
+    font-size: 2rem;
+    color: #0d2b47;
+    text-align: left;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .how-it-works-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  
+  .how-it-works-step {
+    background-color: #fff; /* Clean background */
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+  
+  .how-it-works-step:hover {
+    transform: translateX(10px); /* Slight right shift on hover */
+  }
+  
+  .how-it-works-step-icon {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: 15px;
+    font-size: 3rem; /* Adjust icon size */
+    color: #113353;
+    transition: transform 0.3s ease;
+  }
+  
+  .how-it-works-step-icon:hover {
+    transform: scale(1.2); /* Zoom effect on hover */
+  }
+  
+  .how-it-works-step span {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 767px) {
+    .how-it-works-step {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .how-it-works-step-icon {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  

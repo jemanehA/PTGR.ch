@@ -1,0 +1,106 @@
+/* Force a specific font for the entire document */
+body{
+  font-family: sans-serif !important; /* Using sans-serif font */
+  font-weight: 400; /* Normal weight */
+  -webkit-font-smoothing: antialiased; /* Improves text rendering in WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Improves text rendering in Firefox on macOS */
+  margin: 0;
+  padding: 0;
+ 
+  overflow-x: hidden !important;
+  }
+  nav, main, section, article, aside, footer, h1, h2, h3, h4, h5, h6, p, br, hr, ul, ol, li, dl, dt, dd, div, span, video, audio, source, track, iframe, embed, object, param, canvas, svg, table, caption, thead, tbody, tfoot, tr, th, td, form, input, textarea, button, select, option, optgroup, fieldset, legend, label, datalist, output, progress, meter, details, summary, dialog, template, slot, blockquote, cite, q, abbr, address, b, strong{
+    font-family: sans-serif !important; /* Using sans-serif font */
+    
+}
+.breadcrumb {
+
+  font-weight: bold; /* Bold text for better readability */
+  color: #555; /* Neutral text color */
+  font-size: 1.3em !important;
+  margin-top: 20px; /* Add space from the element above */
+  display: inline-block; /* Prevent full-width block */
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1); /* Slightly pronounced shadow */
+}
+.homemenu
+{
+  font-weight: 700;
+  
+  color: #0f0f0f;
+}
+.breadcrumb .current-page {
+  font-weight: normal; /* Emphasize current page */
+  color: #7c7b7b; /* Darker color for current page */
+  cursor: default; /* Indicate it's not clickable */
+}
+
+.subtitle
+{
+  font-size: 1.8rem !important ;
+  text-transform: uppercase !important;
+  margin-bottom: 20px;
+  color: #0f0f0f;
+  font-weight: bold;
+  text-align: left; 
+}
+.subtitlelittle
+{
+  font-size: 1.3rem !important ;
+  text-transform: uppercase !important;
+  margin-bottom: 20px;
+  color: #0f0f0f;
+  font-weight: bold;
+  text-align: left; 
+}
+.middlesub
+{
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #113353;
+  font-weight: bold;
+  text-align: center;
+}
+.middlesubwhite
+{
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+/* Hide CursorFollower on small devices */
+.cursor-follower-wrapper {
+  display: none; /* By default, hide the CursorFollower */
+}
+
+/* Show CursorFollower on larger devices (desktop, etc.) */
+@media (min-width: 1024px) {
+  .cursor-follower-wrapper {
+    display: block; /* Show on devices with width greater than or equal to 1024px */
+  }
+}
+@media(min-width: 624px){
+  .breadcrumb {
+    font-size: 1em !important;
+    margin-top: 20px; /* Add space from the element above */
+  }
+}
+@media(min-width: 554px){
+  .breadcrumb {
+    padding-left: 20px !important;
+    font-size: 1em !important;
+    margin-top: 20px; /* Add space from the element above */
+  }
+}
+@media(min-width: 454px){
+  .breadcrumb {
+   padding-left: 20px !important;
+  
+    font-size: 1em !important;
+    margin-top: 20px; /* Add space from the element above */
+
+  } 
+}
+/* .maincontentdiv{
+  padding-bottom: 10px;
+} */

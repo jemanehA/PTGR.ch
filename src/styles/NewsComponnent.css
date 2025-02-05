@@ -1,0 +1,104 @@
+/* Newsletter Section Styling */
+.newsletter-section {
+    background-color: #f9f9f9;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .newsletter-title {
+    font-size: 2.5rem;
+    color: #163962; /* Your branding color */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-subheading {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  .footerimage{
+    background-image: url('../assets/images/log1.png')  no-repeat bottom center;
+    background-size: cover;
+    height: 50vh; /* Adjusts to half the viewport height */
+    position: relative;
+    padding: 20px; /* Adjust padding as needed */
+    color: white; /* Adjust text color if necessary for contrast */
+  }
+
+  .newsletter-form1 {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .newsletter-input {
+    border-radius: 6px;
+    font-size: 1.1rem;
+    padding: 12px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+  }
+  .newsletter-header
+  {
+    font-weight: bold;
+    color: #0f2c47;
+  }
+  
+  .newsletter-input:focus {
+    border-color: #163962;
+    outline: none;
+    box-shadow: 0 0 8px rgba(22, 57, 98, 0.2);
+  }
+  
+  .newsletter-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    background-color: #163962; /* Your branding color */
+    border-radius: 6px;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .newsletter-btn:hover {
+    background-color: #0f2c47;
+  }
+  
+  .form-check-label {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .form-check-input {
+    margin-top: 6px;
+  }
+  
+  .form-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .newsletter-title {
+      font-size: 2rem;
+    }
+  
+    .newsletter-subheading {
+      font-size: 1rem;
+    }
+  
+    .newsletter-input,
+    .newsletter-btn {
+      font-size: 1rem;
+    }
+  }
+  body{
+    font-family: "Inter",Impact, 'Montserrat', sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6 ,p{
+    font-family: 'Montserrat', sans-serif !important; /* Heading font */
+}

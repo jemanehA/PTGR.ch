@@ -1,0 +1,92 @@
+/* Crypto */
+.marquee-container {
+    overflow: hidden;
+    background-color: #ffffff; /* White background */
+    color: rgb(8, 8, 8);
+    padding-top: 5px;
+    font-family: 'serif', sans-serif !important; /* Heading font */
+    font-weight: normal;
+}
+
+.marquee-content {
+    height: 100%;
+    
+    display: flex;
+    padding: 0;
+    white-space: nowrap;
+    animation: scroll-marquee 30s linear infinite;
+    -webkit-animation: scroll-marquee 30s linear infinite; /* Safari and older Chrome */
+    -moz-animation: scroll-marquee 30s linear infinite; /* Older Firefox */
+    -ms-animation: scroll-marquee 30s linear infinite; /* Older IE */
+}
+
+.crypto-column {
+    display: flex;
+    align-items: flex-end;  /* Align items to the bottom */
+    height: 22px;  /* Increased height for all content */
+    
+    margin-right: 12px; /* Space between items */
+}
+
+.cryptoimage {
+    height: 17px;  /* Increased height for images */
+    width: 17px;   /* Increased width for images */
+    object-fit: cover;  /* Ensures the image covers the available space */
+    object-position: bottom; 
+    
+    margin-right: 12px;
+}
+
+.crypto-name,
+.crypto-price {
+    margin-right: 12px;
+    font-size: 17px;  /* Increased font size to match new height */
+    line-height: 17px; /* Align text vertically within the increased height */
+}
+
+.price-change {
+    font-weight: bold;
+    font-size: 17px;  /* Adjusted font size to fit */
+    line-height: 17px; /* Align text vertically */
+}
+
+.separator {
+    margin: 0 12px;
+}
+
+@keyframes scroll-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Vendor-prefixed keyframes */
+@-webkit-keyframes scroll-marquee {
+    from {
+        -webkit-transform: translateX(0);
+    }
+    to {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@-moz-keyframes scroll-marquee {
+    from {
+        -moz-transform: translateX(0);
+    }
+    to {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+@-ms-keyframes scroll-marquee {
+    from {
+        -ms-transform: translateX(0);
+    }
+    to {
+        -ms-transform: translateX(-100%);
+    }
+}

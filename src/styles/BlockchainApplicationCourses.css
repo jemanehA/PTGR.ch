@@ -1,0 +1,96 @@
+/* Container */
+.bac-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Section */
+  .bac-header {
+    margin-bottom: 30px;
+  }
+  
+  .bac-line {
+    width: 50px;
+    height: 3px;
+    background-color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .bac-description {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Row Section */
+  .bac-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Fixed Left Card */
+  .bac-fixed-card {
+    width: 250px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bac-fixed-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .bac-industry-item {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .bac-industry-item:hover {
+    color: #007bff;
+  }
+  
+  /* Scrollable Industry Details Card */
+  .bac-scroll-card {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 500px;
+  }
+  
+  .bac-card-content h5 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .bac-industry-detail {
+    margin-bottom: 20px;
+  }
+  
+  .bac-industry-detail h6 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .bac-industry-detail p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Learn More Button */
+  .bac-learn-more {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .bac-learn-more:hover {
+    text-decoration: underline;
+  }

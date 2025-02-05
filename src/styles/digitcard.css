@@ -1,0 +1,146 @@
+/* General Styling */
+.crrcard, .crrcard1, .crrcard2, .crrcard3 {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    border: 1px solid #cec8c8;
+    background-color: #f5f5f5;
+    overflow: hidden; /* Ensure child elements (image) don't spill over */
+    margin: 0; /* Remove any outer margin */
+    padding: 0; /* Remove any inner padding */
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3) !important; /* Add a soft shadow around the card */
+    opacity: 0; /* Start as invisible */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeIn 0.8s ease-out forwards; /* Animation when the card is displayed */
+    border-top-right-radius: 40px; /* Top-right corner */
+    border-bottom-left-radius: 40px;  /* Top-left corner */
+}
+
+/* Shadow effect for the card */
+.crrcard1 {
+    height: 500px; /* Set a fixed height for the card */
+}
+
+.crrcard2 {
+    height: 670px; /* Set a fixed height for the card */
+}
+
+.crrcard3 {
+    height: 760px; /* Set a fixed height for the card */
+}
+@media (max-width: 500px) {
+    .crrcard1, .crrcard2, .crrcard3 {
+        height: auto; /* Set height to auto on smaller screens */
+    }
+}
+/* Shorter content card */
+.crrcard-img-top {
+    width: 100%; /* Full width */
+    height: 150px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensure the image fills the area */
+    margin: 0; /* Eliminate extra spacing around the image */
+    padding: 0; /* Eliminate internal padding */
+}
+
+.crrcard-body {
+    padding: 20px 15px;
+    flex-grow: 1; /* Allow body to grow and push the button to the bottom */
+}
+
+.crrcard-title {
+    color: #000000;
+    font-size: 1.65rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.crrcard-subtitle {
+    font-size: 1.4rem;
+    color: #050505;
+    text-align: left;
+}
+
+/* Align list to the left */
+.crrcard-list {
+    list-style-type: none;
+    margin-top: 0px; /* Increased space from the title */
+}
+
+.crrcard-list-item {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 0; /* Remove any padding */
+    position: relative;
+    text-align: left; /* Align text to the left */
+}
+
+.crrcard-list-item::before {
+    content: "";
+    position: absolute;
+    left: -24px; /* Adjust icon's horizontal position */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url('../assets/images/logo2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Button Styling */
+.crrcard-button {
+    padding: 15px; /* Adjust the padding if needed */
+    border: none; /* Remove border */
+    background-color: #143558; /* Set a background color */
+    color: white; /* Set text color */
+    text-align: center; /* Ensure the text is centered */
+    cursor: pointer; /* Add a pointer cursor for interactivity */
+    font-weight: 700;
+    margin: 20px;
+    margin-right: 20px !important;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Add smooth transitions */
+}
+
+.crrcard-button:hover {
+    background-color: #1b4672; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+/* Card Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Add a pulse effect to the button when clicked */
+.crrcard-button:active {
+    animation: buttonPulse 0.2s ease;
+}
+
+/* Shorter content card */
+.crrcard-short {
+    height: 550px !important; /* Fixed height for shorter content */
+}
+
+/* Longer content card */
+.crrcard-long {
+    height: 720px !important; /* Fixed height for longer content */
+}

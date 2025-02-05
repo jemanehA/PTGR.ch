@@ -1,0 +1,146 @@
+
+
+.custom-cards-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 16px;
+  align-items: stretch;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Media query for screens smaller than 800px */
+@media (max-width: 850px) {
+  .custom-cards-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    overflow-x: visible; /* Allow overflow in vertical layout */
+  }
+}
+
+  .custom-cards {
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    flex-direction: column;
+    min-height: 500px;
+    position: relative;
+    justify-content: space-between;
+    border: 2px solid #2556c0; /* Light border around the card */
+    flex: 1; /* Allow cards to stretch equally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+  }
+  
+  .custom-cards:hover {
+    transform: translateY(-10px); /* Move up slightly */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  }
+
+.custom-card-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+.header-container
+{
+  display: flex;
+  align-items: center; /* Align logo and name vertically centered */
+  gap: 10px; /* Add some space between logo and name */
+}
+
+.custom-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.custom-card-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.custom-card-list {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+
+
+.custom-card-link {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  position: absolute; /* Position the link absolutely */
+  bottom: 16px; /* Add bottom padding */
+  right: 16px; /* Add right padding */
+  padding: 8px 12px; /* Add padding around the link */
+  background-color: rgba(0, 123, 255, 0.1); /* Optional: Add a background color */
+  border-radius: 4px; /* Optional: Rounded corners */
+}
+.custom-card-link:hover {
+  background-color: #052e5a;
+  color: #ffffff; /* Optional: Add a background color */
+
+}
+.card-indicator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 8px; /* Reduced margin further */
+}
+
+.card-indicator {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px; /* Even less margin */
+}
+
+.indicator-point {
+  width: 16px;
+  height: 16px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.indicator-point.active {
+  background-color: #1b4572;
+}
+
+.navigation-container {
+  display: flex;
+  gap: 4px; /* Reduced gap for tighter layout */
+  align-items: center;
+  
+  padding: 10px;
+}
+
+.navigation-icon {
+  background-color: #1b4572;
+  color: white;
+  border-radius: 50%;
+  
+  font-size: 1.3rem;
+  padding: 20px; /* Adjusted padding to fit within circle */
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  height: 20px; /* Set fixed height */
+  width: 20px; /* Set fixed width to match height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-icon:hover {
+  background-color: #0056b3;
+}
+
+.navigation-icon:disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.5;
+}

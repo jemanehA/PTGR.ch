@@ -1,0 +1,257 @@
+/* Event Detail Styles */
+.event-detail-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 140px;
+  }
+  
+  /* Back Button */
+  .back-to-events {
+    padding: 20px 0;
+  }
+  
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .back-button:hover {
+    background: #0056b3;
+    transform: translateX(-5px);
+  }
+  
+  /* Hero Section */
+  .event-hero {
+    margin-bottom: 40px;
+  }
+  
+  .hero-image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    background: linear-gradient(transparent, rgba(4, 28, 54, 0.7));
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .hero-content-bottom {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .hero-meta {
+    display: flex;
+    gap: 30px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .hero-date::before,
+  .hero-location::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #007bff;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  
+  /* Main Content Layout */
+  .event-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+    padding: 30px 0;
+  }
+  
+  /* Event Description */
+  .event-description {
+    margin-bottom: 50px;
+  }
+  
+  .event-description h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #333;
+  }
+  
+  .description-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+  }
+  
+  /* Schedule */
+  .event-schedule h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #333;
+  }
+  
+  .schedule-grid {
+    display: grid;
+    gap: 15px;
+  }
+  
+  .schedule-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .schedule-item:hover {
+    transform: translateX(10px);
+  }
+  
+  .schedule-time {
+    font-weight: 600;
+    color: #007bff;
+  }
+  
+  /* Sidebar */
+  .event-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .highlight-card,
+  .speaker-card,
+  .registration-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .highlight-card h3,
+  .speaker-card h3,
+  .registration-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Highlights List */
+  .highlight-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .highlight-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+  }
+  
+  .highlight-item::before {
+    content: '★';
+    color: #007bff;
+    margin-right: 10px;
+  }
+  
+  /* Speakers */
+  .speaker-grid {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .speaker-profile {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+  }
+  
+  .speaker-avatar {
+    width: 80px;
+    height: 80px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+  }
+  
+  /* Registration Form */
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .registration-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .registration-form button {
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .registration-form button:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .event-content-wrapper {
+      grid-template-columns: 1fr;
+    }
+    
+    .event-sidebar {
+      grid-row: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .hero-meta {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }

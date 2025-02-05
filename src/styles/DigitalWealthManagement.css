@@ -1,0 +1,174 @@
+/* Container */
+.dwm-container {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  background: white; /* Add a background to avoid content overlap */
+  z-index: 100; /* Ensure it stays above other content */
+}
+
+/* Row Layout */
+.dwm-row {
+  display: flex;
+  gap: 20px;
+  align-items: stretch; /* Ensure all cards stretch to the same height */
+}
+
+/* Fixed Left Card */
+.dwm-fixed-card {
+  flex: 0 0 350px; /* Fixed width for the left card */
+  background: #1b4672; /* Brand color for the fixed card */
+  padding: 20px;
+  border-radius: 8px 0 0 8px; /* Only top-left and bottom-left corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white; /* White text for better contrast */
+  height: auto; /* Stretch to match the tallest card */
+}
+
+.dwm-card-image {
+  width: 100%; /* Cover the entire width of the card */
+  height: auto; /* Allow the image height to adjust based on aspect ratio */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.dwm-fixed-card ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.dwm-fixed-card li {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dwm-fixed-card li.dwm-active {
+  font-weight: bold;
+  color: #ffcc00; /* Highlight active item with a contrasting color */
+  transform: scale(1.05);
+}
+
+/* Scrollable Services */
+.dwm-scroll-container {
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.dwm-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.dwm-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.dwm-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Scrollable Card */
+.dwm-scroll-card {
+  flex: 0 0 350px; /* Fixed width for each card */
+  background: white;
+  border: 1px solid #1b3e9e; /* Add a 1px solid border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 16px;
+  overflow: hidden; /* Ensure content doesn't overflow */
+  transition: transform 0.3s ease-in-out, background 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.dwm-scroll-card:hover {
+  transform: translateY(-10px); /* Move the card up by 10px */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: Add a stronger shadow on hover */
+}
+
+.dwm-scroll-card.dwm-active {
+  background: #e3f2fd;
+  transform: translateY(-10px);
+}
+
+/* Card Content */
+.dwm-card-content {
+  padding: 15px;
+  flex: 1; /* Ensure content stretches to fill the card */
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word; /* Break long words if necessary */
+}
+
+/* Title */
+.dwm-card-content h5 {
+  font-weight: bold; /* Make the text bold */
+  font-weight: 700;
+  word-wrap: break-word; /* Break long titles if necessary */
+  margin-bottom: 10px; /* Add spacing below the title */
+}
+
+/* Description */
+.dwm-card-content p {
+  word-wrap: break-word; /* Break long descriptions if necessary */
+  margin-bottom: 10px; /* Add spacing below the description */
+}
+
+/* List Items */
+.dwm-card-content ul {
+  padding-left: 20px; /* Add some padding for better readability */
+  list-style-type: disc; /* Add bullet points */
+  margin-bottom: 10px; /* Add spacing below the list */
+}
+
+.dwm-card-content ul li {
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+  margin-bottom: 8px; /* Add spacing between list items */
+}
+
+/* Learn More Link */
+.dwm-learn-more {
+  text-align: right;
+  color: #1b4672; /* Brand color for "Learn More" */
+  cursor: pointer;
+  margin-top: auto; /* Push "Learn More" to the bottom of the card */
+  word-wrap: break-word; /* Break long text if necessary */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dwm-row {
+    flex-direction: column;
+  }
+
+  /* Hide the fixed card on small devices */
+  .dwm-fixed-card {
+    display: none;
+  }
+
+  /* Stack cards vertically on small devices */
+  .dwm-scroll-container {
+    flex-direction: column; /* Stack cards vertically */
+    overflow: auto; /* Allow vertical scrolling */
+    white-space: normal; /* Allow text to wrap */
+  }
+
+  .dwm-scroll-card {
+    width: 100%; /* Full width for each card */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 16px; /* Add spacing between stacked cards */
+    flex: 0 0 auto; /* Reset flex for mobile */
+  }
+
+  /* Remove active card highlight on mobile */
+  .dwm-scroll-card.dwm-active {
+    background: white;
+    transform: none;
+  }
+}

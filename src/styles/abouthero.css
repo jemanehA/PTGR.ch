@@ -1,0 +1,192 @@
+/* Hero Section Styling */
+.about-hero-section {
+    position: relative;
+    height: 60vh; /* Reduced height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: transparent; /* Remove solid background */
+    padding: 0;
+  }
+  
+  /* Gradient Overlay */
+  .about-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(to right, #102f4e 30%, transparent 70%); /* Gradient from blue to transparent */
+    z-index: 1;
+  }
+  .about-ptgr-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #102f4e 10%, transparent 70%); /* Gradient from blue to transparent */
+    z-index: 1;
+  }
+  
+  /* Video Background */
+  .about-hero-video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: 0; /* Ensure it stays behind the content */
+  }
+  
+  /* Content Container */
+  .about-hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding to prevent text from touching the edges */
+  }
+  
+  .about-hero-text {
+    text-align: left;
+    color: #fff;
+    padding: 20px; /* Add padding for better readability */
+    border-radius: 10px; /* Optional: Add rounded corners */
+  }
+  
+  /* Fade-in and Scale-up Animation for "PTGR AG" */
+  @keyframes fadeInScaleUp {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .about-title-line.about-animate-text {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInScaleUp 1.5s ease-in-out forwards;
+  }
+  
+  /* Highlight Text Container */
+  .about-highlight-text {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* Typing Animation for Text */
+  .highlight-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #b33a3a; /* Caret */
+    animation: typing 4s steps(40, end) 1, blink-caret 0.75s step-end infinite, hideText 1s ease-in-out 7s forwards;
+    animation-fill-mode: forwards; /* Keep the text visible after animation */
+  }
+  
+  /* Typing Animation Keyframes */
+  @keyframes typing {
+    from {
+      width: 0; /* Start with no width */
+    }
+    to {
+      width: 100%; /* Expand to full width */
+    }
+  }
+  
+  /* Blinking Caret Animation Keyframes */
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent; /* Hide caret */
+    }
+    50% {
+      border-color: #b33a3a; /* Show caret (Bordeaux color) */
+    }
+  }
+  
+  /* Hide Text After Animation */
+  @keyframes hideText {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  /* Header Title */
+  .about-header-title {
+    font-size: 2.5rem; /* Adjusted text size */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  
+  /* Call-to-Action Button */
+  .about-cta-button {
+    background-color: #b33a3a; /* Bordeaux color for the button */
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 2s forwards; /* Delay after subtitle */
+    transition: background-color 0.3s ease;
+  }
+  
+  .about-cta-button:hover {
+    background-color: #8c2d2d; /* Darker shade of Bordeaux for hover */
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Bouncing Circle */
+  .about-bouncing-circle {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%); /* Center it properly */
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff; /* White color */
+    border-radius: 50%;
+    border: 8px solid #2f3e4e; /* Dark blue border */
+    z-index: 3; /* Ensures it's above other elements */
+    /* animation: bounceUpDown 5.5s infinite ease-in-out; */
+  }
+  
+  /* Bouncing Animation (Optional) */
+  @keyframes bounceUpDown {
+    0%, 100% {
+      transform: translate(-50%, 50%) translateY(0);
+    }
+    50% {
+      transform: translate(-50%, 50%) translateY(-20px);
+    }
+  }
+  

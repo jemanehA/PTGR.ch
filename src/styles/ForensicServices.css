@@ -1,0 +1,242 @@
+/* General Container Styling */
+.forensic-services-section {
+    padding: 40px 10px;
+
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+/* Forensic Container Styles */
+.forensic-container {
+    margin-bottom: 50px;
+}
+
+.forensic-container-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.forensic-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0;
+    padding: 0;
+}
+
+.forensic-text-content {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.forensic-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.forensic-heading {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #1d3957;
+    margin-bottom: 20px;
+}
+
+.forensic-text {
+    font-size: 1.1rem;
+    color: #4b5c6b;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Service Section Styling */
+.forensic-container-2 {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.forensic-subheading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1d3957;
+    margin-bottom: 30px;
+}
+
+/* Grid Layout for Forensic Services List */
+.forensic-services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Service Cards */
+.service-item {
+    background-color: #f4f7fc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 350px;
+}
+
+/* Service Icon */
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+}
+
+/* Title Styling */
+.service-title {
+    font-size: 1.3rem;
+    color: #1d3957;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Text Styling */
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Call-to-Action Button */
+.forensic-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cta-button {
+    padding: 12px 25px;
+    background-color: #1d3957;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3d5f83;
+}
+
+/* Padding container for extra spacing */
+.pad {
+    margin: 20px auto;
+    
+    padding: 20px;
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pad p {
+    text-align: left;
+    font-size: 1.1rem;
+    color: #161616;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+    .forensic-container-1 {
+        flex-direction: column;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .forensic-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forensic-text-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .forensic-image img {
+        width: 350px;
+        height: auto; /* Smaller image on tablets */
+    }
+
+    .forensic-heading {
+        font-size: 1.8rem;
+    }
+
+    .forensic-text {
+        font-size: 1rem;
+        max-width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .forensic-content {
+        padding: 10px;
+    }
+
+    .forensic-heading {
+        font-size: 1.5rem;
+    }
+
+    .forensic-text {
+        font-size: 0.95rem;
+    }
+
+    .forensic-image img {
+        width: 300px; /* Smaller image on mobile */
+        height: auto;
+    }
+
+    .forensic-container-2 {
+        padding: 20px 10px;
+    }
+
+    .forensic-subheading {
+        font-size: 1.5rem;
+    }
+
+    .service-item {
+        max-width: 90%;
+        padding: 15px;
+        height: 300px; /* Smaller card size on mobile */
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

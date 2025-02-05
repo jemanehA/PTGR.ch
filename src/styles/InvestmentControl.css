@@ -1,0 +1,161 @@
+.investment-section {
+  padding: 80px 0;
+  background-color: #e7e7eb;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.progress-container1 {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  align-items: center;
+}
+
+.progress-item1 {
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;  /* Stack elements vertically */
+  justify-content: center; /* Center elements horizontally */
+  align-items: center;     /* Center elements vertically */
+}
+
+.progress-item1:hover {
+  transform: scale(1.1);
+}
+
+/* Circle Styles */
+.circle1 {
+  width: 150px;    /* Circle width */
+  height: 150px;   /* Circle height */
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.circle1 svg {
+  transform: rotate(-90deg); /* Rotate to make the circle start from top */
+  width: 100%;
+  height: 100%;
+}
+
+/* Background circle (static) */
+.circle-bg {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 12;
+}
+
+/* Foreground circle (progress) */
+.circle-fg {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-out, stroke 1s ease-out; /* Transition for color */
+  stroke: #023b61; /* Blue-black color for branding */
+}
+
+/* Underline for titles */
+.progress-item1 p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+  margin-top: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.progress-item1 p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background-color: #003b49; /* Underline color is the same as circle color */
+  transition: width 1s ease-out; /* Transition for underline */
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom blue-black color for the company brand */
+.company-blue-black {
+  color: #003b49; /* Adjust this to your actual blue-black brand color */
+}
+
+.progress-item1:hover .circle-fg {
+  stroke: #003b49; /* Hover transition color (company brand color) */
+}
+.progress-circle-bg {
+  fill: none;
+  stroke: #e6e6e6; /* Background stroke color */
+  stroke-width: 10;
+}
+
+.progress-circle-fg {
+  fill: none;
+  stroke: #003366; /* Progress stroke color */
+  stroke-width: 10;
+  stroke-linecap: round; /* Prevents gaps in the circle */
+  transition: stroke-dashoffset 0.5s;
+}
+
+.progress-percentage {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.progress-label {
+  text-align: center;
+  margin-top: 10px;
+}
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.progress-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.progress-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #003366;
+}
+
+.progress-label {
+  margin-top: 10px;
+}

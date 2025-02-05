@@ -1,0 +1,92 @@
+/* Container styling */
+
+/* Partner Card Styling */
+.partner-card-custom {
+  background-color: #fcfcfc; /* Background color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 2px 4px 20px rgba(31, 30, 30, 0.1); /* Light shadow for depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensures equal height for all cards */
+  border: 1px solid #ddd; /* Light border around the card */
+}
+
+.partner-logo-container-custom {
+  display: flex;
+  height: 100px;
+  justify-content: center; /* Centers the logo */
+  align-items: center;
+  margin-bottom: 20px; /* Space below the logo */
+}
+
+.partner-logo-custom {
+  max-width: 40%; /* Makes logo smaller */
+  height: auto;
+  max-height: 120px; /* Sets a maximum height for the logo */
+}
+
+.partner-card-body-custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.partner-card-title-custom {
+  font-size: 1.25rem; /* Title font size */
+  font-weight: bold;
+  display: flex;
+  justify-content: center !important; /* Centers the logo */
+  align-items: center !important;
+  color: #1b4672; /* Custom title color */
+  margin-bottom: 10px; /* Reduced margin between title and text */
+}
+
+.partner-card-text-custom {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 15px; /* Reduced space below the description */
+  flex-grow: 1; /* Allows the text to take available space */
+}
+
+.partner-learn-more-link-custom {
+  display: inline-block;
+  padding: 8px 16px; /* Adjusted padding for the link */
+  background-color: transparent;
+  color: #1b4672; /* Link color */
+  font-weight: bold;
+  border-radius: 3px; /* Smaller border-radius */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: flex-end; /* Aligns the link at the bottom */
+  border: 2px solid #1b4672; /* Border around the link */
+}
+
+.partner-learn-more-link-custom:hover {
+  background-color: #1b4672;
+  color: #fff; /* Invert text color on hover */
+  text-decoration: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .partner-card-custom {
+      padding: 15px;
+  }
+
+  .partner-logo-custom {
+      max-width: 70%; /* Slightly smaller logo on mobile */
+      max-height: 100px;
+  }
+
+  .partner-card-title-custom {
+      font-size: 1.1rem;
+  }
+
+  .partner-card-text-custom {
+      font-size: 0.9rem;
+  }
+}

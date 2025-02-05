@@ -1,0 +1,181 @@
+.unique-card-carousel-container {
+    padding: 2rem 0;
+  }
+  
+  .unique-card {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease;
+  }
+  
+  .unique-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  .unique-card-body {
+    padding: 1.5rem;
+  }
+  
+  .unique-icon {
+    font-size: 3rem;
+  }
+  
+  .unique-icon-primary {
+    color: #007bff;
+  }
+  
+  .unique-icon-secondary {
+    color: #6c757d;
+  }
+  
+  .unique-icon-warning {
+    color: #ffc107;
+  }
+  
+  .unique-card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .unique-list {
+    padding-left: 1rem;
+  }
+  
+  .unique-learn-more {
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .unique-learn-more:hover {
+    text-decoration: underline;
+  }
+  
+
+
+
+/* Navigation container for center alignment */
+.unique-carousel-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  /* Left and Right Button Styles */
+  .unique-carousel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;  /* Fixed width for the circle */
+    height: 70px; /* Fixed height for the circle */
+    background-color: white;  /* Background of the circle */
+    border-radius: 50%;  /* Circle shape */
+    border: 4px solid #003366; /* Dark blue border */
+    color: #003366;  /* Dark blue color for the icon */
+    font-size: 2rem;  /* Icon size */
+    font-weight: bold;  /* Make icon bold */
+    transition: all 0.3s ease;  /* Smooth transition for all properties */
+    cursor: pointer;  /* Change cursor to pointer */
+    margin: 0 10px;  /* Space between the buttons */
+  }
+  
+  /* Hover effect: Circle background turns dark blue, icon turns white */
+  .unique-carousel-btn:hover {
+    background-color: #003366;  /* Dark blue background */
+    border-color: #003366;  /* Ensure the border stays dark blue */
+    color: white;  /* Icon turns white */
+  }
+  
+  /* Icon inside the button */
+  .unique-carousel-btn i {
+    color: inherit;  /* Inherit color from the parent button */
+    transition: color 0.3s ease;  /* Smooth color transition for icon */
+  }
+  
+  /* Navigation dots */
+  .unique-carousel-dots {
+    font-size: 1.5rem;
+    color: #003366;
+    margin: 0 1rem;
+  }
+  
+  
+
+
+
+  
+  /* Card Visibility Handling */
+  .d-none {
+    display: none !important; /* Hide cards that are not in the current carousel view */
+  }
+  
+  /* Specific card styles for each unique class */
+  .unique-card-1, .unique-card-2, .unique-card-3, .unique-card-4 {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .unique-card-1:hover, .unique-card-2:hover, .unique-card-3:hover, .unique-card-4:hover {
+    transform: translateY(-5px);
+  }
+  
+  .unique-card-body-1, .unique-card-body-2, .unique-card-body-3, .unique-card-body-4 {
+    padding: 1.5rem;
+  }
+  
+  .unique-icon-1, .unique-icon-2, .unique-icon-3, .unique-icon-4 {
+    font-size: 3rem;
+  }
+  
+  .unique-icon-primary {
+    color: #007bff;
+  }
+  
+  .unique-icon-secondary {
+    color: #6c757d;
+  }
+  
+  .unique-icon-warning {
+    color: #ffc107;
+  }
+  
+  .unique-icon-info {
+    color: #17a2b8;
+  }
+  
+  /* Additional styles for list and links */
+  .unique-list-1, .unique-list-2, .unique-list-3, .unique-list-4 {
+    padding-left: 1rem;
+  }
+  
+  .unique-learn-more-1, .unique-learn-more-2, .unique-learn-more-3, .unique-learn-more-4 {
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .unique-learn-more-1:hover, .unique-learn-more-2:hover, .unique-learn-more-3:hover, .unique-learn-more-4:hover {
+    text-decoration: underline;
+  }
+  .unique-carousel-dots {
+    font-size: 1.5rem;
+    color: #003366;
+    margin: 0 1rem;
+  }
+  
+  .dot {
+    font-size: 1.5rem;
+    color: #003366;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .dot.active {
+    font-size: 2rem; /* Increase size for active dot */
+    color: #007bff; /* Highlight color */
+    transform: scale(1.5); /* Optional: to make the active dot pop out more */
+  }
+  
+  .dot:hover {
+    transform: scale(1.2); /* Slight hover effect */
+  }
+  

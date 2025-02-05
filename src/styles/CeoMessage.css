@@ -1,0 +1,140 @@
+/* Container for the quote card */
+.quote-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Inner container to hold image and content side by side */
+.quote-card-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+
+  position: relative;
+  padding: 30px;
+  
+  box-shadow: none; /* Removed the box shadow */
+}
+
+/* Styling for the image */
+.quote-card-image img {
+  width: 350px; /* Fixed width for the image */
+  height: 350px;
+  object-fit: cover; /* Ensures the image fills the space without distortion */
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+/* Content section for the quote and author */
+.quote-card-content {
+  max-width: 600px; /* Limits the width for the text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+/* Quote text style - More dynamic and engaging */
+.quote {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: #1b4672; /* Brand color */
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  
+}
+
+/* Keyframes to create a speaking effect */
+@keyframes speak {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(2deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: rotate(-2deg);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(2deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Author name styling */
+.author {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1b4672; /* Brand color for the author */
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional hover effect to make the card pop */
+.quote-card-inner:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .quote-card-inner {
+    flex-direction: column; /* Stack image and content vertically */
+    padding: 20px;
+  }
+
+  .quote-card-image img {
+    width: 250px; /* Reduce image size for smaller screens */
+    height: 250px;
+    margin: 0 auto 20px auto; /* Center image and add spacing */
+  }
+
+  .quote-card-content {
+    padding-left: 0;
+  }
+
+  .quote {
+    font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }
+
+  .author {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-card {
+    padding: 10px;
+  }
+
+  .quote-card-image img {
+    width: 200px; /* Further reduce image size for very small screens */
+    height: 200px;
+  }
+
+  .quote {
+    font-size: 1.6rem;
+  }
+
+  .author {
+    font-size: 1rem;
+  }
+}

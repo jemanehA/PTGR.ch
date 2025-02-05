@@ -1,0 +1,437 @@
+/* Basic styling for the header */
+.header {
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  background-color: #1b4672;
+}
+
+.navbar {
+  background-color: #1b4672;
+  text-align: center;
+  margin: 0px;
+}
+
+.navbar-toggler-icon {
+  background-color: #215188;
+}
+
+.logoimg {
+  height: 80px;
+  width: auto;
+  margin-right: 120px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1); /* Logo hover effect */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left; /* Align text to the left */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+.nav-link.dropdown-toggle:hover {
+  background-color: #052335 !important;
+  color: #fff !important;
+  text-shadow: none !important;
+}
+.nav-item:hover .nav-link.dropdown-toggle:hover {
+  background-color: #062b41 !important;
+  color: #fff !important;
+}
+/* Style for active navbar items */
+.navbar-nav .nav-item.active .nav-link {
+  background-color: #0d3c57; /* Set background color for active items */
+  color: #ffffff !important; /* Set text color to white */
+  text-shadow: none; /* Remove text shadow for better readability */
+  border-radius: 5px; /* Optional: round the corners for the active item */
+  border: 2px solid #f1c40f; /* Optional: Add a border around active navbar items */
+}
+
+.navbar-nav .nav-item.active .nav-link:hover {
+  background-color: #0a2b3d; /* Set background color for active item on hover */
+  color: #ffffff !important; /* Ensure the text color stays white */
+}
+
+.nav-item {
+  position: relative;
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link:focus {
+  background-color: rgba(19, 61, 109, 0.9);
+  color: white !important;
+  outline: none; /* Remove default outline */
+}
+
+.nav-item .dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Increase font size for navbar links */
+.navbar-nav .nav-item .nav-link {
+  font-size: 1.2rem !important; /* Increase font size significantly */
+  color: #fff !important; /* Ensure text color is white */
+}
+
+.navbar-nav .nav-item .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1b4672;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: left; /* Align dropdown text to the left */
+}
+
+.navbar-nav .nav-item:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Ensure the navbar content is aligned to the right */
+.navbar-collapse.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+/* For mobile devices: Ensure better readability */
+/* Language Selector Styling */
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-language:hover {
+  background-color: #007bff;
+  transform: scale(1.05);
+}
+
+/* Dropdown Menu */
+.language-selector .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.language-selector:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.vertical-line {
+  width: 2px;
+  background-color: #bec5ce;
+  height: 40px;
+  margin: auto 20px;
+}
+
+/* General link styles */
+.link {
+  position: relative;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Hover effect with sliding underline */
+.link:hover {
+  color: #0d0d0e; /* Change text color on hover */
+  background-color: #1c4977 !important;
+}
+
+.link:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #9c4b4b; /* Color of the sliding line */
+  transition: width 0.8s ease;
+}
+
+.link:hover:after {
+  width: 100%; /* Make the underline span the entire width */
+}
+
+.dropdown-header {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.dropdown-header strong {
+  font-weight: 700;
+  color: #cacaca; /* Accent color */
+}
+
+.dropdown-description {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-top: 5px;
+}
+
+/* Divider styling */
+.dropdown-divider {
+  border-top: 1px solid #fff;
+  margin: 10px 0;
+}
+
+.limited-width {
+  width: 350px; /* Adjust width as needed */
+  word-wrap: break-word; /* Ensures the text continues on a new line */
+  white-space: normal; /* Allows text to break and wrap properly */
+  overflow: visible; /* Ensures text isn't hidden */
+}
+
+.custom-padding {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+}
+
+
+@media (max-width: 576px) { /* Small devices */
+  .vertical-line {
+    display: none !important;
+  }
+
+  .navbar-nav .nav-link {
+    text-align: left !important;
+    padding-left: 50px; /* Force alignment to left on small screens */
+  }
+}
+/* For small devices */
+/* For small devices */
+@media (max-width: 992px) {
+  
+  .link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1f4c88; /* Color of the sliding line */
+    transition: width 0.8s ease;
+  }
+  .link:hover {
+    color: #0d0d0e; /* Change text color on hover */
+    background-color: #a2a9b1 !important;
+  }
+  .link {
+    position: relative;
+    padding: 10px 15px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .dropdown-description {
+    font-size: 0.9rem;
+    color: #202020;
+    margin-top: 5px;
+  }
+  
+  /* Divider styling */
+  .dropdown-divider {
+    border-top: 1px solid #fff;
+    margin: 10px 0;
+  }
+  .dropdown-header strong {
+    font-weight: 700;
+    color: #000000; /* Accent color */
+  }
+  /* Hide vertical line on small screens */
+  .vertical-line {
+    display: none !important;
+  }
+
+  /* Navbar links for small screens */
+  .navbar-nav .nav-link {
+    text-align: left !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1rem;
+    color: #fff; /* Adjust text color for nav links */
+  }
+
+  .navbar-brand img {
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .navbar-collapse {
+    text-align: left;
+  }
+
+  /* Stack navbar items vertically */
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Make each navbar item take full width */
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Adjust padding for nav links */
+  .navbar-nav .nav-item .nav-link {
+    padding: 10px;
+  }
+
+  /* Adjust navbar toggler icon size */
+  .navbar-toggler-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Fix navbar toggler alignment */
+  .navbar-toggler {
+    position: absolute;
+    top: 15px; /* Adjust the top position */
+    right: 15px; /* Adjust the right position */
+    z-index: 1050; /* Ensure the toggler is above other content */
+    padding: 10px;
+  }
+
+  /* Dropdown menu with white background */
+  .navbar-nav .nav-item .dropdown-menu {
+    display: none;
+    position: static; /* Change to static to make it behave like a collapsible item */
+    width: 100%;
+    background-color: #ffffff; /* White background */
+    padding: 0;
+    border: none; /* Remove the border */
+    box-shadow: none; /* Remove the shadow */
+    border-radius: 10px 10px 0 0 !important; /* Rounded top corners, no rounding for bottom */
+  }
+
+  /* Show dropdown when the parent item is active */
+  .navbar-nav .nav-item.active .dropdown-menu {
+    display: block;
+    opacity: 1;
+  }
+
+  /* Adjust the text color for items in the dropdown */
+  .navbar-nav .nav-item .dropdown-menu .nav-link {
+    color: #1b4672; /* Dark text color for readability on a white background */
+    font-size: 1rem;
+    padding: 8px 15px; /* Adjust padding */
+  }
+
+  /* Hover effect for dropdown links */
+  .navbar-nav .nav-item .dropdown-menu .nav-link:hover {
+    background-color: #f1f1f1; /* Light grey background on hover */
+    color: #1b4672; /* Keep the text color consistent */
+  }
+
+  /* Active state for dropdown links */
+  .navbar-nav .nav-item .dropdown-menu .nav-link.active {
+    background-color: #1b4672; /* Dark background on active state */
+    color: #fff; /* White text on active state */
+  }
+
+  /* Language selector dropdown */
+  .language-selector .dropdown-menu {
+    position: relative;
+    min-width: 100%;
+    background-color: #ffffff; /* White background */
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove shadow */
+  }
+
+  /* Reduce the navbar toggler size */
+  .navbar-toggler {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Adjust the navbar toggler positioning */
+  .navbar-toggler {
+    position: absolute;
+    top: 15px; /* Adjust the top position */
+    right: 15px; /* Adjust the right position */
+    z-index: 1050;
+  }
+}
+@media (max-width: 692px) {
+  .link {
+    position: relative;
+    padding: 10px 15px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+.headerbuttonholder {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  padding-bottom: 20px;
+  padding-right: 80px;
+          /* Make the div take full viewport height */
+}
+
+.btnheader {
+  padding: 10px 24px; /* Add some padding for better button size */
+  font-size: 1.1em;   
+  font-weight: 600;
+  /* Adjust font size */
+  border: none;       /* Remove default border */
+  border-radius: 4px;  /* Rounded corners */
+  background-color: #6e3030; /* Bootstrap success color */
+  color: rgb(255, 255, 255);        /* Text color */
+  border: 0px solid #ffffff;
+  cursor: pointer;     /* Show pointer on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btnheader:hover {
+  background-color: #8a4b4b; /* Darker green on hover */
+  transform: scale(1.05);     /* Slightly enlarge the button */
+}
+
+.btnheader:active {
+  background-color: #0a1e33; /* Even darker green when clicked */
+  transform: scale(1);        /* Reset scale on click */
+}
+
+.btnheader:focus {
+  outline: none; /* Remove focus outline */
+}
+.topmenus
+{
+  color: #ffffff;
+}

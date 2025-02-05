@@ -1,0 +1,145 @@
+/* Modal Container */
+.modal.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    padding: 1rem; /* Adds padding for smaller screens */
+    box-sizing: border-box;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 400px; /* Default max width */
+    width: 100%; /* Full width for smaller screens */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Logo Styling */
+  .logo-container {
+    margin-bottom: 1rem;
+  }
+  .logo-container img {
+    max-width: 100px; /* Ensures the logo scales on smaller screens */
+    height: auto;
+  }
+  
+  /* Contact Form Inputs */
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%; /* Full width for responsive design */
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  #contact-form textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  /* Submit Button */
+  .contact-button {
+    background-color: #1b4672;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-button.loading {
+    background-color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  .contact-button:hover {
+    background-color: #163b5c;
+    transform: scale(1.05);
+  }
+  
+  /* Media Queries for Smaller Screens */
+  @media (max-width: 768px) {
+    .modal-content {
+      padding: 1.5rem; /* Reduce padding */
+      max-width: 90%; /* Wider modal on smaller screens */
+    }
+  
+    #contact-form input,
+    #contact-form textarea {
+      font-size: 0.9rem; /* Adjust input font size */
+      padding: 0.6rem; /* Reduce padding */
+    }
+  
+    .contact-button {
+      font-size: 1rem; /* Slightly smaller button */
+      padding: 0.7rem 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modal-content {
+      padding: 1rem; /* Further reduce padding */
+      max-width: 100%; /* Use full screen width */
+    }
+  
+    .close-btn {
+      font-size: 1.2rem; /* Adjust close button size */
+    }
+  
+    .logo-container img {
+      max-width: 80px; /* Smaller logo */
+    }
+  
+    .contact-button {
+      font-size: 0.9rem; /* Further adjust button size */
+      padding: 0.6rem 1rem;
+    }
+  }
+  .profit-now-button.loading {
+    background-color: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  .spinner {
+    border: 2px solid #f3f3f3; /* Light grey */
+    border-top: 2px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

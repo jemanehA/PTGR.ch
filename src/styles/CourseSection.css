@@ -1,0 +1,286 @@
+.course-section {
+    padding: 60px 0;
+    background-color: #193d63;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .course-card {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .course-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .course-card-title {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  
+  .course-card-description {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 20px 20px;
+  }
+  
+  .btn-get-started {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-get-started:hover {
+    background-color: #0056b3;
+  }
+  
+  .payment-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .payment-modal {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .payment-modal-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .payment-form input,
+  .payment-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .btn-submit-payment {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .btn-submit-payment:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-close-modal {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .btn-close-modal:hover {
+    background-color: #d32f2f;
+  }
+  .course-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .course-card {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .course-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures the image covers the entire area of the card */
+    margin: 0; /* Removes any margin around the image */
+  }
+  
+  .course-card-title {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    padding: 0 15px;
+  }
+  
+  .course-card-description {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 15px 20px;
+  }
+  
+  .btn-get-started {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 15px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-get-started:hover {
+    background-color: #0056b3;
+  }
+  
+  .payment-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .payment-modal {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .payment-modal-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .payment-form input,
+  .payment-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .btn-submit-payment {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .btn-submit-payment:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-close-modal {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .btn-close-modal:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Ensure equal height for all course cards */
+  .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 15px;
+    flex-basis: 32%; /* Ensures 3 cards per row with equal space */
+  }
+  
+  @media (max-width: 768px) {
+    .col-md-4 {
+      flex-basis: 48%; /* 2 cards per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .col-md-4 {
+      flex-basis: 100%; /* 1 card per row on small screens */
+    }
+  }

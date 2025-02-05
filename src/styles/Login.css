@@ -1,0 +1,201 @@
+
+.logincontent-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+
+.card {
+    background-color: #ffffff !important;
+    color: #163962 !important;
+    border-radius: 10px !important;
+    padding: 20px !important;
+    transition: transform 0.5s ease-in-out !important;
+    opacity: 0.5s ease-in-out !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    width: 100% !important;
+    max-width: 400px !important;
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    display: none;
+}
+
+.show {
+    opacity: 1 !important;
+    transform: scale(1) ;
+    display: block ;
+}
+
+.btn-custom {
+    background-color: #ffffff;
+    color: #163962;
+    border: 2px solid #163962;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-custom:hover {
+    background-color: #163962;
+    color: white;
+}
+
+.btn-back {
+    background-color: #979494;
+    color: #163962;
+    border: 2px solid #163962;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn-back:hover {
+    background-color: #163962;
+    color: white;
+}
+
+.navbar {
+    background-color: #163962;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: white;
+}
+
+.footer {
+    background-color: #121920;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+
+.logoimg {
+    height: 80px;
+    width: auto;
+    margin-right: 120px;
+    transition: transform 0.3s ease;
+}
+
+.custom-br {
+    height: 0.1px;
+    background-color: #6e6c6c;
+    margin: 0;
+    padding: 0;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.getintouch p {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* Request Access Form Adjustments */
+.request-form input,
+.request-form button {
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.request-form .form-control {
+    padding: 10px 12px;  /* Match login input padding */
+    font-size: 14px;
+    border: 2px solid #ddd;
+}
+
+.request-form .form-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: left;
+    display: block; /* Align labels to the left */
+}
+
+.request-form button {
+    background-color: #163962;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.request-form button:hover {
+    background-color: #0f1316;
+}
+
+.request-form .back-btn {
+    background-color: #6c757d;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.request-form .back-btn:hover {
+    background-color: #5a6268;
+}
+
+.request-form .headerr {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #163962;
+}
+
+.thank-you-message {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.logincontainer
+{
+    margin-top: 200px !important;
+    margin-bottom: 200px;
+}
+@media (max-width: 768px) {
+    .logincontainer {
+        margin-bottom: 100px;
+    }
+}
+
+.wearecoming {
+    font-size: 1.8em !important;
+    font-weight: bold;
+    color: #4CAF50; /* A vibrant green color, change as needed */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Arial', sans-serif; /* Change font-family if needed */
+    animation: slideIn 1s ease-out;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.underconstruction {
+    font-size: 18px;
+    color: #092249;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-top: 10px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

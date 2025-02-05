@@ -1,0 +1,32 @@
+.efficiency-section {
+    background-image: url('../assets/images/cta-bg-1.webp');
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: left;
+
+  }
+  .efficiency-section .content {
+    position: relative;  /* Ensures that elements inside it are positioned correctly */
+}
+
+  .efficiency-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .efficiency-section .content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .efficiency-section .content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  .efficiency-section p {
+color: #ffffff;
+  }

@@ -1,0 +1,79 @@
+/* Event Section Styling */
+.event-section-header {
+  font-size: 2.5rem;
+  color: #163962; /* Your branding color */
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+
+/* Event Card Styling */
+.event-card {
+  border-radius: 8px;
+  background-color: #0f2c47;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 500px;
+}
+
+
+.event-card-title {
+  font-size: 1.5rem;
+  color: #163962; /* Your branding color */
+  font-weight: bold;
+}
+
+.event-card-date,
+.event-card-location {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.event-card-description {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Button Styling */
+.event-card-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.event-card-btn-primary {
+  background-color: #163962; /* Your branding color */
+  color: white;
+}
+
+.event-card-btn-primary:hover {
+  background-color: #0f2c47;
+}
+
+.event-card-btn-secondary {
+  background-color: #6c757d; /* Gray color for secondary button */
+  color: white;
+}
+
+.event-card-btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+  .event-card-title {
+    font-size: 1.2rem;
+  }
+
+  .event-card-description {
+    font-size: 0.9rem;
+  }
+
+  .event-card-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+.eventmain
+{
+  background-color: #c3c6c9;
+}

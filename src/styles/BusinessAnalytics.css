@@ -1,0 +1,166 @@
+/* Container */
+.ba-container {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: sticky;
+  margin-top: 20px;
+  top: 0; /* Stick to the top of the viewport */
+  background: white; /* Add a background to avoid content overlap */
+  z-index: 100; /* Ensure it stays above other content */
+}
+
+/* Header Section */
+.ba-header {
+  text-align: start;
+  margin-bottom: 40px;
+}
+
+.ba-line {
+  text-align: start;
+  width: 50px;
+  height: 2px;
+  background: #1b4672; /* Brand color for the line */
+  margin: 0 0 20px 0; /* Aligns it to the left */
+}
+
+.ba-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1b4672; /* Brand color for the title */
+  margin-bottom: 10px;
+}
+
+.ba-description {
+  font-size: 16px;
+  text-align: start;
+  color: #666; /* Subdued color for the description */
+
+  margin: 0 0 20px 0; /* Aligns it to the left */
+}
+
+/* Row Layout */
+.ba-row {
+  display: flex;
+  gap: 20px;
+  align-items: stretch; /* Ensure all cards stretch to the same height */
+}
+
+/* Fixed Left Card */
+.ba-fixed-card {
+  flex: 0 0 350px; /* Fixed width for the left card */
+  background: #1b4672; /* Brand color for the fixed card */
+  padding: 20px;
+  border-radius: 8px 0 0 8px; /* Only top-left and bottom-left corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white; /* White text for better contrast */
+  height: auto; /* Stretch to match the tallest card */
+}
+
+.ba-fixed-card h3 {
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.ba-fixed-card ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.ba-fixed-card li {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ba-fixed-card li.ba-active {
+  font-weight: bold;
+  color: #ffcc00; /* Highlight active item with a contrasting color */
+  transform: scale(1.05);
+}
+
+/* Scrollable Card */
+.ba-scroll-card {
+  flex: 1; /* Takes up remaining space */
+  background: white;
+  border: 1px solid #1b3e9e; /* Add a 1px solid border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+  overflow: hidden; /* Ensure content doesn't overflow */
+  transition: transform 0.3s ease-in-out, background 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.ba-scroll-card:hover {
+  transform: translateY(-10px); /* Move the card up by 10px */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: Add a stronger shadow on hover */
+}
+
+/* Card Content */
+.ba-card-content {
+  flex: 1; /* Ensure content stretches to fill the card */
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word; /* Break long words if necessary */
+}
+
+/* Title */
+.ba-card-content h5 {
+  font-weight: bold; /* Make the text bold */
+  font-weight: 700;
+  word-wrap: break-word; /* Break long titles if necessary */
+  margin-bottom: 10px; /* Add spacing below the title */
+}
+
+/* Description */
+.ba-card-content p {
+  word-wrap: break-word; /* Break long descriptions if necessary */
+  margin-bottom: 10px; /* Add spacing below the description */
+}
+
+/* List Items */
+.ba-card-content ul {
+  padding-left: 20px; /* Add some padding for better readability */
+  list-style-type: disc; /* Add bullet points */
+  margin-bottom: 10px; /* Add spacing below the list */
+}
+
+.ba-card-content ul li {
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+  margin-bottom: 8px; /* Add spacing between list items */
+}
+.ba-card-image
+{
+  width: 100%; /* Cover the entire width of the card */
+  height: 100px; /* Fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Learn More Link */
+.ba-learn-more {
+  text-align: right;
+  color: #1b4672; /* Brand color for "Learn More" */
+  cursor: pointer;
+  margin-top: auto; /* Push "Learn More" to the bottom of the card */
+  word-wrap: break-word; /* Break long text if necessary */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ba-row {
+    flex-direction: column;
+  }
+
+  .ba-fixed-card {
+    display: none; /* Hide fixed card on mobile */
+  }
+
+  .ba-scroll-card {
+    width: 100%; /* Full width for each card */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 16px; /* Add spacing between stacked cards */
+    flex: 0 0 auto; /* Reset flex for mobile */
+  }
+}

@@ -1,0 +1,553 @@
+/* General Footer Styles */
+.site-footer {
+    background-color: #0f1316; /* Dark blue background */
+    color: white;
+    padding: 40px 20px;
+    margin-top: auto;
+    text-align: center; /* Center align the footer text */
+  }
+  
+  .site-footer h4 {
+    font-size: 1.3rem;
+   
+    font-weight: 700;
+    color: #d3cdcd;
+  }
+  
+  .site-footer p {
+    font-size: 1.1rem;
+    color: #d3cdcd; /* Lighter text color for content */
+  }
+ 
+
+  
+  .site-footer a {
+    color: #d3cdcd;
+    font-size: 1rem;
+    padding-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .site-footer a:hover {
+    color: #f0a500; /* Light gold color on hover */
+  }
+  
+  /* Footer Column Styling */
+
+  
+  /* Newsletter Form */
+  .footerLogo
+  {
+    height: 80px;
+    width: auto;
+  }
+ 
+
+
+/* Modal overlay style */
+/* Modal overlay style */
+/* Overlay */
+.footer-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.footer-modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  animation: slideDown 0.4s ease-in-out;
+}
+
+.footer-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the left */
+  gap: 20px; /* Increase gap for better spacing */
+  margin-bottom: 20px; /* Add space below the header */
+}
+
+.footer-logo {
+  max-width: 120px;
+  height: auto;
+}
+
+.footer-header h2 {
+  color: #0c2542;
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px; /* Slightly increase space between letters */
+}
+
+.footer-modal-description {
+  color: #000000 !important;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.footer-close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-close-button:hover {
+  color: #ff5722;
+}
+
+.footer-form-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.footer-form-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.footer-checkbox {
+  margin: 20px 0;
+  font-size: 0.9rem;
+}
+
+.footer-checkbox a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-checkbox a:hover {
+  text-decoration: underline;
+}
+
+.footer-btn-primary {
+  padding: 12px 20px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-btn-primary:disabled {
+  background-color: #a9d1ff;
+  cursor: not-allowed;
+}
+
+.footer-btn-primary:hover:enabled {
+  background-color: #0056b3;
+}
+
+.success-message {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #1f354d;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Checkbox style */
+.footer-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-checkbox input {
+  margin-right: 10px;
+}
+
+.footer-checkbox label {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.footer-checkbox a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-checkbox a:hover {
+  text-decoration: underline;
+}
+
+/* Button styles */
+.footer-btn {
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  background-color: #1f354d;
+  color: white;
+}
+
+.footer-btn:hover {
+  background-color: #0056b3;
+}
+
+.footer-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 480px) {
+  .footer-modal-content {
+    width: 90%;
+  }
+
+  .footer-btn {
+    font-size: 16px;
+  }
+}
+.copyright
+{
+  margin-top: 40px;
+}
+.success-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: green;
+}
+.custom-br {
+  height: 0.1px; /* Adjust the height as needed */
+  background-color:#6e6c6c;
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+}
+
+
+
+/* News letter subscribtion*/
+/* Section Styling */
+.newsletter-section {
+  background-color: #181e22 !important;
+  color: white;
+  padding: 0 !important;
+  overflow: hidden; 
+
+}
+.newsletter-section * {
+  margin: 0;
+  padding: 0;
+}
+.main-content {
+  flex: 1 !important;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.footerr
+{
+  background-color: #1b4672;
+  bottom: 0 !important;
+  
+}
+.footerr1
+{
+
+  bottom: 100px !important;
+  
+}
+
+.newsletter-right {
+  position: relative; /* Make the parent container relative */
+  align-items: center;
+  
+}
+
+
+
+.half-bottom-image {
+  width: auto;
+  height: 750px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateX(25%) translateY(20%); /* Shifts right by 40% and down by 40% */
+  opacity: 0.1; 
+
+  
+  pointer-events: none; /* Prevents interaction with the image */
+}
+
+
+/* Define the keyframes for rotation */
+@keyframes rotateClockwise {
+  0% {
+    transform: translateY(50%) rotate(0deg); /* Start with no rotation */
+  }
+  100% {
+    transform: translateY(50%) rotate(360deg); /* Rotate 360 degrees */
+  }
+}
+.newsletter-left h3 {
+  font-size: 2.3rem;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+.newsletter-left p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #cac7c7;
+}
+
+/* Subscribe Container */
+.subscribe-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.subscribe-btn {
+  background-color: #162850;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #2a426e;
+  transform: scale(1.05);
+}
+
+.subscribe-btn.hidden {
+  opacity: 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+/* Subscribe Form */
+/* Default styling */
+.subscribe-form-wrapper {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+  text-align: left; /* Align content to the left */
+}
+
+.subscribe-form-wrapper.visible {
+  opacity: 1;
+  max-width: 100%;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+  animation: slide-in 0.5s ease forwards;
+  text-align: left; /* Align text to the left */
+}
+
+.subscribe-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  flex: 1;
+  transition: all 0.3s ease;
+  text-align: left; /* Align text within the input fields to the left */
+}
+
+.subscribe-form input:focus {
+  outline: none;
+  border-color: #e55347;
+}
+.newsletter-left {
+  z-index: 2;
+  padding: 120px 30px 120px 280px !important; /* Default large screen: Increased left padding */
+}
+
+@media (max-width: 1200px) {
+  .newsletter-left {
+    padding: 80px 20px 80px 200px !important; /* Medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .half-bottom-image {
+    width: auto;
+    height: 500px;
+
+  }
+  .newsletter-left {
+    padding: 60px 15px 60px 100px !important; /* Tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter-left {
+    padding: 40px 10px 40px 60px !important; /* Mobile devices */
+  }
+  .half-bottom-image {
+    width: auto;
+    height: 400px;
+
+  }
+}
+
+@media (max-width: 576px) {
+  .newsletter-left {
+    padding: 20px 5px 20px 30px !important; /* Extra small screens */
+  }
+  .half-bottom-image {
+    width: auto;
+    height: 350px;
+
+  }
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .subscribe-form-wrapper {
+    padding: 0 20px; /* Adds padding on smaller screens */
+  }
+
+  .subscribe-form {
+    flex-direction: column; /* Stack inputs vertically */
+  }
+
+  .subscribe-form input {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .subscribe-form-wrapper {
+    padding: 0 15px; /* Smaller padding for smaller devices */
+  }
+
+  .subscribe-form input {
+    font-size: 0.8rem; /* Further decrease font size */
+    padding: 6px; /* Adjust padding further */
+  }
+}
+
+.subscribe-form button {
+  background-color: #102d4b;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #162850;
+  transform: scale(1.05);
+}
+
+/* Keyframe Animation */
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Second Column */
+.newsletter-right {
+
+ text-align: right;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .newsletter-left,
+  .newsletter-right {
+    text-align: center;
+  }
+  .getintouch p {
+    margin-bottom: 5px; /* Reduce the gap between paragraphs */
+    line-height: 1.1em !important; /* Control line spacing for better readability */
+  }
+
+
+}
+.getintouch p {
+  margin-bottom: 5px; /* Reduce the gap between paragraphs */
+  line-height: 1.4; /* Control line spacing for better readability */
+}
+.company-logo img {
+  width: 180px; /* Set a fixed width */
+  height: auto; /* Maintain the aspect ratio */
+}

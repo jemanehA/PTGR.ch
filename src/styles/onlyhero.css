@@ -1,0 +1,152 @@
+.crypto-hero-section {
+  position: relative;
+  height: 60vh; /* Reduced height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 100px;
+  background-color: transparent; /* Remove solid background */
+}
+
+.crypto-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #152d47 20%, transparent 100%); /* Gradient from blue to transparent */
+  background-color: rgba(21, 45, 71, 0.3);
+  z-index: 1;
+}
+
+/* Video Background */
+.crypto-hero-video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire area */
+  z-index: 0; /* Ensure it stays behind the content */
+}
+
+/* Content Container */
+.crypto-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; /* Add padding to prevent text from touching the edges */
+}
+
+.crypto-hero-text {
+  text-align: left;
+  flex-wrap: wrap;
+  color: #fff;
+  padding: 20px; /* Add padding for better readability */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Header Title */
+.crypto-header-title {
+  font-size: 2.8rem; /* Default text size */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-in-out 0.5s forwards;
+}
+
+.crypto-highlight-text {
+  color: #af2319 !important; /* Bordeaux color for highlights */
+}
+
+/* Subtitle */
+.crypto-hero-subtitle {
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-in-out 1s forwards;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Fade In and Slide Up Animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Bouncing Circle */
+.crypto-bouncing-circle {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%); /* Center it properly */
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff; /* White color */
+  border-radius: 50%;
+  border: 8px solid #2f3e4e; /* Dark blue border */
+  z-index: 3; /* Ensures it's above other elements */
+  animation: bounceUpDown 5.5s infinite ease-in-out;
+}
+
+@keyframes bounceUpDown {
+  0%, 100% {
+      transform: translate(-50%, 50%) translateY(0);
+  }
+  50% {
+      transform: translate(-50%, 50%) translateY(-20px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .crypto-header-title {
+      font-size: 2.5rem; /* Adjust for smaller screens */
+  }
+  .crypto-hero-subtitle {
+      font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .crypto-header-title {
+      font-size: 2.2rem; /* Adjust for tablets */
+  }
+  .crypto-hero-subtitle {
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .crypto-header-title {
+      font-size: 2rem; /* Adjust for smaller tablets */
+  }
+  .crypto-hero-subtitle {
+      font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .crypto-header-title {
+      font-size: 1.5rem; /* Adjust for mobile devices */
+  }
+  .crypto-hero-subtitle {
+      font-size: 1rem;
+  }
+}

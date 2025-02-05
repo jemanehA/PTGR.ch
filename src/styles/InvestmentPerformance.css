@@ -1,0 +1,125 @@
+.chart-container {
+    width: 90%;
+    margin: 0 auto;
+    height: 600px;
+    padding-bottom: 50px;
+    background: #ffffff; /* White background for contrast */
+    border-radius: 12px; /* Smooth rounded edges */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Shadow effect */
+}
+
+/* Circle Progress container */
+.circle-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.circle1 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.circle1:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+}
+
+.circle1-text {
+    position: absolute;
+    font-size: 1.6rem;
+    z-index: 10;
+    font-weight: 700;
+}
+
+/* Circle color gradients */
+.circle1.solid {
+    background: conic-gradient(
+        #1b60aa 0% 30%,  /* 30% covered by #50494a */
+        #0056b3 30% 100% /* The rest (70%) covered by #61101d */
+    );
+}
+
+.circle1.balanced {
+    
+    background: conic-gradient(
+        #5f2d36 0% 27%,  /* 30% covered by #50494a */
+        #61101d 27% 100% /* The rest (70%) covered by #61101d */
+    );
+}
+
+.circle1.growth {
+    background: conic-gradient(
+        #363636 0% 44%,  /* 30% covered by #50494a */
+        #000000 44% 100% /* The rest (70%) covered by #61101d */
+    );
+}
+
+.circle1.bitcoin {
+    background: conic-gradient(
+        #b99a63 0% 35%,  /* 30% covered by #50494a */
+        #CC8711 35% 100% /* The rest (70%) covered by #61101d */
+    );
+}
+
+/* Circle progress bar */
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .circle {
+        width: 150px;
+        height: 150px;
+        font-size: 1.5rem;
+    }
+
+    .circle-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .circle {
+        width: 120px;
+        height: 120px;
+        font-size: 1.2rem;
+    }
+
+    .circle-text {
+        font-size: 1rem;
+    }
+    .chart-container {
+        height: 450px; /* Increase height on small screens */
+    }
+}
+
+.responsive-text {
+    color: #1D3957;
+    margin-top: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}

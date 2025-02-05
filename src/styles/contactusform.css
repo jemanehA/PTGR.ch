@@ -1,0 +1,313 @@
+/* Main Layout */
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 50px;
+  position: relative; /* Ensure the pseudo-element is relative to this container */
+  overflow: hidden; /* Hide overflow from the pseudo-element */
+  z-index: 11; /* Ensure it stays above other content */
+}
+
+/* Background Shape */
+.contact-page::before {
+  content: '';
+  position: absolute;
+  top: 50%; /* Vertically center within .contact-page */
+  left: 0; /* Start from the left edge of .contact-page */
+  transform: translateY(-50%); /* Adjust for exact vertical centering */
+  width: 70%; /* Cover 70% of the width of .contact-page */
+  height: 400px; /* Adjust this value to control the height */
+  background-color: #1b4672; /* Blue color */
+  border-radius: 0%; /* Oval shape */
+  z-index: 1; /* Ensure it stays behind the content */
+}
+
+/* Form Select Styling */
+.contact-form select {
+  width: 100%; /* Ensure full width */
+  padding: 12px; /* Better spacing */
+  border: 1px solid #1B4572;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #1B4572;
+  background: #F2F6FC;
+  cursor: pointer;
+  appearance: none; /* Remove default browser styling */
+}
+
+/* Left Section (Text Content) */
+.contact-info {
+  max-width: 400px;
+  color: #f0f0f0; /* Light text color */
+
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 10px; /* Rounded corners */
+  z-index: 2; /* Ensure text is above the background shape */
+}
+
+.contact-info h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: start;
+  color: #ffffff; /* White text color */
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  text-align: justify;
+  text-align-last: left;
+  word-spacing: 0.03em;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  color: #dddada; /* Light gray text color */
+}
+
+/* Right Section (Form Container) */
+.contact-form-container {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: #153860 4px solid; /* Blue border */
+  z-index: 10; /* Ensure form is above the background shape */
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1B4572; /* Blue text color */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Fields */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group-row select,
+.form-group-row input {
+  flex: 1; /* Ensures both elements take equal space */
+  width: 100%; /* Ensures they don’t exceed their container */
+  min-width: 0; /* Prevents the select from growing too much */
+}
+
+.contact-form input,
+.contact-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #1B4572;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #1B4572;
+  background: #F2F6FC;
+}
+
+.countryname {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #1B4572;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #1B4572;
+  background: #F2F6FC;
+}
+
+.reachingOutTo {
+  width: 100% !important;
+}
+
+.contact-form input:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: #153860;
+  box-shadow: 0px 0px 8px rgba(27, 69, 114, 0.3);
+}
+
+/* Checkbox Group Styling */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Ensure checkboxes and labels align properly */
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* Ensure checkbox labels align properly */
+.checkbox-label {
+  font-size: 1rem;
+  color: #1B4572;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #1B4572;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: #153860;
+  transform: translateY(-2px);
+}
+
+/* Alert Message */
+.alert-danger {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-page {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px 50px;
+  }
+
+  .contact-info {
+    max-width: 100%;
+  }
+
+  .contact-form-container {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .form-group-row {
+    flex-direction: column;
+  }
+
+  .form-group-row input {
+    width: 100%;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 100px 15px 50px;
+  }
+
+  .contact-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
+
+  .contact-form-container {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 14px;
+  }
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb1 {
+  font-size: 1.1rem;
+  color: #1B4572;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.breadcrumb1-link {
+  text-decoration: none;
+  color: #1B4572;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  padding: 5px 0;
+}
+
+.breadcrumb1-link:hover {
+  color: #153860;
+}
+
+.breadcrumb1-divider {
+  color: #1B4572;
+  font-weight: bold;
+}
+
+.breadcrumb1-current {
+  color: #3A3A3A;
+  font-weight: bold;
+}
+
+.breadcrumb1-line {
+  border-top: 1px solid #486d96;
+  width: 100%;
+  max-width: 100%;
+}
+
+.contactusdiv {
+  padding-top: 180px;
+}
+
+@media (max-width: 768px) {
+  .contactusdiv {
+    margin-top: 40px;
+  }
+
+  .contact-info h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: start;
+    color: #1B4572;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactusdiv {
+    margin-top: 20px;
+  }
+}

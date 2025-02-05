@@ -1,0 +1,275 @@
+.hero-section {
+    position: relative;
+    width: 100%;  /* Set width to 90% of viewport */
+    margin: 0 auto; /* Center the hero section horizontally */
+    height: 65vh; /* Hero section height */
+  
+    align-items: center; /* Center content vertically */
+    color: white;
+    text-align: left; /* Align text to the left */
+
+    overflow: hidden; /* Prevent video overflow */
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1; /* Ensure the overlay sits above the video but below the content */
+}
+
+
+
+
+/*herosection content*/
+.headingcontnetdiv {
+    position: relative;
+    z-index: 2;
+    margin-left: 0;  
+    padding-top: 100px;
+    text-align: left;
+    border-radius: 8px; /* Optional: round corners for a smoother look */
+    opacity: 0; /* Initially hide the content */
+   
+    animation: fadeInUp 1s forwards; /* Add animation */
+}
+.page-indicator-text {
+    display: none;
+    font-size: 1.7rem;   /* Adjust font size */
+    font-weight: bold;   /* Make the text bold */
+    color: rgb(212, 212, 212) !important;        /* Change color to white */
+    margin-bottom: 20px; /* Add space below */
+}
+.headertit {
+    font-size: 2.3rem !important;             /* Large font size */
+    font-weight: normal !important;           /* Bold text */
+    color: white !important;       
+}
+.headtit1 {
+    font-size: 3.4rem !important;             /* Large font size */
+    font-weight: bold !important;           /* Bold text */
+    color: white !important;                /* White color for the text */
+ 
+}
+.headertit, .headtit1 {
+    display: block; /* Forces each to occupy a new line */
+  }
+
+
+
+
+@media (max-width: 900) {
+
+
+    .headertit {
+        font-size: 2.3rem !important;
+    }
+
+    .headertit1 {
+        font-size: 2.8rem !important;
+    }
+
+    .page-indicator-text {
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive Design for Smaller Screens (Mobile devices) */
+@media (max-width: 768px) {
+
+
+
+    .headertit{
+        font-size: 2rem !important;
+    }
+
+    .headtit1 {
+        font-size: 2.4rem !important;
+    }
+
+    .page-indicator-text {
+        font-size: 1.9rem;
+    }
+
+    .card-button, .header-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+}
+
+/* Extra Small Screens (Phones) */
+@media (max-width: 600px) {
+
+    .hero-section {
+        height: 60vh; /* Further reduced height */
+        padding: 0 5px;
+    }
+
+    .headertit {
+        font-size: 1.4rem !important;
+    }
+
+    .headtit1 {
+        font-size: 1.6rem !important;
+    }
+
+    .page-indicator-text {
+        font-size: 1rem;
+    }
+
+    .card-button, .header-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .btn-learn-more {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+}
+
+/* Extremely Small Screens (Very small mobile devices) */
+@media (max-width: 400px) {
+
+    .headertit {
+        font-size: 1.2rem !important;
+    }
+
+    .headtit1 {
+        font-size: 1.3rem !important;
+    }
+
+    .page-indicator-text {
+        font-size: 0.9rem;
+    }
+
+    .card-button, .header-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .btn-learn-more {
+        font-size: 0.8rem;
+        padding: 7px 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.video-container1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place video behind the content */
+}
+
+#hero-video {
+    object-fit: cover; /* Make sure video covers the entire section */
+    width: 100%;
+    height: 100%;
+    object-position: center; /* Keep video centered */
+}
+
+.hero-section .container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* Ensure the parent has a defined height */
+}
+
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.card-button {
+    padding: 15px 30px; /* Increased padding for a bigger button */
+    background-color: #24456d;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Slightly rounded edges */
+    font-size: 1.4rem; /* Increased font size */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.card-button:hover {
+    background-color: #020e1a;
+}
+.header-button {
+    padding: 12px;
+    background-color: #24456d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.header-button:hover {
+    background-color: #020e1a;
+}
+a {
+    text-decoration:none !important;
+}
+
+.btn-learn-more {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 20px;
+}
+
+.btn-learn-more:hover {
+    background-color: white;
+    color: #333; /* Text color changes when button is hovered */
+}
+
+
+
+
+/* Animation for fading in and moving up */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}

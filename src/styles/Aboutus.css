@@ -1,0 +1,300 @@
+/* Features Section */
+.features-section {
+  background: white; /* White background */
+  padding: 60px 0;
+}
+
+.features-intro {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cardabout {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.9)); /* Subtle gradient */
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  height: 250px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
+}
+
+.cardabout:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(240, 240, 240, 1)); /* Brighter gradient on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.2); /* Slightly darker border on hover */
+}
+
+.custom-icon {
+  color: #0077b5; /* LinkedIn blue for consistency */
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.cardabout:hover .custom-icon {
+  transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0b3b5c; /* Dark blue for headings */
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555; /* Dark gray for text */
+  line-height: 1.6;
+}
+
+/* Advisory Board Section */
+.panaboutusadvisory {
+  background: linear-gradient(135deg, rgba(19, 58, 95, 0.9), rgba(5, 21, 43, 0.9));
+  color: white;
+  padding: 60px 0;
+}
+
+.ceo-image {
+  transition: transform 0.3s ease;
+}
+
+.ceo-image:hover {
+  transform: scale(1.05);
+}
+
+.linkedin-button {
+  font-size: 1.2rem;
+  color: #0077b5;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.linkedin-button:hover {
+  background-color: #0077b5;
+  color: white;
+}
+
+.ceo-message {
+  color: #c9c2c2;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* Key to Success Section */
+.partnerss {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(236, 233, 233, 0.9));
+  padding: 60px 0;
+}
+
+.success-key {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0b3b5c;
+}
+
+.highlighted-text {
+  color: #0077b5;
+}
+
+.cta-button {
+  background-color: #0077b5;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Hero Section */
+.about-hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about-hero-video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(5, 21, 43, 0.7), rgba(19, 58, 95, 0.7));
+  z-index: 0;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+
+
+.crypto-highlight-text {
+  color: #0077b5;
+}
+
+
+.crypto-enroll-button {
+  background-color: #0077b5;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.crypto-enroll-button:hover {
+  background-color: #0056b3;
+}
+
+.middlesubwhitge
+{
+  color: #f8f9fa;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Breadcrumb */
+.menudisplay.breadcrumb {
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.homemenu {
+  color: #0077b5;
+  text-decoration: none;
+}
+
+.homemenu:hover {
+  text-decoration: underline;
+}
+
+.separator {
+  margin: 0 5px;
+  color: #6c757d;
+}
+
+.current-page {
+  color: #6c757d;
+}
+
+/* Strategic Partners Section */
+.strategic-partners {
+  background: white;
+  padding: 60px 0;
+}
+
+.partners-title {
+  font-size: 2rem;
+  color: #0b3b5c;
+  margin-bottom: 30px;
+}
+
+.partner-row {
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.partner-row:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.partner-info {
+  padding-right: 30px;
+}
+
+.partner-name {
+  font-size: 1.5rem;
+  color: #0b3b5c;
+}
+
+.partner-learn-more {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #0077b5;
+}
+
+.partner-learn-more:hover {
+  text-decoration: underline;
+}
+
+.partner-logo-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.partner-logo {
+  max-width: 150px;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Responsive Handling */
+@media (max-width: 768px) {
+  .partner-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .partner-logo-section {
+    text-align: center;
+  }
+
+
+
+
+}

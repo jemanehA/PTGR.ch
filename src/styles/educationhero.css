@@ -1,0 +1,79 @@
+/* Hero Section Styling */
+
+
+/* Enroll Button */
+.ger-sturtedbtn {
+  background-color: #7C0A02; /* Bordeaux color for the button */
+  color: #fff;
+  font-size: 1.3rem; /* Increased font size */
+  font-weight: 600;
+  padding: 15px 30px; /* Increased padding to make the button bigger */
+  border: none;
+  border-radius: 8px; /* Slightly larger border radius */
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.9s forwards;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ger-sturtedbtn:hover {
+  background-color: #8c2d2d; /* Darker shade of Bordeaux for hover */
+  transform: scale(1.1); /* More noticeable scaling */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Discoverbtn {
+  background-color: #7C0A02; /* Bordeaux color for the button */
+  color: #fff;
+  font-size: 1.2rem; /* Increased font size */
+  font-weight: 600;
+  padding: 15px 20px; /* Increased padding to make the button bigger */
+  border: none;
+  border-radius: 8px; /* Slightly larger border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Discoverbtn:hover {
+  background-color: #8c2d2d; /* Darker shade of Bordeaux for hover */
+  transform: scale(1.1); /* More noticeable scaling */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Bouncing Circle */

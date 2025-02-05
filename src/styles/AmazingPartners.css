@@ -1,0 +1,72 @@
+/* Wrapper to hide overflow and give a smooth container */
+.partners-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+ margin-top: 10px;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  
+}
+.partnerdiv
+{
+  margin: 0 !important;
+  
+}
+
+/* Carousel: Flexbox for horizontal alignment */
+.partners-carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  animation: scroll-left 30s linear infinite; /* Infinite smooth scrolling animation */
+}
+
+/* Individual partner styling */
+.partner {
+  flex-shrink: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.partner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.partner img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.partner img:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframes for smooth infinite scroll */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Scroll entire width of the partners */
+  }
+}
+
+/* Text styling */
+.text-partner {
+  font-weight: 700;
+  font-weight: bold;
+  text-align: center;
+  color: #1d3557;
+  margin: 30px;
+}

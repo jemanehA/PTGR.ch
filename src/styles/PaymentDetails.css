@@ -1,0 +1,114 @@
+.payment-details-container {
+  max-width: 600px;  /* Slightly reduced max-width for a more compact layout */
+  
+  padding: 10px;
+}
+
+.payment-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2C3E50;
+  text-align: center;
+  margin-bottom: 20px; /* Reduced margin */
+}
+
+.login-prompt {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.selected-package {
+  background-color: #f1c40f;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.selected-package h4,
+.selected-package p {
+  color: #2C3E50;
+  font-size: 1rem; /* Reduced font size */
+}
+
+.login-prompt h2 {
+  font-size: 1.3rem; /* Reduced font size */
+  color: #2C3E50;
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.btn {
+  padding: 8px 16px;  /* Reduced padding */
+  font-size: 1rem;  /* Reduced font size */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+}
+
+.btn-success {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #27ae60;
+}
+
+.support-info {
+  margin-top: 30px;  /* Reduced top margin */
+  font-size: 0.9rem;  /* Reduced font size */
+  color: #7F8C8D;
+}
+
+.support-info a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.support-info a:hover {
+  text-decoration: underline;
+}
+
+
+.payment-summary {
+  background-color: #e9e8e8;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.payment-item {
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left; /* Ensure text aligns to the left */
+}
+
+.payment-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px; /* Add space between label and value */
+}
+
+.payment-value {
+  font-weight: 500;
+  color: #555;
+}
+
+.login-prompt {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
