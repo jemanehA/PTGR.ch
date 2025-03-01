@@ -96,14 +96,8 @@ const InvestmentControl = () => {
       transition={{ duration: 1 }}
     >
       <div className=" container ">
-      <h2 style={{
-            fontSize: '2.2rem',
-            marginBottom: '20px',
-            color: '#000000',
-            fontWeight: 'bold',
-            textAlign: 'center'
-          }}>
-            Invest in what you feel most comfortable.
+      <h2 className='subtitle'>
+      Invest in what you feel most comfortable with.
           </h2>
         <div className="row justify-content-center">
           {/* Investment Control */}

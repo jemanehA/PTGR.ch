@@ -26,14 +26,14 @@
 .ba-header h2 {
   font-size: 28px;
   font-weight: 700;
-  color: #1b4672; /* Brand color for the title */
+  color: #1b4672 !important; /* Brand color for the title */
   margin-bottom: 10px;
 }
 
 .ba-description {
   font-size: 16px;
   text-align: start;
-  color: #666; /* Subdued color for the description */
+  color: #000000; /* Subdued color for the description */
 
   margin: 0 0 20px 0; /* Aligns it to the left */
 }
@@ -140,11 +140,21 @@
 
 /* Learn More Link */
 .ba-learn-more {
-  text-align: right;
-  color: #1b4672; /* Brand color for "Learn More" */
-  cursor: pointer;
-  margin-top: auto; /* Push "Learn More" to the bottom of the card */
-  word-wrap: break-word; /* Break long text if necessary */
+  display: block; /* or keep inline-block if parent is flex */
+  width: fit-content;
+  margin-left: auto; /* Key right-alignment property */
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #194169;
+  text-decoration: none;
+  border: 2px solid #194169;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.ba-learn-more:hover {
+  background: #194169;
+  color: #fff;
 }
 
 /* Responsive */

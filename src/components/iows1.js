@@ -77,7 +77,7 @@ const Isows1 = () => {
     Your roadmap to harnessing the power of decentralized technologies.
   </p>
   <button className="ger-sturtedbtn crypto-animate-fade-in crypto-delay-3" onClick={animateServicesSection}> 
-  Learn More <i className="fas fa-play"></i>
+  Learn More 
 </button>
 </div>
   </div>
@@ -125,6 +125,7 @@ const Isows1 = () => {
           alignItems: 'center',
           textAlign: 'center',
           marginBottom: '30px',
+          marginTop: '30px',
         }}
       >
         <Link to="/BookConsultations">

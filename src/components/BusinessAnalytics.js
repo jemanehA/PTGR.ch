@@ -11,12 +11,12 @@ const BusinessAnalytics = () => {
     overview: "Master the world of digital assets and blockchain with the Certified Crypto Expert Course. Designed by industry professionals, this program equips you with the skills to excel in cryptocurrency, whether you're a beginner or advancing your expertise.",
     instructor: "PTGR AG",
     instructorIcon: "/assets/images/logocut.png",
-    enrollmentCount: "27,538 already Booked",
+    enrollmentCount: "538 already Booked",
     rating: "4.7 ★",
     ratingLabel: "(276 reviews)",
     level: "Beginner",
     levelLabel: "Recommended experience",
-    duration: "4x4 hours",
+    duration: "5x4 hours",
     pacing: "Flexible",
     pacingLabel: "Learn at your own pace",
     tabs: [
@@ -33,41 +33,43 @@ const BusinessAnalytics = () => {
         id: 'courses',
         label: 'Content of the Course',
         content: [
-          "🔗 Blockchain Technology Basics: Introduction to digital assets, blockchain, distributed ledger technology (DLT), mining, and more. Suitable for beginners.",
-          "📊 Fields of Application in Blockchain: Analyze various industry segments affected by Blockchain, exploring future business opportunities.",
-          "💰 Cryptocurrencies in Detail: Explore cryptocurrencies like Bitcoin, Ethereum, Ripple, and their functions, origins, and use cases.",
-          "📈 Crypto Trading and Investing: Learn strategies for trading, investing, technical analysis, and risk management.",
-          "🔒 Crypto Security: Best practices to secure crypto wallets and protect against fraud and hacking.",
-          "⚖️ Regulatory Aspects: Overview of legal frameworks for digital assets and tax-related aspects.",
-          "🔮 Future Forecasts: Explore trends like sustainability, CO2 offsetting, and AI for new opportunities.",
+          " • Blockchain Technology Basics: Introduction to digital assets, blockchain, distributed ledger technology (DLT), mining, and more. Suitable for beginners.",
+          " • Fields of Application in Blockchain: Analyze various industry segments affected by Blockchain, exploring future business opportunities.",
+          " • Cryptocurrencies in Detail: Explore cryptocurrencies like Bitcoin, Ethereum, Ripple, and their functions, origins, and use cases.",
+          " • Crypto Trading and Investing: Learn strategies for trading, investing, technical analysis, and risk management.",
+          " • Crypto Security: Best practices to secure crypto wallets and protect against fraud and hacking.",
+          " • Regulatory Aspects: Overview of legal frameworks for digital assets and tax-related aspects.",
+          " • Future Forecasts: Explore trends like sustainability, CO2 offsetting, and AI for new opportunities.",
         ],
       },
       {
         id: 'what-youll-learn',
         label: 'Who Needs It?',
         content: [
-          "🎓 Newcomers: Build a solid foundation in digital assets and blockchain with little or no prior knowledge.",
-          "📈 Financial Professionals: Expand your skills to better understand and incorporate digital assets into investment strategies.",
-          "💼 Business Professionals: Integrate digital assets into your business for improved processes and payment methods.",
-          "💻 Tech Enthusiasts: Deepen your knowledge of blockchain technology and explore digital asset possibilities.",
-          "🛡️ Risk Managers: Understand regulatory aspects and security measures related to digital assets.",
-          "💵 Investors: Make informed decisions in the digital asset market as a retail investor.",
+          " • Newcomers: Build a solid foundation in digital assets and blockchain with little or no prior knowledge.",
+          " • Financial Professionals: Expand your skills to better understand and incorporate digital assets into investment strategies.",
+          " • Business Professionals: Integrate digital assets into your business for improved processes and payment methods.",
+          " • Tech Enthusiasts: Deepen your knowledge of blockchain technology and explore digital asset possibilities.",
+          " • Risk Managers: Understand regulatory aspects and security measures related to digital assets.",
+          " • Investors: Make informed decisions in the digital asset market as a retail investor.",
         ],
       },
       {
         id: 'testimonials',
         label: 'Requirements',
         content: [
-          "Basic knowledge of blockchain",
-          "Interest in new technologies & innovations",
-          "Understanding of AI innovations",
-          "Bachelor/Master degree desirable",
-          "English or German language skills",
+          " • Basic knowledge of blockchain",
+          " • Interest in new technologies & innovations",
+          " • Understanding of AI innovations",
+          " •Bachelor/Master degree desirable",
+          " • English or German language skills",
         ],
       },
     ],
     certification: "Certification is done online, allowing participants to enjoy all the benefits of the course without being tied to fixed hours. Participants are certified by the recognized ICO (International Certification Organization) organization and PTGR AG.",
-    fees: "CHF 2,650 (excluding ICO - examination fee)",
+    fees: "CHF 2,650 (excluding ICO examination fee)",  
+    feesDesc: "The total cost is <strong>CHF 2,650</strong>excluding the ICO examination fee. Please check your individual options for cost deduction, whether you are a private participant or a company."
+
   };
 
   return (
@@ -85,19 +87,14 @@ const BusinessAnalytics = () => {
       {/* Row with Fixed Left Card and Course Card */}
       <div className="ba-row">
         {/* Fixed Left Card */}
-        <div className="ba-fixed-card">
-          <h3>Explore Our Course</h3>
-          <ul>
-            <li className="ba-active">{course.title}</li>
-          </ul>
-        </div>
+
 
         {/* Course Card */}
         <div className="ba-scroll-card">
-        <img src="/assets/images/wealth.webp" alt="crypto" className="ba-card-image" />
+        
           <div className="ba-card-content">
-            <h5>{course.title}</h5>
-            <p>{course.description}</p>
+            {/* <h5>{course.title}</h5> */}
+            <p className='ba-description'>{course.description}</p>
             <ul>
               <li><strong>Duration:</strong> {course.duration}</li>
               <li><strong>Format:</strong> 2 online sessions, 1 on-site session</li>
@@ -107,12 +104,12 @@ const BusinessAnalytics = () => {
               <li><strong>Certification:</strong> {course.certification}</li>
             </ul>
             <Link
-              to="/course-details"
-              state={{ course }} // Pass course data as state
-              className="ba-learn-more"
-            >
-              Learn More →
-            </Link>
+  to="/course-details"
+  state={{ course }}
+  className="ba-learn-more"
+>
+  Learn More →
+</Link>
           </div>
         </div>
       </div>

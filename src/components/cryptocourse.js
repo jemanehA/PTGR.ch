@@ -193,7 +193,7 @@
         <span className="training-icon">⏱️</span>
         <div className="training-description">
           <h3>Training Duration</h3>
-          <p>4x4 hours a 60 minutes</p>
+          <p>5x4 hours a 60 minutes</p>
         </div>
       </div>
 

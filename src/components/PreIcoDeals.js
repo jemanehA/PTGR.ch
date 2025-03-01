@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import BookConsultation from './BookConsultation';
 import { Link } from 'react-router-dom';
 import '../styles/PreIcoDeals.css';
@@ -22,49 +22,118 @@ const PreIcoDeals = () => {
       if (section) observer.unobserve(section);
     };
   }, []);
-
+  const animateServicesSection = () => {
+    const servicesSection = document.getElementById('strategydiv');
+    servicesSection.classList.add('animate-section');
+    servicesSection.scrollIntoView({ behavior: 'smooth' });
+  };
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+  const videoRef = useRef(null); // Ref for the video element
+  const fallbackRef = useRef(null); // Ref for the fallback background
+  useEffect(() => {
+    const video = videoRef.current;
+    const fallback = fallbackRef.current;
 
+    if (video) {
+      video.style.display = 'block'; // Show the video element
+      video.play(); // Start playing the video
+
+      video.addEventListener('loadeddata', () => {
+        // Once the video is loaded, hide the fallback background
+        if (fallback) {
+          fallback.style.display = 'none';
+        }
+      });
+
+      video.addEventListener('error', () => {
+        // If the video fails to load, ensure the fallback background is visible
+        if (fallback) {
+          fallback.style.display = 'block';
+        }
+      });
+    }
+  }, []);
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setInView(entry.isIntersecting); // Set state when the section is in view
+          console.log('Section in view:', entry.isIntersecting); // Debugging
+        },
+        { threshold: 0.5 } // Trigger when 50% of the section is in view
+      );
+  
+      const section = document.getElementById('digital-assets-section'); // Select the section
+      if (section) {
+        observer.observe(section); // Start observing the section
+      }
+  
+      return () => {
+        if (section) {
+          observer.unobserve(section); // Clean up the observer
+        }
+      };
+    }, []);
   return (
     <div>
       <style>
         {`
-          #servicetopmenu {
-            background-color: rgb(5, 21, 43);
+          #productsDropdown {
+            background-color: rgb(20, 46, 82);
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
+            font-weight: bold;
           }
         `}
       </style>
 
-      <section className={`hero-section ${inView ? 'in-view' : ''}`}>
-        <div className="video-container1">
-          <video autoPlay muted loop playsInline id="hero-video">
-            <source src="/assets/images/video/cam.MP4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div className="headingcontnetdiv container">
-          <p className="page-indicator-text">Pre-ICO Deals</p>
-          <p className="headertit">
-            We provide guidance into the world of digital investing.
-            <span className="headtit1">Leading with research and with care.</span>
-          </p>
-          <Link to="/Aboutus">
-            <a className="card-button">
-              Get Started <i className="fas fa-play"></i>
-            </a>
-          </Link>
-        </div>
-      </section>
+
+
+            <section
+            id="digital-assets-section"
+            className={`digital-assets-section ${inView ? 'in-view' : ''}`}
+          >
+            {/* Video Background */}
+            <video
+              id="background-video"
+              className="background-video"
+              ref={videoRef}
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{ display: 'none' }} // Hide video initially
+            >
+              <source src="/assets/images/video/cam.MP4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+      
+            {/* Fallback Background Color */}
+            <div className="background-fallback" ref={fallbackRef}></div>
+      
+            {/* Content */}
+            <div className="container">
+              <div className="digital-assets-content">
+                <h1>
+                  <span className="swatch-white">
+                    <strong>Your Guide to Digital Investing</strong>
+                  </span>
+                </h1>
+                <p style={{ color: 'white' }}>
+                We provide expert guidance in the world of digital investing—leading with research and care. Join our expert-led course and unlock the future of finance.
+                </p>
+                <div className="digital-assets-buttons">
+                  <a href="#" className="ptgrbtn" onClick={animateServicesSection}> 
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
 
       <div className="container menudisplay breadcrumb">
-        <Link to="/" className="homemenu">Home</Link>
-        <span className="separator">&gt;</span>
-        <span className="current-page">Pre-ICO Deals</span>
+        <Link to="/" ><span className="homemenu">Home</span></Link> <span className="separators">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</span> <span className="current-page">Pre-ICO Deals</span>
       </div>
-
       <div className="container afterheading-section">
         <div className="row">
           <div className="col-xl-5 col-lg-5 afterheading-left">
@@ -93,11 +162,11 @@ const PreIcoDeals = () => {
         </div>
       </div>
 
-      <div className="strategydiv">
+      <div className="strategydiv" id="strategydiv">
         <div className="container mt-5">
           <div className="row">
             <div className="col-12 col-md-12">
-              <h3 className="subtitle">How It Works</h3>
+              <h2 className="section-title">How It Works</h2>
               <p className="how-it-works-description">
                 Our simple, investor-focused process guarantees clarity and confidence at every stage:
               </p>
@@ -125,9 +194,9 @@ const PreIcoDeals = () => {
           </div>
 
           <div className="ico-token-cta" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', paddingBottom: '40px' }}>
-            <Link to="/BookConsultations">
-              <button className="cta-button">Ready to Launch? Book a Consultation</button>
-            </Link>
+        <Link to="/BookConsultations?consultationType=Pre-ICO Deals">
+          <button className="cta-button">Ready to Launch? Request a Consultation</button>
+        </Link>
           </div>
 
           {isModalOpen && (

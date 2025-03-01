@@ -133,20 +133,6 @@
     margin-top: 40px;
 }
 
-.cta-button {
-    padding: 12px 25px;
-    background-color: #1d3957;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #3d5f83;
-}
 
 /* Padding container for extra spacing */
 .pad {
@@ -233,10 +219,5 @@
         max-width: 90%;
         padding: 15px;
         height: 300px; /* Smaller card size on mobile */
-    }
-
-    .cta-button {
-        font-size: 1rem;
-        padding: 10px 20px;
     }
 }

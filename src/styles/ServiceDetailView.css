@@ -1,0 +1,238 @@
+/* ServiceDetailView.css */
+
+/* Block: service-detail */
+.service-detail {
+    display: flex;
+    flex-direction: column; /* Stack content vertically on small screens */
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: #e0e2e2;
+  }
+  
+  /* Back Button Container */
+  .service-detail__back-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Back Button */
+  .service-detail__back-button {
+    background: none;
+    border: none;
+    color: #1b4672;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  
+  .service-detail__back-button:hover {
+    color: #0056b3;
+  }
+  
+  /* Main Content */
+  .service-detail__content {
+    width: 100%; /* Full width on small screens */
+  }
+  
+  /* Header */
+  .service-detail__header {
+    margin-bottom: 2rem;
+  }
+  
+  .service-detail__title {
+    font-size: 2rem; /* Slightly smaller on small screens */
+    color: #1b4672;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-detail__description {
+    font-size: 1rem;
+    color: #2c2b2b;
+    line-height: 1.6;
+  }
+  
+  /* Body */
+  .service-detail__body {
+    margin-top: 1.5rem;
+  }
+  
+  .service-detail__list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-detail__list-item {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-detail__html-content {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  /* Testimonials */
+  .service-detail__testimonials {
+    margin-top: 2rem;
+  }
+  
+  .service-detail__testimonials-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .service-detail__testimonials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .service-detail__testimonials h2 {
+    font-size: 1.2rem;        /* Adjust the size of the text */
+    font-weight: bold;      /* Make the text bold */
+    color: #1b4672;            /* Set the text color */
+    margin-bottom: 20px;    /* Add space below the heading */
+    
+  }
+  
+  
+  .service-detail__testimonial {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+  }
+  
+  .service-detail__testimonial-text {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-detail__testimonial-author {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+  }
+  
+  /* Sidebar */
+  .service-detail__sidebar {
+    display: none; /* Hide sidebar on small screens */
+    padding-left: 1rem; /* Reduce padding */
+    border-left: 1px solid #37668d;
+  }
+  
+  .service-detail__sidebar-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .service-detail__sidebar-divider {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin-bottom: 1rem;
+  }
+  
+  .service-detail__sidebar-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .service-detail__sidebar-item {
+    font-size: 1rem;
+    color: #007bff;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .service-detail__sidebar-item:hover {
+    color: #0056b3;
+  }
+  
+  .service-detail__sidebar-item--active {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Responsive Design for Larger Screens */
+  @media (min-width: 768px) {
+    .service-detail {
+      flex-direction: row; /* Side-by-side layout on larger screens */
+      padding: 2rem;
+    }
+  
+    .service-detail__content {
+      width: 75%; /* Main content takes 70% of the width */
+    }
+  
+    .service-detail__sidebar {
+      display: block; /* Show sidebar on larger screens */
+      width: 25%; /* Reduce sidebar width */
+    }
+  }
+  .legal-info {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 20px;
+    border-left: 5px solid #1b4672;
+    font-size: 14px;
+    color: #333;
+  }
+  .watermark-container {
+    position: relative;
+    border: 1px solid #1b4672;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.watermark-title {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    color: #1b4672;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid rgb(26, 58, 105);
+    z-index: 1;
+}
+
+.watermark-content {
+    margin-top: 20px; /* Make space for the title */
+}
+.service-detail {
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the ServiceDetailView container */
+.service-detail {
+  animation: slideInFromTop 0.5s ease-out;
+}
+/* Class to apply when the component is being removed */
+.service-detail.slide-out {
+  transform: translateY(-100%);
+  opacity: 0;
+}

@@ -50,31 +50,28 @@
 
 /* Service list */
 .service-list {
-  list-style-type: none;
+  list-style-type: disc;
   margin-left: 10px;
 }
 
 .service-list li {
   position: relative;
-  padding-left: 30px;
+  
   font-size: 0.95rem;
   color: #444;
   margin-left: 4px;
   margin-bottom: 10px;
 }
-
 .service-list li::before {
-  content: '';
+ 
+  font-weight: bold; /* Make it bolder */
+  font-size: 1.4rem; /* Make it larger */
+  color: #0e1570; /* Adjust color */
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background-image: url('../assets/images/logo2.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+  left: -15px; /* Adjust positioning */
+  top: 2px; /* Move it slightly higher */
 }
+
 
 /* Button style */
 .strategy-contact-btn {

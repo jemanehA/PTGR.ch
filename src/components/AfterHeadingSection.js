@@ -8,7 +8,7 @@ const AfterHeadingSection = () => {
    
     <div class="col-xl-5 col-lg-5 afterheading-left">
       <div class="afterheading-title">
-        <h2 class="afterheading-main-title"> <span className="topspan">Education</span><br></br>Dive into the world of digital assets and blockchain technology with our expert-led programs. </h2>
+        <h2 class="afterheading-main-title"> <span className="topspan"></span><br></br>Dive into the world of digital assets and blockchain technology with our expert-led programs. </h2>
       </div>
     </div>
     
@@ -21,8 +21,10 @@ const AfterHeadingSection = () => {
 
     </div>
     <div>
-    <img src="/assets/images/panedu.png" className='panedu' /></div>
     </div>
+    </div>
+    <div className='panimagee'><img src="/assets/images/panedu.png" className='panedu' /></div>
+    
   </div>
 </div>
 );

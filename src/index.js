@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './bootstrap.min.css'; 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css';
 // import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap';
 // import '@fortawesome/fontawesome-free/css/all.css';

@@ -4,44 +4,21 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-  gap: 50px;
+  gap: 10px;
+  background-color: #ffffff;
   position: relative; /* Ensure the pseudo-element is relative to this container */
   overflow: hidden; /* Hide overflow from the pseudo-element */
   z-index: 11; /* Ensure it stays above other content */
+  border-radius: 20px;
 }
 
 /* Background Shape */
-.contact-page::before {
-  content: '';
-  position: absolute;
-  top: 50%; /* Vertically center within .contact-page */
-  left: 0; /* Start from the left edge of .contact-page */
-  transform: translateY(-50%); /* Adjust for exact vertical centering */
-  width: 70%; /* Cover 70% of the width of .contact-page */
-  height: 400px; /* Adjust this value to control the height */
-  background-color: #1b4672; /* Blue color */
-  border-radius: 0%; /* Oval shape */
-  z-index: 1; /* Ensure it stays behind the content */
-}
 
-/* Form Select Styling */
-.contact-form select {
-  width: 100%; /* Ensure full width */
-  padding: 12px; /* Better spacing */
-  border: 1px solid #1B4572;
-  border-radius: 6px;
-  font-size: 1rem;
-  color: #1B4572;
-  background: #F2F6FC;
-  cursor: pointer;
-  appearance: none; /* Remove default browser styling */
-}
 
 /* Left Section (Text Content) */
 .contact-info {
-  max-width: 400px;
-  color: #f0f0f0; /* Light text color */
-
+  max-width: 500px;
+  color: #0f4979; /* Light text color */
   padding: 20px; /* Add padding for better spacing */
   border-radius: 10px; /* Rounded corners */
   z-index: 2; /* Ensure text is above the background shape */
@@ -50,9 +27,9 @@
 .contact-info h1 {
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  
   text-align: start;
-  color: #ffffff; /* White text color */
+  color: #0f4979; /* White text color */
 }
 
 .contact-info p {
@@ -62,7 +39,7 @@
   word-spacing: 0.03em;
   letter-spacing: -0.01em;
   line-height: 1.5;
-  color: #dddada; /* Light gray text color */
+  color: #7c7777; /* Light gray text color */
 }
 
 /* Right Section (Form Container) */
@@ -72,7 +49,7 @@
   border-radius: 10px;
   width: 500px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border: #153860 4px solid; /* Blue border */
+
   z-index: 10; /* Ensure form is above the background shape */
 }
 
@@ -135,38 +112,6 @@
   box-shadow: 0px 0px 8px rgba(27, 69, 114, 0.3);
 }
 
-/* Checkbox Group Styling */
-.checkbox-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-/* Ensure checkboxes and labels align properly */
-.checkbox-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.checkbox-item input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-/* Ensure checkbox labels align properly */
-.checkbox-label {
-  font-size: 1rem;
-  color: #1B4572;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-}
-
 /* Submit Button */
 .submit-btn {
   background-color: #1B4572;
@@ -193,18 +138,55 @@
   margin-bottom: 15px;
   font-size: 0.9rem;
 }
+.contactusdiv
+{
+  padding: 100px;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .contact-info {
+
+    color: #1B4672; /* Light text color */
+
+  }
+  
+  .contact-info h1 {
+align-content: start;
+    color: #1B4672; /* White text color */
+  }
+  
+  .contact-info p {
+
+    color: #575656; /* Light gray text color */
+  }
   .contact-page {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 80px 20px 50px;
+  
+    
+  }
+
+  .contact-page::before {
+    width: 100%; /* Full width on smaller screens */
+    height: 300px; /* Adjust height for smaller screens */
   }
 
   .contact-info {
     max-width: 100%;
+    
+    
+  }
+
+  .contact-info h1 {
+    font-size: 2.5rem;
+    text-align: start;
+  }
+
+  .contact-info p {
+    text-align: start;
+    
   }
 
   .contact-form-container {
@@ -219,7 +201,13 @@
   .form-group-row input {
     width: 100%;
   }
+  .contactusdiv
+{
+  padding: 10px;
 }
+}
+
+
 
 /* Extra Small Screens */
 @media (max-width: 480px) {
@@ -227,8 +215,12 @@
     padding: 100px 15px 50px;
   }
 
+  .contact-page::before {
+    height: 200px; /* Further adjust height for very small screens */
+  }
+
   .contact-info h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .contact-info p {
@@ -237,77 +229,116 @@
 
   .contact-form-container {
     width: 100%;
-    padding: 25px;
+    padding: 20px;
   }
 
   .submit-btn {
     font-size: 1rem;
-    padding: 14px;
+    padding: 12px;
+  }
+}
+/* Add this to your CSS file */
+
+/* Animation for form inputs and selects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Breadcrumb Navigation */
-.breadcrumb1 {
-  font-size: 1.1rem;
-  color: #1B4572;
-  margin-bottom: 20px;
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  position: relative;
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  animation: fadeIn 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.breadcrumb1-link {
-  text-decoration: none;
-  color: #1B4572;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-  padding: 5px 0;
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 12px rgba(27, 69, 114, 0.4);
 }
 
-.breadcrumb1-link:hover {
-  color: #153860;
+/* Animation for the submit button */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-.breadcrumb1-divider {
-  color: #1B4572;
-  font-weight: bold;
+.submit-btn {
+  animation: pulse 2s infinite;
 }
 
-.breadcrumb1-current {
-  color: #3A3A3A;
-  font-weight: bold;
+.submit-btn:hover {
+  animation: none;
+  transform: scale(1.05);
+}
+/* Add this to your CSS file */
+
+/* Loading spinner */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.breadcrumb1-line {
-  border-top: 1px solid #486d96;
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #1B4572;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
   width: 100%;
-  max-width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #1B4572;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #1B4572;
+  background: #F2F6FC;
+  transition: all 0.3s ease-in-out;
 }
 
-.contactusdiv {
-  padding-top: 180px;
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.country-code-input {
+  flex: 1; /* Take up less space */
+  max-width: 80px; /* Limit the width of the country code input */
+  text-align: center; /* Center the text */
 }
 
-@media (max-width: 768px) {
-  .contactusdiv {
-    margin-top: 40px;
-  }
-
-  .contact-info h1 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: start;
-    color: #1B4572;
-  }
+.phone-input {
+  flex: 3; /* Take up more space */
 }
-
-@media (max-width: 480px) {
-  .contactusdiv {
-    margin-top: 20px;
-  }
+.contactpage {
+  text-align: center; /* Centers inline elements like text */
+  display: flex; /* Enables flexbox for centering */
+  justify-content: center; /* Centers horizontally */
+  
+  width: 100%;
+  
 }

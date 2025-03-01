@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import ReactHtmlParser from 'react-html-parser';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../styles/CourseDetails.css';
+import '../styles/schedule.css';
 
 const CourseDetails = () => {
   const [activeTab, setActiveTab] = useState('about');
@@ -68,42 +70,46 @@ const CourseDetails = () => {
 
   return (
     <div className="course-details-container">
-      {/* Breadcrumb Navigation */}
-      <div className="breadcrumb">
-        <Link to="/">Home</Link> &gt; {course.title}
-      </div>
-
-      {/* Course Header with Video */}
-      <div className="course-header">
-        <h1>{course.title}</h1>
-        <div className="video-section">
-          <button className="video-button" onClick={toggleVideo}>
-            <span className="video-icon">▶️</span> Watch Video
+            <div className="breadcrumb">
+        <Link to="/">Home</Link>&nbsp;&gt;&nbsp;<Link to="/education">Education</Link>&nbsp;<span className='separators'>&gt;&nbsp;</span>{course.title}
+      </div><br></br>
+      {/* Hero Section with Full-Width Image */}
+      <div className="hero-section" style={{ backgroundImage: "url(/assets/images/blockchainn.jpeg)" }}>
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1>{course.title}</h1>
+            <p>{course.overview}</p>
+          </div>
+          <div className='videocontainer'>
+          <button className="watch-video-button" onClick={toggleVideo}>
+            <span className="video-icon"></span> Watch Video
           </button>
-          {showVideo && (
-            <div className="video-popup">
-              <div className="video-container">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={course.videoUrl}
-                  title="Course Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <button className="close-button" onClick={toggleVideo}>
-                Close
-              </button>
-            </div>
-          )}
+          </div>
         </div>
       </div>
+      <div className='videocontainer'>
+      {/* Video Popup */}
+      {showVideo && (
+        <div className="video-popup-overlay">
+  <div className="video-popup">
+    <button className="close-button" onClick={toggleVideo} aria-label="Close video"></button>
+    <div className="video-container">
+      <iframe
+        src={course.videoUrl}
+        title="Course Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+)}
+</div>
+      {/* Breadcrumb Navigation */}
+
 
       {/* Course Overview */}
       <div className="course-overview">
-        <p>{course.overview}</p>
         <div className="course-meta">
           <span className="instructor">
             <img
@@ -148,7 +154,7 @@ const CourseDetails = () => {
       <div className="tab-content">
         {course.tabs.map((tab) => (
           activeTab === tab.id && (
-            <div key={tab.id} className={`${tab.id}-section`}>
+            <div key={tab.id} className='tab-section'>
               <h2>{tab.label}</h2>
               {renderTabContent(tab.content)}
             </div>
@@ -164,9 +170,15 @@ const CourseDetails = () => {
         </div>
         <div className="fees">
           <h2>Fees</h2>
-          <p>{course.fees}</p>
+          <p>{ReactHtmlParser(course.feesDesc)}</p>
         </div>
       </div>
+
+      {/* Schedule Section */}
+      { <div className='tab-content'>
+        <h2 className="schedule-heading">Schedule</h2>
+              <p style={{textAlign:'left'}}>All courses are held individually, at most once per quarter, provided that at least five participants have enrolled.</p>
+      </div> }
     </div>
   );
 };
@@ -200,6 +212,7 @@ CourseDetails.propTypes = {
         ).isRequired,
         certification: PropTypes.string.isRequired,
         fees: PropTypes.string.isRequired,
+        heroImage: PropTypes.string.isRequired,
       }).isRequired,
     }).isRequired,
   }).isRequired,

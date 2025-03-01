@@ -1,0 +1,604 @@
+/* Base Styles */
+.course-details-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.course-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.course-header h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.video-section {
+  position: relative;
+}
+
+.video-button {
+  background: #1B4572;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.video-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #1B4572;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.course-overview {
+  margin-bottom: 30px;
+}
+
+.course-overview p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.course-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.instructor-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.course-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.enroll-button {
+  background: #1B4572;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.enrollment {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.course-details-box {
+  display: flex;
+  justify-content: space-around;
+  background: #F2F6FC;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.detail-column {
+  text-align: center;
+}
+
+.detail-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1B4572;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.vertical-line {
+  width: 1px;
+  background: #ddd;
+}
+
+.tabbed-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #1B4572;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #1B4572;
+  font-weight: bold;
+}
+
+
+.certification-fees-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.certification, .fees {
+  flex: 1;
+  padding: 20px;
+ 
+ 
+  margin: 0 10px;
+}
+
+.schedule-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.unique-schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.unique-schedule-table .header,
+.unique-schedule-table .cell {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #2c2b2b;
+}
+
+.unique-schedule-table .header {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+}
+
+.unique-schedule-table .cell {
+  background-color: #fff;
+  color: #555;
+}
+
+.unique-schedule-table .highlight {
+  background-color: #e3f2fd;
+  font-weight: bold;
+  color: #1976d2;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .course-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .course-details-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail-column {
+    margin-bottom: 20px;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .tabbed-navigation {
+    flex-direction: column;
+  }
+
+  .tab-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .certification-fees-section {
+    flex-direction: column;
+  }
+
+  .certification, .fees {
+    margin: 10px 0;
+  }
+
+  .unique-schedule-table {
+    font-size: 0.9rem;
+  }
+
+  .unique-schedule-table .header,
+  .unique-schedule-table .cell {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .course-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .video-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .course-overview p {
+    font-size: 0.9rem;
+  }
+
+  .enroll-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .enrollment {
+    font-size: 0.8rem;
+  }
+
+  .detail-value {
+    font-size: 1.2rem;
+  }
+
+  .detail-label {
+    font-size: 0.8rem;
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .certification, .fees {
+    padding: 10px;
+  }
+
+  .schedule-heading {
+    font-size: 1.2rem;
+  }
+
+  .unique-schedule-table {
+    font-size: 0.8rem;
+  }
+
+  .unique-schedule-table .header,
+  .unique-schedule-table .cell {
+    padding: 6px;
+  }
+}
+
+
+
+
+
+
+
+
+* Payment Form Container */
+.payment-form-container {
+    margin-top: 130px;
+    padding: 20px;
+  }
+  .countrycode
+  {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #1B4572;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #1B4572;
+    background: #F2F6FC;
+  }
+  .payment-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background: white;
+    padding: 20px;
+  }
+  
+  /* Left Section (Payment Info) */
+  .payment-info {
+    max-width: 400px;
+    color: #1B4572;
+  }
+  
+  .payment-info h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1B4572;
+  }
+  
+  .payment-info p {
+    font-size: 1.2rem;
+    color: #3A3A3A;
+    line-height: 1.6;
+  }
+  
+  /* Right Section (Payment Form) */
+  .payment-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1B4572;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Fields */
+  .payment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #1B4572;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #1B4572;
+    background: #F2F6FC;
+  }
+  
+  .payment-form input:focus {
+    outline: none;
+    border-color: #153860;
+    box-shadow: 0px 0px 8px rgba(27, 69, 114, 0.3);
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    background-color: #1B4572;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+  }
+  
+  .submit-btn:hover {
+    background-color: #153860;
+    transform: translateY(-2px);
+  }
+  
+  /* Alert Messages */
+  .alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .alert-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .payment-page {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .payment-info,
+    .payment-form {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .payment-info h1 {
+      font-size: 2rem;
+    }
+  
+    .payment-info p {
+      font-size: 1rem;
+    }
+  }
+  /* Payment Method Buttons */
+.payment-methods {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .payment-method {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #1B4572;
+    border-radius: 6px;
+    background: #F2F6FC;
+    color: #1B4572;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .payment-method.active {
+    background: #1B4572;
+    color: white;
+  }
+  
+  .payment-method:hover {
+    background: #153860;
+    color: white;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    background-color: #1B4572;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+  }
+  
+  .submit-btn:hover {
+    background-color: #153860;
+    transform: translateY(-2px);
+  }
+  .error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: block;
+  }
+  
+
+  
+  .form-group-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .form-group-row .form-group {
+    flex: 1;
+  }
+  .processing-payment {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .progress-bar::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: #007bff;
+    animation: progress 2s linear infinite;
+  }
+  
+  @keyframes progress {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(200%);
+    }
+  }
+  /* Course Type Selection */
+.course-type-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.course-type-options label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+ 
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Ensure text doesn't overflow */
+
+}
+
+.course-type-options label:hover {
+  background: #1B4572;
+  color: white;
+}
+
+.course-type-options input[type="radio"] {
+  
+}
+
+.course-type-options input[type="radio"]:checked + label {
+  background: #1B4572;
+  color: white;
+}
+/* Minimalist Info Icon */
+.info-icon {
+  cursor: pointer;
+  color: #1B4572;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.info-icon:hover {
+  color: #153860; /* Darker shade on hover */
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import blogs from '../assets/blogs.json';
 import '../styles/detaiBlogs.css';
@@ -7,7 +7,9 @@ const BlogDetail = () => {
   const { slug } = useParams();
   const blog = blogs.find(blog => blog.slug === slug);
   const relatedPosts = blogs.filter(b => blog.relatedPosts.includes(b.id));
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   // Function to convert body array to HTML string
   const renderBodyToHTML = (body) => {
     return body
@@ -31,7 +33,7 @@ const BlogDetail = () => {
           case 'infographic':
             return `
               <figure class="bd-infographic">
-                <img src="${item.image}" alt="${item.title}" />
+               
                 <figcaption>${item.caption}</figcaption>
               </figure>
             `;
@@ -74,8 +76,8 @@ const BlogDetail = () => {
             <header className="bd-article-header">
               <div className="bd-hero">
                 <img 
-                  // src={blog.featuredImage} 
-                  src="/assets/images/logo.png"
+                  src={blog.featuredImage} 
+                  
                   alt={blog.title} 
                   className="bd-hero-img"
                 />
@@ -84,12 +86,12 @@ const BlogDetail = () => {
                   <h1 className="bd-title">{blog.title}</h1>
                   <div className="bd-author-meta">
                     <img 
-                      src="/assets/images/logo.png"
+                      src="/assets/images/log1.png"
                       alt={blog.author.name} 
                       className="bd-author-img"
                     />
                     <div>
-                      <p className="bd-author-name">{blog.author.name}</p>
+                      <p className="bd-author-name">PTGR AG</p>
                       <p className="bd-post-date">{blog.date}</p>
                     </div>
                   </div>
@@ -110,53 +112,10 @@ const BlogDetail = () => {
             />
 
             {/* Media Embed */}
-            {blog.content.media?.map((media, index) => (
-              media.type === 'video' ? (
-                <div key={index} className="bd-media-embed">
-                  <iframe 
-                    title={media.title}
-                    src={media.url}
-                    allowFullScreen
-                  />
-                </div>
-              ) : (
-                <figure key={index} className="bd-content-image">
-                  <img src={media.url} alt={media.alt} />
-                  <figcaption className="bd-image-caption">{media.alt}</figcaption>
-                </figure>
-              )
-            ))}
+
 
             {/* Author Bio */}
-            <div className="bd-author-bio">
-              <h3 className="bd-bio-title">About the Author</h3>
-              <div className="bd-bio-content">
-                <img 
-                  src="/assets/images/logo.png"
-                  alt={blog.author.name} 
-                  className="bd-bio-img"
-                />
-                <div>
-                  <p className="bd-bio-text">{blog.author.bio}</p>
-                  <div className="bd-social-links">
-                    <a 
-                      href={`https://twitter.com/${blog.author.social?.twitter}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Twitter
-                    </a>
-                    <a 
-                      href={blog.author.social?.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      LinkedIn
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+    
           </article>
         </main>
 

@@ -3,7 +3,7 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
-    margin-top: 140px;
+    margin-top: 20px;
   }
   
   /* Back Button */
@@ -31,6 +31,7 @@
   /* Hero Section */
   .event-hero {
     margin-bottom: 40px;
+    margin-top: 20px;
   }
   
   .hero-image-container {
@@ -181,7 +182,7 @@
   }
   
   .highlight-item::before {
-    content: '★';
+   
     color: #007bff;
     margin-right: 10px;
   }

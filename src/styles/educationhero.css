@@ -3,13 +3,13 @@
 
 /* Enroll Button */
 .ger-sturtedbtn {
-  background-color: #7C0A02; /* Bordeaux color for the button */
+  background-color: #5c011e; /* Bordeaux color for the button */
   color: #fff;
-  font-size: 1.3rem; /* Increased font size */
+  font-size: 1.2rem; /* Increased font size */
   font-weight: 600;
-  padding: 15px 30px; /* Increased padding to make the button bigger */
+  padding: 10px 30px; /* Increased padding to make the button bigger */
   border: none;
-  border-radius: 8px; /* Slightly larger border radius */
+  border-radius: 4px; /* Slightly larger border radius */
   cursor: pointer;
   opacity: 0;
   animation: fadeIn 1s ease-in-out 0.9s forwards;
@@ -17,11 +17,23 @@
 }
 
 .ger-sturtedbtn:hover {
-  background-color: #8c2d2d; /* Darker shade of Bordeaux for hover */
+  background-color: #5c011e; /* Darker shade of Bordeaux for hover */
   transform: scale(1.1); /* More noticeable scaling */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
 }
+@media (max-width: 768px) {
+  .ger-sturtedbtn {
+    font-size: 1.1rem; /* Slightly smaller font size for tablets */
+    padding: 12px 25px; /* Slightly smaller padding */
+  }
+}
 
+@media (max-width: 480px) {
+  .ger-sturtedbtn {
+    font-size: 1rem; /* Smaller font size for mobile devices */
+    padding: 10px 20px; /* Smaller padding */
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;

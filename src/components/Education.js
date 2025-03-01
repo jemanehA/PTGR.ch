@@ -17,12 +17,10 @@ const Education = () => {
     { label: 'Service Name', value: 'Certified Crypto Expert Course' },
     { label: 'Price', value: 'CHF 1.00' },
   ];
-
-  const animateServicesSection = () => {
-    const servicesSection = document.getElementById('Educations');
-    servicesSection.classList.add('animate-section');
-    servicesSection.scrollIntoView({ behavior: 'smooth' });
-  };
+  useEffect(() => {
+    document.title = 'PTGR AG Education';
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling to the top
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -76,18 +74,16 @@ const Education = () => {
             <p className="crypto-hero-subtitle crypto-animate-text crypto-delay-2">
               Join our expert-led course and unlock the future of finance.
             </p>
-            <button className="ger-sturtedbtn crypto-animate-fade-in crypto-delay-3" onClick={animateServicesSection}>
-              Learn More <i className="fas fa-play"></i>
-            </button>
+            {/* <button className="ger-sturtedbtn crypto-animate-fade-in crypto-delay-3" onClick={animateServicesSection}>
+              Learn More 
+            </button> */}
           </div>
         </div>
         <div className="crypto-bouncing-circle"></div>
       </section>
 
       <div className="container menudisplay breadcrumb">
-        <Link to="/" className="homemenu">Home</Link>
-        <span className="separator">&gt;</span>
-        <span className="current-page">Education</span>
+        <Link to="/" ><span className="homemenu">Home</span></Link> <span className="separators">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</span> <span className="current-page">Education</span>
       </div>
 
       <AfterHeadingSection />

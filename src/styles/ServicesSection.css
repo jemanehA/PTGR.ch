@@ -1,188 +1,98 @@
-#services {
-    background-color: rgb(255, 255, 255); /* White background for the entire section */
-    margin: 0; /* Remove any default margin */
-    padding: 40px 0; /* Add padding around the section for spacing */
-    -webkit-box-sizing: border-box; /* Ensure consistent box sizing in Webkit browsers */
-    -moz-box-sizing: border-box; /* Ensure consistent box sizing in Firefox */
-    box-sizing: border-box; /* Consistent box sizing across all browsers */
-    scroll-margin-top: 120px;
-}
-#corefunctionality
-{
-    scroll-margin-top: 120px;
-}
-#digitalassetservices
-{
-    scroll-margin-top: 130px;
-}
-#Educations
-{
-    scroll-margin-top: 130px;
-}
-#web3courses
-{
-    scroll-margin-top: 130px;
-}
-#openjobs
-{
-    scroll-margin-top: 130px;
+/* Services Section */
+.services-section {
+  background-color: #f9f9f9;
+  padding: 80px 0;
+  scroll-margin-top: 120px;
 }
 
-/* Service Card Section */
-.services-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap; /* Ensure flex-wrap works in Webkit browsers */
-    -ms-flex-wrap: wrap; /* Ensure flex-wrap works in IE */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Service Card */
+
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
 .service-card {
-    position: relative;
-    width: 23%;  /* Adjust width to fit 4 cards in a row */
-    height: 400px; /* Set fixed height for uniform card sizes */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 20px 20px rgba(19, 31, 73, 0.1);
-    margin-bottom: 30px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column; /* Ensure image and content stack vertically */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease; /* Webkit transition */
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
-/* Hover Effect for Card */
-.service-card:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Service Image */
 .service-image {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    width: 100%; /* Ensure image fills the width of the container */
-    height: 200px;  /* Fixed height for all images */
-    flex-shrink: 0;  /* Prevent shrinking */
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px 15px 0 0;
 }
 
-/* Overlay Effect */
-.service-card:hover .overlay {
-    opacity: 1;  /* Show the overlay on hover */
-    transform: translateY(0);  /* Move the overlay from top to bottom */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Slight opacity for overlay */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;  /* Start with overlay hidden */
-    transition: opacity 0.4s ease, transform 0.6s ease; /* Fade-in and slide effect */
-    transform: translateY(-100%); /* Initially hide the overlay above the card */
-    padding: 20px;
-    text-align: center;
-    z-index: 2;  /* Ensure overlay is on top of the image and content */
-}
-
-/* Button and Description in Overlay */
-.discover-more-btn {
-    background-color: #7C0A02;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    -webkit-transition: background-color 0.3s ease; /* Webkit transition */
-}
-
-.discover-more-btn:hover {
-    background-color: #8c2d2d;
-}
-
-.card-description {
-    color: #333;
-    font-size: 1rem;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-/* Content Section Below Image */
 .service-content {
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 0 0 10px 10px;
-    z-index: 1;
-    flex-grow: 1; /* Ensure content fills available space */
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.container h2 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #163962;
-    margin-bottom: 15px;
-}
-.service-content h3 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #163962;
-    margin-bottom: 15px;
+.service-title {
+  font-size: 1.5rem;
+  color: #163962;
+  margin-bottom: 10px; /* Reduced from 15px to reduce space */
+  font-weight: 700;
+  height: 50px;
 }
 
-.service-content p {
-    font-size: 1rem;
-    color: #555555;
-    line-height: 1.6;
-    -webkit-line-height: 1.6; /* Ensure consistent line height in Webkit browsers */
-    -moz-line-height: 1.6; /* Ensure consistent line height in Firefox */
+.service-description1 {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
 }
 
-#services h2 {
-    text-align: center;
-    color: #163962;  /* The specified color */
-    font-size: 2.5rem; /* Adjust the size if needed */
-    margin-bottom: 30px; /* Space below the heading */
-    -webkit-font-smoothing: antialiased; /* Smooth fonts in Webkit browsers */
-    -moz-osx-font-smoothing: grayscale; /* Smooth fonts in Firefox */
+.button-container {
+  text-align: center;
+  margin-top: auto; /* Push the button to the bottom */
 }
 
-/* Media Queries */
-@media (max-width: 992px) {
-    .service-card {
-        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
-        max-width: calc(50% - 20px);
-    }
+.learn-more-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #194169;
+  text-decoration: none;
+  border: 2px solid #194169;
+  border-radius: 30px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+.learn-more-btn:hover {
+  background: #194169;
+  color: #fff;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .services-cards {
-        gap: 15px; /* Reduce gap between cards */
-    }
 
-    .service-card {
-        flex: 1 1 100%; /* 1 card per row */
-        max-width: 100%;
-    }
 
-    .service-card .service-content p {
-        font-size: 0.9rem; /* Smaller text for mobile */
-    }
-}
+  .services-grid {
+      grid-template-columns: 1fr;
+  }
 
-@media (max-width: 576px) {
-    #services h2 {
-        font-size: 2rem; /* Smaller heading for small screens */
-    }
+  .service-content {
+      padding: 20px; /* Adjust padding for small devices */
+  }
+
+  .service-title, .service-description {
+      text-align: left; /* Ensure text aligns to the left on small devices */
+  }
 }

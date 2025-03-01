@@ -9,11 +9,15 @@
 
 /* Container Styles */
 .blogs-container {
-
-
   padding: 0 20px;
   margin: 4rem auto;
   margin-top: 10px;
+}
+.blogs-container h1 {
+  font-size: 1.5rem; /* Adjust the size as needed */
+  font-weight: bold;
+  margin-bottom: 1rem; /* Space below the heading */
+  color: #1b4672; /* Adjust the color as needed */
 }
 
 /* Title Styles */
@@ -45,6 +49,9 @@
   box-shadow: 0 4px 20px rgba(27, 70, 114, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .blog-card:hover {
@@ -82,6 +89,9 @@
 /* Content Section */
 .card-content {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .meta-info {
@@ -123,6 +133,13 @@
   margin-bottom: 1.5rem;
 }
 
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto; /* Pushes the button to the bottom */
+}
+
 /* Button Styles */
 .card-button {
   display: inline-flex;
@@ -153,17 +170,21 @@
 .card-button:hover .arrow-icon {
   transform: translateX(3px);
 }
-
+.crypto-animate-fade-in
+{
+  color: #1B4672;
+  font-weight: 700;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 2rem;
+    font-size: 1.6rem !important;
   }
-  
+
   .card-title {
     font-size: 1.15rem;
   }
-  
+
   .card-excerpt {
     font-size: 0.9rem;
   }

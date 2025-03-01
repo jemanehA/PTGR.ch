@@ -3,7 +3,7 @@
     margin: 0 auto;
     margin-bottom: 20px;
     margin-top: 50px;
-    position: sticky;
+  
     top: 0; /* Stick to the top of the viewport */
     background: white; /* Add a background to avoid content overlap */
     z-index: 100; /* Ensure it stays above other content */
@@ -19,12 +19,13 @@
   /* Fixed Left Card */
   .ssc-fixed-card {
     flex: 0 0 250px; /* Fixed width for the left card */
-    background: #1b4672; /* Brand color for the fixed card */
+    background: #ebecec; /* Brand color for the fixed card */
     padding: 20px;
     border-radius: 8px 0 0 8px; /* Only top-left and bottom-left corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: white; /* White text for better contrast */
+    color: rgb(28, 72, 138); /* White text for better contrast */
     height: auto; /* Stretch to match the tallest card */
+    border: solid 1px black;
   }
   
   .ssc-card-image {
@@ -51,7 +52,7 @@
   
   .ssc-fixed-card li.ssc-active {
     font-weight: bold;
-    color: #ffcc00; /* Highlight active item with a contrasting color */
+    color: #86210f; /* Highlight active item with a contrasting color */
     transform: scale(1.05);
   }
   
@@ -63,6 +64,7 @@
     scroll-behavior: smooth;
     white-space: nowrap;
     padding-bottom: 10px;
+   
   }
   
   .ssc-scroll-container::-webkit-scrollbar {
@@ -75,6 +77,30 @@
   }
   
   .ssc-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+
+  .web-scroll-container {
+    flex: 1; /* Takes up remaining space */
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    
+  }
+  
+  .web-scroll-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .web-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .web-scroll-container::-webkit-scrollbar-track {
     background: #f1f1f1;
   }
   
@@ -116,6 +142,7 @@
   }
   .ssc-card-content p {
     white-space: normal; /* Allow paragraph text to wrap */
+    color: #2d2d2e;
     word-wrap: break-word; /* Break long words if necessary */
     margin-bottom: 12px; /* Add spacing below paragraphs */
   }
@@ -141,9 +168,19 @@
     text-align: right;
     color: #1b4672; /* Brand color for "Learn More" */
     cursor: pointer;
+    border: 2px solid #194169;
+    width: fit-content;
+    margin-left: auto; 
     margin-top: auto; /* Push "Learn More" to the bottom of the card */
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease;
   }
-  
+  .ssc-learn-more:hover {
+    background: #194169;
+    color: #fff;
+  }
   /* Responsive */
   @media (max-width: 768px) {
     .ssc-row {
@@ -157,6 +194,11 @@
   
     /* Stack cards vertically on small devices */
     .ssc-scroll-container {
+      flex-direction: column; /* Stack cards vertically */
+      overflow: auto; /* Allow vertical scrolling */
+      white-space: normal; /* Allow text to wrap */
+    }
+    .web-scroll-container {
       flex-direction: column; /* Stack cards vertically */
       overflow: auto; /* Allow vertical scrolling */
       white-space: normal; /* Allow text to wrap */

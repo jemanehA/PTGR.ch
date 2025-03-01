@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import '../styles/JobComponnent.css'; // Import the CSS file for styling
 import { Link } from 'react-router-dom';  // Ensure Link is imported
 
@@ -33,48 +33,109 @@ const JobComponnent = () => {
     // Optional: Scroll to the section for better visibility
     servicesSection.scrollIntoView({ behavior: 'smooth' });
   };
+  const videoRef = useRef(null); // Ref for the video element
+    const fallbackRef = useRef(null); // Ref for the fallback background
+    useEffect(() => {
+      const video = videoRef.current;
+      const fallback = fallbackRef.current;
+  
+      if (video) {
+        video.style.display = 'block'; // Show the video element
+        video.play(); // Start playing the video
+  
+        video.addEventListener('loadeddata', () => {
+          // Once the video is loaded, hide the fallback background
+          if (fallback) {
+            fallback.style.display = 'none';
+          }
+        });
+  
+        video.addEventListener('error', () => {
+          // If the video fails to load, ensure the fallback background is visible
+          if (fallback) {
+            fallback.style.display = 'block';
+          }
+        });
+      }
+    }, []);
+      useEffect(() => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            setInView(entry.isIntersecting); // Set state when the section is in view
+            console.log('Section in view:', entry.isIntersecting); // Debugging
+          },
+          { threshold: 0.5 } // Trigger when 50% of the section is in view
+        );
+    
+        const section = document.getElementById('digital-assets-section'); // Select the section
+        if (section) {
+          observer.observe(section); // Start observing the section
+        }
+    
+        return () => {
+          if (section) {
+            observer.unobserve(section); // Clean up the observer
+          }
+        };
+      }, []);
   return (
     <div>
       <style>
-        {`
-          #aboutustopmenu {
-            background-color: rgb(5, 21, 43);
+      {`
+          #aboutUsDropdown {
+            background-color: rgb(20, 46, 82);
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
+            font-weight: bold;
           }
         `}
       </style>
 
       {/* Hero Section */}
-      <section id="crypto-hero-section" className={`crypto-hero-section ${inView ? 'crypto-in-view' : ''}`}>
-        <video className="crypto-hero-video-background" autoPlay muted loop playsInline>
-          <source src="/assets/images/video/Aboutus.MP4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="crypto-hero-overlay"></div> {/* Gradient overlay */}
-        <div className="crypto-hero-content container">
-          <div className="crypto-hero-text">
-          <h1 className="crypto-header-title">
-    <span className="crypto-title-line crypto-animate-text">Join us and contribute</span><br/>
-    <span className="crypto-title-line crypto-animate-text crypto-delay-1">
-      <span className="crypto-highlight-text">to innovative solutions.</span>
-    </span>
-  </h1>
-            <p className="crypto-hero-subtitle crypto-animate-text crypto-delay-2">
-            Explore career opportunities in the digital investing field.
-            </p>
-            <button className="ger-sturtedbtn crypto-animate-fade-in crypto-delay-3" onClick={animateServicesSection}> 
-  Apply Now <i className="fas fa-play"></i>
-</button>
-          </div>
-        </div>
-        <div className="about-bouncing-circle"></div>
-      </section>
+      <section
+                                      id="digital-assets-section"
+                                      className={`digital-assets-section ${inView ? 'in-view' : ''}`}
+                                    >
+                                      {/* Video Background */}
+                                      <video
+                                        id="background-video"
+                                        className="background-video"
+                                        ref={videoRef}
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                        style={{ display: 'none' }} // Hide video initially
+                                      >
+                                        <source src="/assets/images/video/Aboutus4.MP4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                      </video>
+                                
+                                      {/* Fallback Background Color */}
+                                      <div className="background-fallback" ref={fallbackRef}></div>
+                                
+                                      {/* Content */}
+                                      <div className="container">
+                                        <div className="digital-assets-content">
+                                          <h1>
+                                            <span className="swatch-white">
+                                              <strong>Join Us and Drive Innovative Solutions</strong>
+                                            </span>
+                                          </h1>
+                                          <p style={{ color: 'white' }}>
+                                          Explore exciting career opportunities in the digital investing field and be part of the future of finance.
+                                          </p>
+                                          <div className="digital-assets-buttons">
+                      
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </section>
       {/* Breadcrumb */}
-      <div className="container menudisplay breadcrumb">
-        <Link to="/" className="homemenu">Home</Link> <span className="separator">&gt;</span> <span className="current-page">Jobs</span>
-      </div>
 
+      <div className="container menudisplay breadcrumb">
+        <Link to="/" ><span className="homemenu">Home</span></Link> <span className="separators">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</span> <span className="current-page">Jobs</span>
+      </div>
       <div class="container afterheading-section">
   <div class="row">
    
@@ -108,9 +169,9 @@ const JobComponnent = () => {
           <div className="row">
             {/* Card 1 */}
             <div className="col-md-3 mb-4">
-              <div className="customecard fixed-size-card text-center">
-                <div className="card-body">
-                  <i className="fas fa-clock fa-3x mb-3"></i>
+              <div className=" feature-card">
+                <div className="cardabout">
+                  <i className="fas fa-clock fa-3x mb-3 custom-icon"></i>
                   <h5 className="card-title">Flexible Working Hours Offered</h5>
                   <p className="card-text">
                     Take advantage of remote work options and flexible working hours to maintain your work-life balance, because the well-being of our team always comes first.
@@ -121,9 +182,9 @@ const JobComponnent = () => {
 
             {/* Card 2 */}
             <div className="col-md-3 mb-4">
-              <div className="customecard fixed-size-card text-center">
-                <div className="card-body">
-                  <i className="fas fa-handshake fa-3x mb-3"></i>
+              <div className=" feature-card">
+                <div className="cardabout">
+                <i className="fas fa-users fa-3x mb-3 custom-icon"></i>
                   <h5 className="card-title">Attractive Working Conditions</h5>
                   <p className="card-text">
                     We offer a highly competitive salary as well as various bonus awards and other benefits for your commitment to the future growth of our company.
@@ -134,9 +195,9 @@ const JobComponnent = () => {
 
             {/* Card 3 */}
             <div className="col-md-3 mb-4">
-              <div className="customecard fixed-size-card text-center">
-                <div className="card-body">
-                  <i className="fas fa-users fa-3x mb-3"></i>
+              <div className=" feature-card">
+                <div className="cardabout">
+                  <i className="fas fa-users fa-3x mb-3 custom-icon"></i>
                   <h5 className="card-title">Active Market Influences</h5>
                   <p className="card-text">
                     Become part of the leading digital asset consulting company in Switzerland and actively shape the Future of Finance together for lasting impact.
@@ -147,9 +208,9 @@ const JobComponnent = () => {
 
             {/* Card 4 */}
             <div className="col-md-3 mb-4">
-              <div className="customecard fixed-size-card text-center">
-                <div className="card-body">
-                  <i className="fas fa-gift fa-3x mb-3"></i>
+              <div className="feature-card">
+                <div className="cardabout">
+                  <i className="fas fa-gift fa-3x mb-3 custom-icon"></i>
                   <h5 className="card-title">Teambuilding</h5>
                   <p className="card-text">
                     Our fast-paced and productive environment is complemented by regular social events, fostering collaboration, creativity, and team bonding throughout the year, enhancing performance.
@@ -176,8 +237,7 @@ const JobComponnent = () => {
               The future of digital finance has begun. Join us on this journey. Are you a sales professional with a background in the business, investment or finance sector and would you like to be rewarded for your success? Then you’ve come to the right place. For our fast-growing company in the digital finance sector, we are looking for a Broker in Finance (m/f/d) 100%!
             </p>
             <div className="d-flex justify-content-start gap-3">
-              <a href="#" className="btn btn-primary">Apply Now</a>
-              <a href="#" className="btn btn-secondary">Job Detail</a>
+              <Link  to="/ContactUsForm" className="ptgrbtn">Apply Now</Link>
             </div>
           </div>
         </div>
@@ -193,8 +253,7 @@ const JobComponnent = () => {
               The future of digital finance has begun. Join us on this journey. Are you a sales professional with a background in the business, investment or finance sector and would you like to be rewarded for your success? Then you’ve come to the right place. For our fast-growing company in the digital finance sector, we are looking for a Sales Manager (m/f/d) 100% with immediate effect.
             </p>
             <div className="d-flex justify-content-start gap-3">
-              <a href="#" className="btn btn-primary">Apply Now</a>
-              <a href="#" className="btn btn-secondary">Job Detail</a>
+              <Link  to="/ContactUsForm" className="ptgrbtn">Apply Now</Link>
             </div>
           </div>
         </div>

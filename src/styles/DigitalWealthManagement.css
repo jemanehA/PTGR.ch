@@ -18,11 +18,20 @@
 /* Fixed Left Card */
 .dwm-fixed-card {
   flex: 0 0 350px; /* Fixed width for the left card */
-  background: #1b4672; /* Brand color for the fixed card */
+  background: #f4f5f5; /* Brand color for the fixed card */
   padding: 20px;
   border-radius: 8px 0 0 8px; /* Only top-left and bottom-left corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: white; /* White text for better contrast */
+  color: #1b4672;
+  height: auto; /* Stretch to match the tallest card */
+}
+.dsm-fixed-card {
+  flex: 0 0 350px; /* Fixed width for the left card */
+  background: #f4f5f5; /* Brand color for the fixed card */
+  padding: 20px;
+  border-radius: 8px 0 0 8px; /* Only top-left and bottom-left corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #1b4672;
   height: auto; /* Stretch to match the tallest card */
 }
 
@@ -42,10 +51,25 @@
   cursor: pointer;
   transition: all 0.3s;
 }
+.dsm-fixed-card ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.dsm-fixed-card li {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
 
 .dwm-fixed-card li.dwm-active {
   font-weight: bold;
-  color: #ffcc00; /* Highlight active item with a contrasting color */
+  color: #5c011e; /* Highlight active item with a contrasting color */
+  transform: scale(1.05);
+}
+.dsm-fixed-card li.dsm-active {
+  font-weight: bold;
+  color: #5c011e; /* Highlight active item with a contrasting color */
   transform: scale(1.05);
 }
 

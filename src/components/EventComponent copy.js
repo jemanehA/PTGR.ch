@@ -60,9 +60,7 @@ const EventComponent = () => {
             <p className="crypto-hero-subtitle crypto-animate-text crypto-delay-2">
             Stay ahead with the latest industry insights, networking, and growth opportunities.
             </p>
-            <button className="crypto-enroll-button crypto-animate-fade-in crypto-delay-3">
-              Explore Now
-            </button>
+
           </div>
         </div>
         <div className="about-bouncing-circle"></div>

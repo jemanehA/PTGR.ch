@@ -7,7 +7,12 @@
     padding: 20px 0;
 }
 
-
+.logincon
+{
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px !important;
+}
 .card {
     background-color: #ffffff !important;
     color: #163962 !important;
@@ -157,19 +162,26 @@
 }
 .logincontainer
 {
-    margin-top: 200px !important;
-    margin-bottom: 200px;
+    
+    margin-bottom: 100px;
 }
 @media (max-width: 768px) {
     .logincontainer {
-        margin-bottom: 100px;
+        
     }
 }
-
+.login_area {
+    padding: 100px 0;
+    background: #f9f9f9;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 .wearecoming {
     font-size: 1.8em !important;
     font-weight: bold;
-    color: #4CAF50; /* A vibrant green color, change as needed */
+    color: #1b4f7a; /* A vibrant green color, change as needed */
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;

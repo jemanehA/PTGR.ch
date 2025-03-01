@@ -26,7 +26,7 @@ const CryptoConsultingCards = () => {
               <h5 className="crrcard-title">WALLET</h5>
               <h6 className="crrcard-subtitle card-subtitle mb-2 text-muted">Crypto Wallet Consulting</h6>
               <ul className="crrcard-list">
-                <li className="crrcard-list-item">Minimum investment: not required </li>
+                <li className="crrcard-list-item">Minimum investment: not requi </li>
                 <li className="crrcard-list-item">Personal consultation and education (app. 3 hours)</li>
                 <li className="crrcard-list-item">Initial portfolio set up of centralized & decentralized wallet</li>
               </ul>

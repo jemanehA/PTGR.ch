@@ -273,3 +273,21 @@ a {
         transform: translateY(0); /* End at normal position */
     }
 }
+.ptgrbtn {
+    background-color: #5c011e;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform to transition */
+    position: relative; /* Ensures smooth transform behavior */
+}
+
+.ptgrbtn:hover {
+    background-color: #063158;
+    transform: translateY(-2px); /* Moves button 2px upward */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional shadow for depth */
+}

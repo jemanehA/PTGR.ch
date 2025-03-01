@@ -91,7 +91,7 @@ const CryptoAssetManagement = () => {
           <div className="crypto-hero-text">
             <div className="crypto-header">
               <h1 className="crypto-header-title">
-                <span className="crypto-title-line crypto-animate-text">We provide guidance into the world of digital investing.</span>
+                <span className="crypto-title-line crypto-animate-text">We provide guidance into the world of digital investing.</span><br/>
                 <span className="crypto-title-line crypto-animate-text crypto-delay-1">
                   <span className="crypto-highlight-text">Leading with research and with care.</span>
                 </span>
@@ -101,7 +101,7 @@ const CryptoAssetManagement = () => {
               </p>
             </div>
             <button className="ger-sturtedbtn crypto-animate-fade-in crypto-delay-3" onClick={animateServicesSection}>
-              Get Started <i className="fas fa-play"></i>
+              Get Started 
             </button>
           </div>
         </div>
@@ -109,7 +109,7 @@ const CryptoAssetManagement = () => {
       </section>
 
       <div className="container menudisplay breadcrumb">
-        <Link to="/">Home</Link> <span className="separator">&gt;</span> <span className="current-page">PTGR is the SRO</span>
+        <Link to="/">Home</Link> <span className="separator">&gt;</span> <span className="current-page">PTGR is a Member of SRO</span>
       </div>
 
       <div className="container afterheading-section">
@@ -140,7 +140,7 @@ const CryptoAssetManagement = () => {
 
       <div className="strategydiv">
         <div className="container mt-5" style={{ paddingBottom: '10px' }}>
-          <h4 className="middlesub">Our Commitment to Self-Regulation</h4>
+          <h4 className="subtitle">Our Commitment to Self-Regulation</h4>
           <p className="main-text">
             Our SRO status underscores our dedication to providing a safe, compliant, and transparent environment. By independently anticipating regulatory needs and adhering to FINMA’s strict guidelines, we strengthen client confidence, operational security, and financial integrity.
           </p>

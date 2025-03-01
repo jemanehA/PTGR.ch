@@ -40,7 +40,7 @@ const Bloglist = () => {
 <div>
 <style>
         {`
-          #aboutustopmenu {
+          #NewDropdown {
             background-color: rgb(5, 21, 43);
             border-top-left-radius: 10px; /* Adjust the value as needed */
             border-top-right-radius: 10px; /* Adjust the value as needed */
@@ -69,11 +69,11 @@ const Bloglist = () => {
 </div>
         <div className="about-bouncing-circle"></div>
       </section>
-    <div className="container menudisplay breadcrumb">
-  <Link to="/" className="homemenu">Home</Link> <span className="separator">&gt;</span> <span className="current-page">Blogs</span>
-</div>
 
-
+      <div className="container menudisplay breadcrumb">
+        <Link to="/" ><span className="homemenu">Home</span></Link> <span className="separators">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</span> <span className="current-page">Blogs</span>
+      </div>
+  
 
 
 <div class="container afterheading-section">
@@ -81,7 +81,7 @@ const Bloglist = () => {
    
     <div class="col-xl-5 col-lg-5 afterheading-left">
       <div class="afterheading-title">
-        <h2 class="afterheading-main-title">Upcoming Events </h2>
+        <h2 class="afterheading-main-title">Exploring the Future of Finance & Innovation. </h2>
       </div>
     </div>
     
@@ -89,12 +89,12 @@ const Bloglist = () => {
     <div class="col-xl-6 offset-xl-1 col-lg-7 afterheading-right">
       <div class="afterheading-content">
         <p class="afterheading-highlight">
-        Don’t miss any more highlights. Be part of our events.
+        Stay Updated with the Latest in Crypto and Blockchain.
    </p>
         <p class="afterheading-description">
-        We hold regular virtual events or on-site events. Once a month, we hold a Cryptomarket Talk, where we address the most important changes in the crypto market. In addition, we show monthly what our investment strategies are and how you can profit from the market with us.</p>
+        We regularly share valuable insights through our blog, where we cover important updates and trends in the crypto market. Each month, we dive deep into the latest changes, highlight key investment strategies, and discuss how you can profit from the evolving landscape of digital assets and blockchain technology.</p>
         <p class="afterheading-description">
-        Be there and register directly at the link at the individual event that interests you.</p>
+        Don’t miss out on any of our updates—subscribe to our blog for expert insights and exclusive discussions.</p>
       </div>
     </div>
   </div>

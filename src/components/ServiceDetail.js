@@ -25,6 +25,7 @@ const ServiceDetail = ({ service, onBack }) => {
         {/* What's Included */}
         <div className="service-detail-section">
           <h2>What's Included</h2>
+          <p>{service.detailContent}</p>
           <ul>
             {service.list.map((item, index) => (
               <li key={index}>{item}</li>

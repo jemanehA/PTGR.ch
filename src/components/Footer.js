@@ -116,7 +116,7 @@ function Footer() {
               <h4 className='mb-3'>About Us</h4>
               <p>We are a team of experts from the fields of investment banking, private banking, portfolio management, trading, IT, risk management as well as blockchain and cryptoassets.</p>
 <p>Follow us</p>
-<p style={{ lineHeight: '0', minHeight: '1.8em' }}>Become part of this big change, stay tuned with us</p>
+<p >Become part of this big change, stay tuned with us</p>
 <div className="d-flex gap-2">
 <a href="https://www.facebook.com/profile.php?id=100088835256574" className="text-white" target="_blank" title="Facebook"><i className="fab fa-facebook-f fa-lg"></i></a>
 <a href="https://www.linkedin.com/company/ptgr/" className="text-white" target="_blank" title="LinkedIn"><i className="fab fa-linkedin-in fa-lg"></i></a>

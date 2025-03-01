@@ -6,26 +6,25 @@ const CeoMessage = () => {
   // Hardcoded values inside the component
   const imageUrl = "../assets/images/pan-final.jpg.webp";
   const quote = "The path to success is always a path of passion, people, and performance.";
-  const author = "Dr. Pan Grosse-Ruyken, CEO of PTGR AG";
+  const author = "Dr. Pan Grosse-Ruyken, CEO and Founder of PTGR AG";
 
   return (
-    <div className=''>
     <motion.div 
-      className="quote-card" 
+      className="ceo-message-container"
       initial={{ opacity: 0 }} 
       animate={{ opacity: 1 }} 
       transition={{ duration: 1 }}
     >
-      <div className="quote-card-inner">
-        <div className="quote-card-image">
-          <img src={imageUrl} alt="Background" />
+      <div className="ceo-message-card">
+        <div className="ceo-message-image">
+          <img src={imageUrl} alt="Dr. Pan Grosse-Ruyken" />
         </div>
-        <div className="quote-card-content">
-          <p className="quote">{quote}</p>
-          <p className="author">- {author}</p>
+        <div className="ceo-message-content">
+          <p className="ceo-message-quote">{quote}</p>
+          <p className="ceo-message-author">- {author}</p>
         </div>
       </div>
-    </motion.div></div>
+    </motion.div>
   );
 };
 

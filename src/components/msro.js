@@ -68,7 +68,7 @@ const HeroSection = () => {
     </div>
   </section>
   <section class="commitment-section">
-    <h4 className='middlesub'>Our Commitment to Self-Regulation</h4>
+    <h4 className='subtitle'>Our Commitment to Self-Regulation</h4>
     <p class="main-text">
       Our SRO status underscores our dedication to providing a safe, compliant, and transparent environment. By independently anticipating regulatory needs and adhering to FINMA’s strict guidelines, we strengthen client confidence, operational security, and financial integrity.
     </p>
@@ -76,7 +76,7 @@ const HeroSection = () => {
   </section>
   
   <section class="core-functions-section">
-    <h4 class="section-title">Core Functions and Responsibilities</h4>
+    <h4 class="subtitle">Core Functions and Responsibilities</h4>
     <div class="core-functions">
       <div class="function-card">
         <div class="function-icon">

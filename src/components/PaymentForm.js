@@ -1,9 +1,26 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import DatePicker from 'react-datepicker';
 import '../styles/PaymentForm.css';
 
 const PaymentForm = () => {
+  fetch('https://restcountries.com/v3.1/all')
+  .then(response => response.json())
+  .then(data => {
+    const countryData = data.map(country => ({
+      name: country.name.common,
+      code: country.cca2,
+      callingCode: country.idd.root + (country.idd.suffixes ? country.idd.suffixes[0] : ''),
+    })).sort((a, b) => a.name.localeCompare(b.name));
+    setCountries(countryData);
+  })
+  .catch(error => {
+    console.error('Error fetching countries:', error);
+    setFormError('Failed to fetch countries. Please try again later.');
+  });
+  const [transactionId, setTransactionId] = useState(uuidv4()); // Generate a unique ID
   const location = useLocation();
   const { course, price } = location.state; // Access course and price from state
   const navigate = useNavigate();
@@ -17,8 +34,12 @@ const PaymentForm = () => {
     address: '',
     city: '',
     country: '',
-    cryptoWallet: '',
+    zipCode: '', // New field for zip code
     timeFrame: '', // New field for time frame
+    language: 'english', // Default language
+    totalParticipants: 1, // Default participants
+    preferredDate: new Date(), // Default date
+    courseType: 'online', // Default course type
   });
 
   const [formError, setFormError] = useState('');
@@ -26,9 +47,25 @@ const PaymentForm = () => {
   const [validationErrors, setValidationErrors] = useState({});
   const [isFormValid, setIsFormValid] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false); // New state for submission status
+  const [isProcessingPayment, setIsProcessingPayment] = useState(false); // New state for processing payment
+  const [selectedCountryCode, setSelectedCountryCode] = useState('+41'); // Default country code for Switzerland
+  const [countries, setCountries] = useState([]);
+
+  const handleCountryChange = (e) => {
+    const selectedCountry = e.target.value;
+    const selectedCountryData = countries.find(country => country.name === selectedCountry);
+
+    setFormData({
+      ...formData,
+      country: selectedCountry,
+      state: '',
+      countryCode: selectedCountryData ? selectedCountryData.callingCode : '',
+    });
+
+  };
 
   const initialOptions = {
-    "client-id": "EHOunktnfCoRKICZ7ZZobzTFkRczm-h8hG8DVBejvkgE7u7vDHr5wOVDltwoWptew7oO-6ohvG8zlhtG", 
+    "client-id": "AXBPGypSFqjGiXR8vYivk3flERIYeUkGBrYcJpBonpzxVNzGi7wmNT5f1_CJ1hGNefz7ScCYlB8EyoaZ", 
     currency: "CHF", // Currency code
     intent: "capture",
   };
@@ -56,41 +93,29 @@ const PaymentForm = () => {
     }
   };
 
-  const logPaymentDetails = async (logData) => {
+  const logTransaction = async (details, formData) => {
     const timestamp = new Date().toISOString();
-    const logMessage = `${timestamp} - ${JSON.stringify(logData)}`;
-
+    const logMessage = JSON.stringify({
+      timestamp,
+      transactionDetails: details,
+      formData: formData,
+    });
+    console.log('Attempting to log transaction:', logMessage); // Debugging
+  
     try {
-        const response = await fetch('https://admin.ptgr.ch/paymentlog.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ log: logMessage }),
-        });
-
-        const result = await response.json();
-        console.log(result);
-    } catch (error) {
-        console.error('Error logging payment:', error);
-    }
-  };
-
-  const logTransaction = async (details) => {
-    try {
-      const response = await fetch("https://email.ptgr-test.com/log_transaction.php", {
+      const response = await fetch("https://email.ptgr-test.com/paymentlog.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(details), // Send the PayPal response as JSON
+        body: JSON.stringify({ log: logMessage }), // Send the combined data as JSON
       });
-
+  
       // Check if the request was successful
       if (response.ok) {
         console.log("Transaction logged successfully");
       } else {
-        console.error("Failed to log transaction");
+        console.error("Failed to log transaction. Server response:", response.status, response.statusText);
       }
     } catch (error) {
       console.error("Error logging transaction:", error);
@@ -101,12 +126,6 @@ const PaymentForm = () => {
     const regex = /^\+?[0-9]{10,15}$/;
     return regex.test(phone);
   };
-
-  const validateCryptoWallet = (wallet) => {
-    const regex = /^0x[a-fA-F0-9]{40}$/;
-    return regex.test(wallet);
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -115,9 +134,26 @@ const PaymentForm = () => {
     });
   };
 
+  const handleCountryCodeChange = (e) => {
+    setSelectedCountryCode(e.target.value);
+  };
+
   const handlePaymentMethodChange = (method) => {
     setPaymentMethod(method);
     setValidationErrors({});
+  };
+  const handleParticipantChange = (e) => {
+    const value = parseInt(e.target.value, 10);
+    setFormData({
+      ...formData,
+      totalParticipants: value,
+    });
+  };
+  const handleDateChange = (date) => {
+    setFormData({
+      ...formData,
+      preferredDate: date,
+    });
   };
 
   const validateForm = async () => {
@@ -127,18 +163,15 @@ const PaymentForm = () => {
     if (!formData.lastName) errors.lastName = 'Last Name is required';
     if (!formData.phone) {
       errors.phone = 'Phone is required';
-    } else if (!validatePhone(formData.phone)) {
+    } else if (!validatePhone(`${selectedCountryCode}${formData.phone}`)) {
       errors.phone = 'Invalid phone number';
     }
     if (!formData.address) errors.address = 'Address is required';
     if (!formData.city) errors.city = 'City is required';
     if (!formData.country) errors.country = 'Country is required';
+    if (!formData.zipCode) errors.zipCode = 'Zip Code is required'; // Validate zip code
 
-    if (paymentMethod === 'crypto' && !formData.cryptoWallet) {
-      errors.cryptoWallet = 'Crypto Wallet Address is required';
-    } else if (paymentMethod === 'crypto' && !validateCryptoWallet(formData.cryptoWallet)) {
-      errors.cryptoWallet = 'Invalid crypto wallet address';
-    }
+
 
     if (Object.keys(errors).length > 0) {
       setValidationErrors(errors);
@@ -163,19 +196,23 @@ const PaymentForm = () => {
     setTimeout(() => {
       setIsSubmitting(false);
       setIsFormValid(true); // Proceed to payment options
-      logPaymentDetails({
-        customerDetails: formData,
-        paymentMethod,
-        course,
-        price,
-        status: 'Contact details submitted',
-      });
+      const courseTitle = course.title; // Access the title property
     }, 2000); // 2 seconds delay
   };
 
   return (
+    <div
+    className=""
+    style={{
+      backgroundImage: "url('/assets/images/swissback.jpg')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed',
+    }}
+  >
     <PayPalScriptProvider options={initialOptions}>
-      <div className="container payment-form-container">
+      <div className="container contactusdiv">
         <div className="payment-page">
           <div className="payment-info">
             <h1>Complete Your Booking</h1>
@@ -194,12 +231,6 @@ const PaymentForm = () => {
                 onClick={() => handlePaymentMethodChange('paypal')}
               >
                 PayPal / Credit Card
-              </button>
-              <button
-                className={`payment-method ${paymentMethod === 'crypto' ? 'active' : ''}`}
-                onClick={() => handlePaymentMethodChange('crypto')}
-              >
-                Crypto (Wallets)
               </button>
             </div>
 
@@ -244,14 +275,39 @@ const PaymentForm = () => {
               </div>
 
               <div className="form-group">
+                <div className="phone-input">
+                <select
+                  name="country"
+                  value={formData.country}
+                  onChange={handleCountryChange}
+                  required
+                >
+                  <option value="">Select Country*</option>
+                  {countries.map(country => (
+                    <option key={country.name} value={country.name}>
+                      {country.name}
+                    </option>
+                  ))}
+                </select>
+                <div className="form-group-row">
                 <input
                   type="text"
-                  name="phone"
-                  placeholder="Phone*"
-                  value={formData.phone}
+                  name="countryCode"
+                  placeholder="Code"
+                  value={formData.countryCode}
                   onChange={handleChange}
-                  required
+                  disabled
+                  className="country-code-input"
                 />
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Phone*"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                  /></div>
+                </div>
                 {validationErrors.phone && <span className="error">{validationErrors.phone}</span>}
               </div>
 
@@ -293,19 +349,86 @@ const PaymentForm = () => {
                 </div>
               </div>
 
-              {paymentMethod === 'crypto' && (
-                <div className="form-group">
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="zipCode"
+                  placeholder="Zip Code*"
+                  value={formData.zipCode}
+                  onChange={handleChange}
+                  required
+                />
+                {validationErrors.zipCode && <span className="error">{validationErrors.zipCode}</span>}
+              </div>
+              <div className="form-group">
+              <label>Language</label>
+              <select
+                name="language"
+                value={formData.language}
+                onChange={handleChange}
+              >
+                <option value="english">English</option>
+                <option value="german">German</option>
+              </select>
+            </div>
+
+            {/* Total Participants */}
+            <div className="form-group">
+  <div className="participants-label">
+    <label>Total Participants</label>
+    <div className="info-icon" title="Discount available for more than 2 participants!">
+
+    </div>
+  </div>
+  <input
+    type="number"
+    name="totalParticipants"
+    value={formData.totalParticipants}
+    onChange={handleParticipantChange}
+    min="1"
+  />
+</div>
+
+            {/* Preferred Date Picker */}
+            <div className="form-group">
+              <label>Preferred Date</label>
+              <input
+                type="date"
+                name="preferredDate"
+                placeholder="Preferred Date*"
+                value={formData.preferredDate}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            {/* Course Type Selection */}
+            <div className="form-group">
+              <label>Course Type</label>
+              <div className="course-type-options">
+                <label>
                   <input
-                    type="text"
-                    name="cryptoWallet"
-                    placeholder="Crypto Wallet Address*"
-                    value={formData.cryptoWallet}
+                    type="radio"
+                    name="courseType"
+                    value="online"
+                    checked={formData.courseType === 'online'}
                     onChange={handleChange}
-                    required
                   />
-                  {validationErrors.cryptoWallet && <span className="error">{validationErrors.cryptoWallet}</span>}
-                </div>
-              )}
+                  Online
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name="courseType"
+                    value="in-person"
+                    checked={formData.courseType === 'in-person'}
+                    onChange={handleChange}
+                  />
+                  In-Person
+                </label>
+              </div>
+            </div>
+
 
               {!isFormValid && (
                 <button type="submit" className="submit-btn" disabled={isSubmitting}>
@@ -313,48 +436,80 @@ const PaymentForm = () => {
                 </button>
               )}
 
-              {isFormValid && paymentMethod === 'paypal' && (
+{isFormValid && paymentMethod === 'paypal' && (
                 <div className="form-group">
+                  {isProcessingPayment && (
+                    <div className="progress-container">
+                      {/* <div className="progress-bar"></div>
+                      <p>Processing your payment...</p> */}
+                    </div>
+                  )}
                   <PayPalButtons
                     createOrder={(data, actions) => {
-                      return actions.order.create({
+                      setIsProcessingPayment(true); // Show progress bar
+                      const orderDetails = {
+
+                        type: 'PayPal Order Creation',
                         purchase_units: [
                           {
                             amount: {
-                              value: '1', // The price of the course
+                              value: price, // The price of the course
                               currency_code: "CHF", // Currency code
                             },
                           },
                         ],
-                      });
+                      };
+
+                      
+                      return actions.order.create(orderDetails);
                     }}
                     onApprove={(data, actions) => {
                       return actions.order.capture().then((details) => {
-                        logTransaction(details); // Log the transaction
+                        const paymentResponse = {
+                          transactionId,
+                          status: 'Payment successful',
+                          details: details, // Include PayPal response details
+                        };
+                        logTransaction(paymentResponse, formData); // Log successful transaction with form data
                         setSuccessMessage(`Payment successful using PayPal! Redirecting to the course...`);
                         setTimeout(() => {
                           navigate('/course-details', { state: { course } });
-                        }, 2000);
+                        }, 6000);
                       });
                     }}
                     onError={(err) => {
+                      setIsProcessingPayment(false); // Hide progress bar on error
+                      const errorLog = {
+                        type: 'PayPal Error',
+                        message: err?.message || 'An unknown error occurred.',
+                        errorDetails: err,
+                      };
+                    
+                      logTransaction(errorLog, formData); // Log error details with form data
                       setFormError('An error occurred during the PayPal payment process.');
                       console.error('PayPal error:', err);
                     }}
+                    onCancel={(data) => {
+                      setIsProcessingPayment(false); // Hide progress bar on cancel
+                      const cancelLog = {
+                        type: 'PayPal Cancel',
+                        message: 'User canceled the PayPal payment.',
+                        cancelDetails: data,
+                      };
+                    
+                      logTransaction(cancelLog, formData); // Log cancellation details with form data
+                      setFormError('Payment was canceled by the user.');
+                      console.warn('PayPal payment canceled:', data);
+                    }}
                   />
                 </div>
-              )}
-
-              {isFormValid && paymentMethod === 'crypto' && (
-                <button type="submit" className="submit-btn">
-                  Pay CHF {price} with Crypto
-                </button>
               )}
             </form>
           </div>
         </div>
       </div>
     </PayPalScriptProvider>
+    </div>
   );
 };
 

@@ -238,7 +238,7 @@ p {
 /* Section Wrapper */
 /* General Styles */
 .afterheading-section {
-  padding: 50px 0;
+  padding: 50px;
   background-color: #ffffff;
 }
 
@@ -274,17 +274,17 @@ p {
 }
 
 .afterheading-highlight {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600 !important;
-  color: #000;
-  text-align: justify !important;
+  color: #202020;
+  
   margin-bottom: 20px;
-  line-height: 1.6; /* Improved adaptability with a relative line height */
-  word-spacing: 0.03em; /* Slightly reduced word spacing for tighter text */
-  letter-spacing: -0.01em; /* Reduces character spacing for better fit */
-  hyphens: auto; /* Enables word hyphenation to reduce wide gaps */
+
+
+
+  
   text-align-last: left; /* Prevents excessive gaps in the last line */
-  text-justify: inter-word; /* Aligns by adjusting word spacing only */
+
 }
 .message-highlight {
   font-size: 1.2rem;
@@ -352,17 +352,18 @@ p {
     font-size: 1.2rem; /* Adjust subtitle size */
    
   }
-  .topspan{
-    font-size: 1.3rem !important; /* Default size */
-  }
+  .topspan {
+    display: none;
+}
 }
 
 @media (max-width: 576px) {
   .afterheading-section {
-    padding: 30px 0; /* Reduce padding further for mobile */
+    padding: 0; /* Reduce padding further for mobile */
   }
   .afterheading-main-title {
-    font-size: 1.6rem !important; /* Mobile-friendly size */
+    font-size: 1.4rem !important; /* Mobile-friendly size */
+    margin-bottom: 15px;
   }
   .topspan{
     font-size: 1rem !important; /* Default size */
@@ -379,7 +380,24 @@ p {
   padding-top: 20px;
   margin-bottom: 0;
 }
+.strategydiv p {
+  font-size: 1.1rem; /* Slightly larger font size */
+  line-height: 1.6; /* Improve readability */
+  color: #333; /* Dark gray for better contrast */
+  margin-bottom: 20px; /* Add space below the paragraph */
+  padding: 10px 0; /* Add padding for better spacing */
+  text-align: center; /* Center-align the text */
+}
+.strategydiv p strong {
+  color: #1a3c61; /* Blue color for emphasis */
+  font-weight: 600; /* Make it bold */
+}
 
+.strategydiv p .highlight {
+  background-color: #f8f9fa; /* Light background for highlight */
+  padding: 2px 5px; /* Add padding */
+  border-radius: 3px; /* Rounded corners */
+}
 .cards-container {
   display: flex;
   flex-direction: column; /* Stack cards vertically on smaller devices */

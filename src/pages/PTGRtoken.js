@@ -73,7 +73,7 @@ const PTGRToken = () => {
         <div className="about-hero-content container">
           <div className="crypto-hero-text">
           <h1 className="crypto-header-title">
-    <span className="crypto-title-line crypto-animate-text" style={{fontSize:'80px'}}>PTGR Token </span><br/>
+    <span className="crypto-title-line crypto-animate-text" >PTGR Token </span><br/>
     <span className="crypto-title-line crypto-animate-text crypto-delay-1">
       <span className="crypto-highlight-text">The Future Of Finance.</span>
     </span>
@@ -82,7 +82,7 @@ const PTGRToken = () => {
             We provide guidance into the world of digital investing.
             </p>
             <button className="ger-sturtedbtn crypto-animate-fade-in crypto-delay-3" onClick={animateServicesSection}> 
-  Learn More <i className="fas fa-play"></i>
+  Learn More 
 </button>            &nbsp;&nbsp;&nbsp; <button className="ger-sturtedbtn crypto-animate-fade-in crypto-delay-3"  style={{backgroundColor:'#88600a'}}onClick={animateServicesSection}> 
   Buy PTGR Token 
 </button>

@@ -5,6 +5,7 @@ import CardCarousel from '../components/CardCarousel';
 import ScrollableServiceCards from '../components/ScrollableServiceCards';
 import Questionnaire from '../components/setAppElement';
 
+import PromoBox from '../components/PromoBox';
 
 const Digital = () => {
   const [isQuestionnaireOpen, setIsQuestionnaireOpen] = useState(false);
@@ -18,13 +19,15 @@ useEffect(() => {
   return (
     <div>
       <Digital_asset />
+      {/* <PromoBox/> */}
       {/* <Sddalist/> */}
       <ScrollableServiceCards />
       {/* <CardCarousel/> */}
-      <Questionnaire
+      {/* <Questionnaire
         isOpen={isQuestionnaireOpen}
         onRequestClose={() => setIsQuestionnaireOpen(false)}
-      />
+      /> */}
+      
     </div>
   );
 };

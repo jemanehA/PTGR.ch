@@ -2,23 +2,38 @@
   position: relative;
   height: 60vh; /* Reduced height */
   display: flex;
-  align-items: center;
+  width: 100%;
+  
   justify-content: center;
   overflow: hidden;
   padding-top: 100px;
-  background-color: transparent; /* Remove solid background */
+ 
 }
-
+@media (max-width: 768px) { /* Adjust for small devices */
+  .crypto-hero-section {
+    height: 60ch; /* Set height to 60ch */
+  }
+}
 .crypto-hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #152d47 20%, transparent 100%); /* Gradient from blue to transparent */
-  background-color: rgba(21, 45, 71, 0.3);
+  background-color: rgba(27, 70, 114, 0.4);
+   /* Updated to #1B4672 with 10% transparency */
   z-index: 1;
 }
+.about-hero-video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Use 'fill' if cover cuts the video */
+  z-index: -1;
+}
+
 
 /* Video Background */
 .crypto-hero-video-background {
@@ -41,6 +56,7 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  
   padding: 0 20px; /* Add padding to prevent text from touching the edges */
 }
 
@@ -48,6 +64,7 @@
   text-align: left;
   flex-wrap: wrap;
   color: #fff;
+ 
   padding: 20px; /* Add padding for better readability */
   border-radius: 10px; /* Optional: Add rounded corners */
 }
@@ -64,7 +81,7 @@
 }
 
 .crypto-highlight-text {
-  color: #af2319 !important; /* Bordeaux color for highlights */
+  color: #5c011e !important; /* Bordeaux color for highlights */
 }
 
 /* Subtitle */
@@ -103,6 +120,8 @@
   border: 8px solid #2f3e4e; /* Dark blue border */
   z-index: 3; /* Ensures it's above other elements */
   animation: bounceUpDown 5.5s infinite ease-in-out;
+
+  display: none;
 }
 
 @keyframes bounceUpDown {

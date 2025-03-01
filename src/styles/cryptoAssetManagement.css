@@ -59,10 +59,6 @@
     flex: 1;
   }
   
-  .section-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
   
   .icon {
     margin-right: 10px;
@@ -96,14 +92,14 @@
   }
   
   .section-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem !important;
     font-weight: bold;
     margin-bottom: 20px;
     position: relative;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    color: #ffffff;
+    color: #2c3e50 !important;
   }
   
   .section-title::after {
@@ -187,6 +183,7 @@
   
   /* Heading and Description */
   .function-card h5 {
+    height: 50px; /* Set a fixed height for the h5 element */
     font-size: 1.4rem; /* Adjusted size for better fit */
     font-weight: bold;
     margin-top: 15px;
@@ -212,9 +209,7 @@
       padding: 20px;
     }
   
-    .section-title {
-      font-size: 2rem;
-    }
+
   }
   
 

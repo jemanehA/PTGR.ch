@@ -20,29 +20,38 @@ body{
   font-size: 1.3em !important;
   margin-top: 20px; /* Add space from the element above */
   display: inline-block; /* Prevent full-width block */
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1); /* Slightly pronounced shadow */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.homemenu
-{
-  font-weight: 700;
-  
-  color: #0f0f0f;
-}
+
 .breadcrumb .current-page {
   font-weight: normal; /* Emphasize current page */
   color: #7c7b7b; /* Darker color for current page */
   cursor: default; /* Indicate it's not clickable */
 }
 
-.subtitle
-{
-  font-size: 1.8rem !important ;
-  text-transform: uppercase !important;
+
+.subtitle {
+  font-size: 1.8rem !important;
+ 
   margin-bottom: 20px;
   color: #0f0f0f;
   font-weight: bold;
-  text-align: left; 
+  text-align: left !important;
 }
+
+/* Responsive Styles */
+
+
+
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 1.5rem !important;
+    margin-bottom: 14px;
+  }
+}
+
+
+
 .subtitlelittle
 {
   font-size: 1.3rem !important ;

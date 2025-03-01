@@ -38,7 +38,7 @@
   }
   
   .service-list {
-    list-style-type: none;
+    list-style-type: disc;
     padding-left: 0;
   }
   
@@ -148,6 +148,13 @@
     transform: scale(1.2); /* Zoom effect on hover */
   }
   
+  .text-muted
+  {
+    text-align: left;
+  }
+  .fw-bold{
+    height: 50px;
+  }
   .how-it-works-step span {
     font-size: 1rem;
     color: #333;

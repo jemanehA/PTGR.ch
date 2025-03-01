@@ -10,6 +10,7 @@ import PSRO from './pages/sro';
 import CourseDetails from './components/CourseDetails';
 import Performance from './pages/performance';
 import Digital from './pages/digitalasset';
+import Service from './pages/digitalasset';
 import Forensic from './pages/Forensic';
 import ISO from './pages/iso';
 import PREISOS from './pages/preiso';
@@ -17,7 +18,8 @@ import CRYD from './pages/crypo';
 import WEB3 from './pages/web3';
 import About from './pages/Aboutus';
 import Family from './pages/Family';
-import WS from './pages/3ws';
+
+import WS from './components/isows'
 import Eventlist from './components/Eventlist';
 import WS1 from './pages/WS1';
 import ISOsetup from './pages/ICOSetup';
@@ -29,6 +31,7 @@ import Event from './pages/Event';
 import News from './pages/News';
 import Blockchain from './pages/Blockchain';
 import Swis from './pages/Swiscom';
+import SelfStudy from './components/selfstudy';
 import Blogs from './components/Blogs';
 import BlogDetail from './components/BlogDetail';
 import TermsAndConditions from './components/TermsAndConditions';
@@ -53,8 +56,10 @@ import BlogsMain from './components/Blogsmain';
 import EventDetail from './components/EventDetail';
 import ServiceDetail from './components/ServiceDetail';
 import Bloglist from './components/Bloglist';
+import NewsHome from './components/NewsHome';
 import PTGRToken from './pages/PTGRtoken';
 import TestPaypal from './pages/test';
+
 import './styles/force.css';
 import './crypto.css';
 
@@ -80,8 +85,20 @@ const Login = ({ onLogin }) => {
   };
 
   return (
+    <div
+    className="login_area"
+    style={{
+      backgroundImage: "url('/assets/images/swissback.jpg')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'fixed'
+    }}
+    
+  >
     <div className="logincontainer">
       <div className="container text-center mt-5">
+        <div className='logincon'>
         <h2 className="wearecoming">We're Almost There!</h2>
         <p className="underconstruction">Our page is under construction to bring you a better experience. Stay tuned!</p>
         <div className="card mx-auto show" id="loginForm">
@@ -108,8 +125,8 @@ const Login = ({ onLogin }) => {
             <button type="submit" className="btn-custom w-100">Login</button>
           </form>
         </div>
-      </div>
-    </div>
+      </div></div>
+    </div></div>
   );
 };
 
@@ -133,8 +150,9 @@ const App = () => {
     setIsAuthenticated(authStatus);
   };
 
-  const privateRoutes = [
+  const routes = [
     { path: '/', element: <Home /> },
+    { path: '/de', element: <Home /> },
     { path: '/cpm', element: <CPM /> },
     { path: '/sro', element: <PSRO /> },
     { path: '/performance', element: <Performance /> },
@@ -151,6 +169,7 @@ const App = () => {
     { path: '/Aboutus', element: <About /> },
     
     { path: '/Digital', element: <Digital /> },
+    { path: '/Service', element: <Service /> },
     { path: '/family', element: <Family /> },
     { path: '/isosetup', element: <ISOsetup /> },
     { path: '/metaVereage', element: <Metaverspage /> },
@@ -174,6 +193,8 @@ const App = () => {
     { path: '/Disclaimer', element: <Disclaimer /> },
     { path: '/Imprint', element: <Imprint /> },
     { path: '/Partners', element: <Partners /> },
+    { path: '/SelfStudy', element: <SelfStudy /> },
+    
     { path: '/payment-details', element: <PaymentDetails /> },
     { path: '/verify-email', element: <VerifyEmail /> },
     { path: '/ContactUsForm', element: <ContactUsForm /> },
@@ -183,29 +204,40 @@ const App = () => {
   return (
     <Router>
       <div className="app-container">
-        {!isLoginPage && <Header ref={headerRef} />}
-        {isLoginPage && <Header1 />}
+        <Header ref={headerRef} />
         <div className="main-content" style={{ paddingTop: `${headerHeight}px` }}>
           <Routes>
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
             <Route path="/CursorFollower" element={<CursorFollower />} />
-            {privateRoutes.map((route, index) => (
+            {routes.map((route, index) => (
               <Route
                 key={index}
                 path={route.path}
-                element={<PrivateRoute isAuthenticated={isAuthenticated} element={route.element} />}
+                element={
+                  route.private ? (
+                    <PrivateRoute
+                      element={route.element}
+                      isAuthenticated={isAuthenticated}
+                    />
+                  ) : (
+                    route.element
+                  )
+                }
               />
             ))}
             <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/ServiceDetail" element={<ServiceDetail />} />
             <Route path="/blogmenu" element={<BlogsMain />} />
             <Route path="/Bloglist" element={<Bloglist />} />
+            <Route path="/NewsHome" element={<NewsHome />} />
+            
             <Route path="/paypaltest" element={<TestPaypal />} />
             <Route path="/event/:id" element={<EventDetail />} />
           </Routes>
         </div>
-        {isLoginPage ? <Footer1 /> : <Footer />}
-        {!isLoginPage && <ChatBox />}
+         <Footer />
+        
+        <ChatBox />
       </div>
     </Router>
   );

@@ -91,7 +91,7 @@ const PTGR = () => {
             <div className="crypto-hero-text">
             <div class="crypto-header">
               <h1 className="crypto-header-title">
-                <span className="crypto-title-line crypto-animate-text">We provide guidance into the world of digital investing.</span>
+                <span className="crypto-title-line crypto-animate-text">We provide guidance into the world of digital investing.</span><br/>
                 <span className="crypto-title-line crypto-animate-text crypto-delay-1">
                   <span className="crypto-highlight-text">Leading with research and with care.</span>
                 </span>
@@ -100,7 +100,7 @@ const PTGR = () => {
               Join our expert-led course and gain valuable insights into the world of digital investing.
               </p></div>
               <button className="ger-sturtedbtn crypto-animate-fade-in crypto-delay-3" onClick={animateServicesSection}> 
-  Learn More <i className="fas fa-play"></i>
+  Learn More 
 </button>
             </div>
           </div>

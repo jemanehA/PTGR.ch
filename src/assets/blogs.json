@@ -6,7 +6,7 @@
     "slug": "future-of-digital-investing",
     "author": {
       "name": "jemaneh",
-      "image": "images/blogimage.png",
+      "image": "images/futureinvesting.webp",
       "bio": "Digital Finance Expert with 15+ years experience in blockchain and investment technologies",
       "social": {
         "twitter": "@johndoe",
@@ -23,7 +23,7 @@
         {
           "type": "section",
           "title": "The New Era of Digital Wealth Management",
-          "text": "In the past decade, we've witnessed a radical transformation in investment strategies...",
+          "text": "In the past decade, we've witnessed a radical transformation in investment strategies. Digital assets, AI-powered financial tools, and decentralized exchanges are changing how wealth is built and managed.",
           "keyTakeaways": [
             "Blockchain's impact on transactional security",
             "AI-driven market analysis tools",
@@ -37,9 +37,29 @@
           "caption": "Source: PTGR AG Market Research 2024"
         },
         {
+          "type": "section",
+          "title": "The Role of AI in Investment Decision-Making",
+          "text": "Artificial intelligence has revolutionized portfolio management, automating decision-making through predictive algorithms. AI models analyze historical data, identify trends, and execute trades faster than any human analyst.",
+          "list": [
+            "Robo-advisors – Automated platforms that create personalized investment strategies.",
+            "Sentiment analysis software – Evaluates market mood through news and social media trends.",
+            "Risk assessment automation – Identifies optimal asset allocation based on risk tolerance."
+          ]
+        },
+        {
           "type": "quote",
           "text": "The integration of AI and blockchain represents the most significant shift in wealth management since the creation of mutual funds.",
           "source": "Financial Technology Review"
+        },
+        {
+          "type": "section",
+          "title": "The Rise of Decentralized Finance (DeFi)",
+          "text": "Decentralized Finance (DeFi) removes traditional banking barriers, allowing users to access financial services via blockchain networks. Smart contracts enable secure and transparent transactions without intermediaries.",
+          "list": [
+            "Permissionless access – No banks or institutions controlling transactions.",
+            "Lower fees – Reduced costs compared to traditional brokerage services.",
+            "Liquidity pools – Users can earn passive income by providing liquidity."
+          ]
         },
         {
           "type": "section",
@@ -60,14 +80,15 @@
         }
       ]
     },
-    "featuredImage": "https://ptgr.ch/wp-content/uploads/2023/02/iStock-1436038027-scaled.jpg.webp",
+    "featuredImage": "/assets/images/futureinvesting.webp",
     "readingTime": "8 min read",
     "metaData": {
       "title": "The Future of Digital Investing - PTGR AG Insights",
       "description": "Comprehensive analysis of digital investment trends and strategic approaches for 2024"
     },
     "relatedPosts": [2, 3]
-  },
+  }
+  ,
   {
     "id": 2,
     "priority": "high",
@@ -75,7 +96,7 @@
     "slug": "blockchain-revolution-financial-security",
     "author": {
       "name": "Jemaneh Aklog",
-      "image": "/public/assets/images/logocut.png",
+      "image": "/assets/images/logocut.png",
       "bio": "Blockchain Specialist with a focus on financial applications and security protocols",
       "social": {
         "twitter": "@Jemaneh",
@@ -102,7 +123,7 @@
         {
           "type": "infographic",
           "title": "Real-World Applications",
-          "image": "/public/assets/images/blogimage.png",
+          "image": "/assets/images/blogimage.png",
           "caption": "Source: PTGR AG Research 2024"
         },
         {
@@ -119,7 +140,7 @@
         }
       ]
     },
-    "featuredImage": "/public/assets/images/blogimage.png",
+    "featuredImage": "/assets/images/blockchain.webp",
     "readingTime": "7 min read",
     "metaData": {
       "title": "Blockchain Revolution: Transforming Financial Security - PTGR AG Insights",
@@ -161,7 +182,7 @@
         {
           "type": "infographic",
           "title": "Case Studies",
-          "image": "https://example.com/ai-finance-cases.jpg",
+          "image": "/assets/images/aifinance.jpeg",
           "caption": "Source: PTGR AG Research 2024"
         },
         {
@@ -178,7 +199,7 @@
         }
       ]
     },
-    "featuredImage": "https://example.com/ai-finance.jpg",
+    "featuredImage": "/assets/images/aifinance.jpeg",
     "readingTime": "6 min read",
     "metaData": {
       "title": "AI in Finance: The Rise of Smart Investment Tools - PTGR AG Insights",
@@ -193,7 +214,7 @@
     "slug": "decentralized-finance-new-frontier",
     "author": {
       "name": "Michael Lee",
-      "image": "https://example.com/michaellee.jpg",
+      "image": "/assets/images/decentralize.jpeg",
       "bio": "DeFi Enthusiast and Financial Analyst specializing in decentralized systems",
       "social": {
         "twitter": "@michaellee",
@@ -237,7 +258,7 @@
         }
       ]
     },
-    "featuredImage": "https://example.com/defi.jpg",
+    "featuredImage": "/assets/images/decentralize.jpeg",
     "readingTime": "9 min read",
     "metaData": {
       "title": "Decentralized Finance (DeFi): A New Frontier for Investors - PTGR AG Insights",
@@ -252,7 +273,7 @@
     "slug": "portfolio-diversification-digital-age",
     "author": {
       "name": "Sarah Johnson",
-      "image": "https://example.com/sarahjohnson.jpg",
+      "image": "/assets/images/decentralize.jpeg",
       "bio": "Investment Strategist with expertise in digital asset management",
       "social": {
         "twitter": "@sarahjohnson",
@@ -279,7 +300,7 @@
         {
           "type": "infographic",
           "title": "Diversification Strategies",
-          "image": "https://example.com/diversification-strategies.jpg",
+          "image": "/assets/images/potfolio.jpg",
           "caption": "Source: PTGR AG Research 2024"
         },
         {
@@ -296,7 +317,7 @@
         }
       ]
     },
-    "featuredImage": "https://example.com/diversification.jpg",
+    "featuredImage": "/assets/images/potfolio.jpg",
     "readingTime": "8 min read",
     "metaData": {
       "title": "Portfolio Diversification in the Digital Age - PTGR AG Insights",
@@ -355,7 +376,7 @@
         }
       ]
     },
-    "featuredImage": "https://example.com/big-data.jpg",
+    "featuredImage": "/assets/images/investement.png",
     "readingTime": "7 min read",
     "metaData": {
       "title": "The Role of Big Data in Shaping Investment Trends - PTGR AG Insights",

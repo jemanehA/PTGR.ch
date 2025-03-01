@@ -391,7 +391,7 @@ padding-top: 50px;
 
 .training-icon {
   font-size: 40px;
-  color: #4caf50;
+  color: #214064;
 }
 
 .training-description h3 {
@@ -736,6 +736,11 @@ padding-top: 50px;
 }
 .panedu
 {
-  width: 100%;
+  width: 90%;
   height: auto;
+}
+.panimagee
+{
+ padding-top: 30px;
+  text-align: center;
 }

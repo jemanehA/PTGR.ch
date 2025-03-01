@@ -1,32 +1,169 @@
-.efficiency-section {
-    background-image: url('../assets/images/cta-bg-1.webp');
-    padding: 100px 0;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: left;
-
-  }
-  .efficiency-section .content {
-    position: relative;  /* Ensures that elements inside it are positioned correctly */
+.ptgr-efficiency-section {
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+  color: #352828;
+  text-align: left;
 }
 
-  .efficiency-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
+.ptgr-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ptgr-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.ptgr-text-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.ptgr-text-content .ptgr-subtitle {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.ptgr-text-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #474444;
+}
+
+.ptgr-cta-button {
+  margin-top: 30px;
+}
+
+.ptgr-card-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #1b4572; /* Updated background color */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: pulse 2s infinite; /* Added pulsating animation */
+}
+
+.ptgr-card-button:hover {
+  background-color: #143a5e; /* Slightly darker on hover */
+}
+
+/* Pulsating Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(27, 69, 114, 0.4);
   }
-  
-  .efficiency-section .content h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(27, 69, 114, 0);
   }
-  
-  .efficiency-section .content p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(27, 69, 114, 0);
   }
-  .efficiency-section p {
-color: #ffffff;
+}
+
+.ptgr-video-container {
+  flex: 1;
+  width: 100%; /* Reduced from 50% to minimize space */
+  position: relative;
+}
+
+.ptgr-video-container video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ptgr-video-title {
+  position: absolute;
+  top: 10px; /* Adjusted to minimize space */
+  left: 10px; /* Adjusted to minimize space */
+  font-size: 18px; /* Reduced font size */
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px; /* Reduced padding */
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ptgr-content-wrapper {
+    flex-direction: column;
+    gap: 30px;
   }
+
+  .ptgr-video-container,
+  .ptgr-text-content {
+    max-width: 100%;
+  }
+
+  .ptgr-text-content .ptgr-subtitle {
+    font-size: 28px;
+  }
+
+  .ptgr-text-content p {
+    font-size: 16px;
+  }
+
+  .ptgr-video-title {
+    font-size: 16px; /* Further reduced font size for mobile */
+    top: 5px; /* Adjusted to minimize space */
+    left: 5px; /* Adjusted to minimize space */
+  }
+}
+/* Loading State Styles */
+.ptgr-video-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 10px;
+  z-index: 2; /* Ensure it appears above the video */
+}
+
+.ptgr-loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3); /* Light gray border */
+  border-top: 4px solid #fff; /* White border for the spinner */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; /* Spinner animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ptgr-video-loading p {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}

@@ -9,7 +9,7 @@ const DigitalWealthManagement = () => {
     {
       image: '/assets/images/wealth.webp', // Replace with your image URL
       title: "Digital Wealth and Asset Management",
-      description: "Learn how to manage assets digitally with modern tools and techniques.",
+      description: "Learn how to manage YOUR assets digitally with modern tools and techniques.",
       list: ["Modern asset management tools", "Digital portfolio strategies", "Risk management techniques"],
       details: {
         title: "Digital Wealth and Asset Management",
@@ -19,12 +19,12 @@ const DigitalWealthManagement = () => {
         overview: "Digital wealth management is transforming the way individuals and institutions manage their assets. This course covers the latest tools and technologies for portfolio management, risk assessment, and financial planning. You'll gain insights into digital investment strategies, automated wealth management platforms, and the role of AI in asset management.",
         instructor: "John Doe",
         instructorIcon: "/assets/images/logocut.png",
-        enrollmentCount: "12,000 already enrolled",
+        enrollmentCount: "820 already enrolled",
         rating: "4.7 ★",
-        ratingLabel: "(1,500 reviews)",
+        ratingLabel: "(180 reviews)",
         level: "Intermediate",
         levelLabel: "Some experience required",
-        duration: "5 hours",
+        duration: "5x4 hours",
         pacing: "Self-paced",
         pacingLabel: "Learn at your own pace",
         tabs: [
@@ -41,36 +41,38 @@ const DigitalWealthManagement = () => {
             id: 'courses',
             label: 'Content of the Course',
             content: [
-              "🔗 Introduction to Digital Wealth Management",
-              "📊 Modern Asset Management Tools",
-              "💰 Digital Portfolio Strategies",
-              "📈 Risk Management Techniques",
-              "💼 Case Studies: Real-World Applications",
-              "📜 Regulatory Compliance in Digital Wealth Management"
+              "• Introduction to Digital Wealth Management",
+              "• Modern Asset Management Tools",
+              "• Digital Portfolio Strategies",
+              "• Risk Management Techniques",
+              "• Case Studies: Real-World Applications",
+              "• Regulatory Compliance in Digital Wealth Management"
             ]
           },
           {
             id: 'what-youll-learn',
             label: 'Who Needs It?',
             content: [
-              "🎓 Financial professionals looking to enhance their digital asset management skills.",
-              "📈 Investors interested in modern portfolio management tools.",
-              "💼 Business leaders exploring digital transformation in wealth management.",
-              "🏦 Wealth managers seeking to adopt AI and blockchain technologies."
+              "• Financial professionals looking to enhance their digital asset management skills.",
+              "• Investors interested in modern portfolio management tools.",
+              "• Business leaders exploring digital transformation in wealth management.",
+              "• Wealth managers seeking to adopt AI and blockchain technologies."
             ]
           },
           {
             id: 'testimonials',
             label: 'Requirements',
             content: [
-              "Basic understanding of financial markets and investment principles.",
-              "Interest in digital transformation and modern financial tools.",
-              "No prior coding experience required, but familiarity with financial concepts is beneficial."
+              "• Basic understanding of financial markets and investment principles.",
+              "• Interest in digital transformation and modern financial tools.",
+              "• No prior coding experience required, but familiarity with financial concepts is beneficial."
             ]
           }
         ],
         certification: "Upon completion, you'll receive a certification recognized by leading financial institutions, validating your expertise in digital wealth management.",
-        fees: "CHF 1,500 (excluding examination fee). Discounts available for early registrations."
+        fees: "CHF 2,649 (excluding examination fee). Discounts available for early registrations.",
+          feesDesc: "The total cost is <strong>CHF 2,649</strong> excluding the ICO examination fee. Please check your individual options for cost deduction, whether you are a private participant or a company."
+
       }
     },
     {
@@ -86,12 +88,12 @@ const DigitalWealthManagement = () => {
         overview: "Blockchain technology is reshaping industries by enabling secure, transparent, and decentralized systems. This course provides a comprehensive understanding of blockchain fundamentals, including consensus mechanisms, cryptography, and distributed ledger technology. You'll also explore emerging trends like DeFi, NFTs, and Web 3.0.",
         instructor: "Jane Smith",
         instructorIcon: "/assets/images/logocut.png",
-        enrollmentCount: "10,000 already enrolled",
+        enrollmentCount: "700 already enrolled",
         rating: "4.8 ★",
-        ratingLabel: "(1,200 reviews)",
+        ratingLabel: "(230 reviews)",
         level: "Beginner",
         levelLabel: "No prior experience required",
-        duration: "6 hours",
+        duration: "5x4 hours",
         pacing: "Self-paced",
         pacingLabel: "Learn at your own pace",
         tabs: [
@@ -108,42 +110,46 @@ const DigitalWealthManagement = () => {
             id: 'courses',
             label: 'Content of the Course',
             content: [
-              "🔗 Introduction to Blockchain Technology",
-              "📊 Blockchain Fundamentals: Consensus and Cryptography",
-              "💰 Smart Contracts and Decentralized Applications",
-              "📈 Emerging Trends: DeFi, NFTs, and Web 3.0",
-              "💼 Real-World Applications of Blockchain",
-              "📜 Regulatory and Ethical Considerations"
+              "• Introduction to Blockchain Technology",
+              "• Blockchain Fundamentals: Consensus and Cryptography",
+              "• Smart Contracts and Decentralized Applications",
+              "• Emerging Trends: DeFi, NFTs, and Web 3.0",
+              "• Real-World Applications of Blockchain",
+              "• Regulatory and Ethical Considerations"
             ]
+            
+            
           },
           {
             id: 'what-youll-learn',
             label: 'Who Needs It?',
             content: [
-              "🎓 Professionals looking to understand blockchain technology and its applications.",
-              "📈 Entrepreneurs exploring blockchain-based business models.",
-              "💼 Developers interested in building decentralized applications.",
-              "🏦 Regulators and policymakers seeking to understand blockchain's impact."
-            ]
+              "• Professionals looking to understand blockchain technology and its applications.",
+              "• Entrepreneurs exploring blockchain-based business models.",
+              "• Developers interested in building decentralized applications.",
+              "• Regulators and policymakers seeking to understand blockchain's impact."
+            ]            
           },
           {
             id: 'testimonials',
             label: 'Requirements',
             content: [
-              "Basic understanding of technology and software concepts.",
-              "Interest in blockchain and decentralized systems.",
-              "No prior coding experience required, but familiarity with technology is beneficial."
-            ]
+              "• Basic understanding of technology and software concepts.",
+              "• Interest in blockchain and decentralized systems.",
+              "• No prior coding experience required, but familiarity with technology is beneficial."
+            ]            
           }
         ],
         certification: "Upon completion, you'll receive a certification recognized by leading blockchain institutions, validating your expertise in blockchain technology.",
-        fees: "CHF 1,200 (excluding examination fee). Discounts available for early registrations."
+        fees: "CHF 2,649 (excluding examination fee). Discounts available for early registrations.",
+          feesDesc: "The total cost is <strong>CHF 2,649</strong> excluding the ICO examination fee. Please check your individual options for cost deduction, whether you are a private participant or a company."
+
       }
     },
     {
       image: "/assets/images/passive.png",
       title: "Passive Income Management",
-      description: "Strategies for building and managing passive income streams effectively.",
+      description: "Strategies for building and managing YOUR passive income streams effectively.",
       list: ["Passive income strategies", "Investment opportunities", "Long-term management"],
       details: {
         title: "Passive Income Management",
@@ -153,12 +159,12 @@ const DigitalWealthManagement = () => {
         overview: "Passive income is a key component of financial independence. This course explores multiple passive income streams, including real estate, dividend investing, affiliate marketing, and automated businesses. Learn how to set up and optimize these revenue sources effectively.",
         instructor: "Jane Smith",
         instructorIcon: "/assets/images/logocut.png",
-        enrollmentCount: "9,500 already enrolled",
+        enrollmentCount: "920 already enrolled",
         rating: "4.6 ★",
-        ratingLabel: "(1,200 reviews)",
+        ratingLabel: "(410 reviews)",
         level: "Beginner",
         levelLabel: "No prior experience needed",
-        duration: "4.5 hours",
+        duration: "5x4 hours",
         pacing: "Self-paced",
         pacingLabel: "Learn at your own pace",
         tabs: [
@@ -175,36 +181,41 @@ const DigitalWealthManagement = () => {
             id: "courses",
             label: "Content of the Course",
             content: [
-              "💡 Introduction to Passive Income",
-              "🏠 Real Estate Investment Strategies",
-              "📈 Dividend Stocks and Investment Income",
-              "🌐 Online Businesses and Affiliate Marketing",
-              "🚀 Automating Passive Income Streams",
-              "🔍 Case Studies and Real-World Examples"
+              "• Introduction to Passive Income",
+              "• Real Estate Investment Strategies",
+              "• Dividend Stocks and Investment Income",
+              "• Online Businesses and Affiliate Marketing",
+              "• Automating Passive Income Streams",
+              "• Case Studies and Real-World Examples"
             ]
+            
           },
           {
             id: "what-youll-learn",
             label: "Who Needs It?",
             content: [
-              "📊 Individuals looking for financial independence through passive income.",
-              "💰 Investors seeking diversified income sources.",
-              "🌍 Entrepreneurs wanting to build automated business models.",
-              "🏡 Real estate and stock market investors."
+              "• Individuals looking for financial independence through passive income.",
+              "• Investors seeking diversified income sources.",
+              "• Entrepreneurs wanting to build automated business models.",
+              "• Real estate and stock market investors."
             ]
+            
           },
           {
             id: "testimonials",
             label: "Requirements",
             content: [
-              "No prior investment experience required.",
-              "Interest in personal finance and wealth creation.",
-              "Willingness to explore multiple income sources."
+              "• No prior investment experience required.",
+              "• Interest in personal finance and wealth creation.",
+              "• Willingness to explore multiple income sources."
             ]
+            
           }
         ],
         certification: "Receive a completion certificate to showcase your knowledge in passive income management.",
-        fees: "CHF 1,200 (excluding examination fee). Discounts available for early registrations."
+        fees: "CHF 2,649 (excluding examination fee). Discounts available for early registrations.",
+        feesDesc: "The total cost is <strong>CHF 2,649</strong> excluding the ICO examination fee. Please check your individual options for cost deduction, whether you are a private participant or a company."
+
       }
     },
     {
@@ -220,12 +231,12 @@ const DigitalWealthManagement = () => {
         overview: "The cryptocurrency market is highly volatile and influenced by market cycles. This course teaches you how to analyze trends, understand price movements, and make data-driven investment decisions.",
         instructor: "Michael Brown",
         instructorIcon: "/assets/images/logocut.png",
-        enrollmentCount: "15,000 already enrolled",
+        enrollmentCount: "870 already enrolled",
         rating: "4.8 ★",
-        ratingLabel: "(2,300 reviews)",
+        ratingLabel: "(670 reviews)",
         level: "Intermediate",
         levelLabel: "Some experience with crypto markets recommended",
-        duration: "6 hours",
+        duration: "5x4 hours",
         pacing: "Self-paced",
         pacingLabel: "Learn at your own pace",
         tabs: [
@@ -242,36 +253,41 @@ const DigitalWealthManagement = () => {
             id: "courses",
             label: "Content of the Course",
             content: [
-              "📖 Introduction to Cryptocurrency Market Cycles",
-              "📊 Technical Analysis of Crypto Trends",
-              "📉 Identifying Market Tops and Bottoms",
-              "🛠 On-Chain Metrics and Trading Strategies",
-              "💡 Case Studies: Bitcoin & Ethereum Price Movements",
-              "📜 Regulatory Impact on Crypto Markets"
+              "• Introduction to Cryptocurrency Market Cycles",
+              "• Technical Analysis of Crypto Trends",
+              "• Identifying Market Tops and Bottoms",
+              "• On-Chain Metrics and Trading Strategies",
+              "• Case Studies: Bitcoin & Ethereum Price Movements",
+              "• Regulatory Impact on Crypto Markets"
             ]
+            
           },
           {
             id: "what-youll-learn",
             label: "Who Needs It?",
             content: [
-              "📈 Crypto traders looking to improve their market analysis skills.",
-              "💰 Investors seeking to optimize their crypto portfolios.",
-              "🌍 Financial analysts interested in digital assets.",
-              "📊 Beginners who want to understand crypto market trends."
+              "• Crypto traders looking to improve their market analysis skills.",
+              "• Investors seeking to optimize their crypto portfolios.",
+              "• Financial analysts interested in digital assets.",
+              "• Beginners who want to understand crypto market trends."
             ]
+            
           },
           {
             id: "testimonials",
             label: "Requirements",
             content: [
-              "Basic understanding of cryptocurrencies and blockchain technology.",
-              "Interest in market trends and investment strategies.",
-              "No prior trading experience required, but beneficial."
+              "• Basic understanding of cryptocurrencies and blockchain technology.",
+              "• Interest in market trends and investment strategies.",
+              "• No prior trading experience required, but beneficial."
             ]
+            
           }
         ],
         certification: "Upon completion, you'll receive a recognized certification in cryptocurrency market analysis.",
-        fees: "CHF 1,800 (excluding examination fee). Discounts available for early registrations."
+        fees: "CHF 2,649 (excluding examination fee). Discounts available for early registrations.",
+        feesDesc: "The total cost is <strong>CHF 2,649</strong> excluding the ICO examination fee. Please check your individual options for cost deduction, whether you are a private participant or a company."
+
       }
     },
     {
@@ -287,12 +303,12 @@ const DigitalWealthManagement = () => {
         overview: "Decentralized finance is reshaping the global financial landscape by removing intermediaries and empowering individuals. This course covers the essentials of DeFi protocols, decentralized exchanges, and lending platforms.",
         instructor: "Sarah Lee",
         instructorIcon: "/assets/images/logocut.png",
-        enrollmentCount: "10,500 already enrolled",
+        enrollmentCount: "651 already enrolled",
         rating: "4.6 ★",
-        ratingLabel: "(1,800 reviews)",
+        ratingLabel: "(190 reviews)",
         level: "Intermediate",
         levelLabel: "Some experience with crypto and finance recommended",
-        duration: "5 hours",
+        duration: "5x4 hours",
         pacing: "Self-paced",
         pacingLabel: "Learn at your own pace",
         tabs: [
@@ -309,36 +325,41 @@ const DigitalWealthManagement = () => {
             id: "courses",
             label: "Content of the Course",
             content: [
-              "🔗 Introduction to DeFi and Smart Contracts",
-              "📊 Key DeFi Platforms and Tools",
-              "💰 Lending and Borrowing in DeFi",
-              "🛠 DeFi Risk Management",
-              "🌍 Case Studies of Successful DeFi Projects",
-              "📜 Regulatory Considerations for DeFi"
+              "• Introduction to DeFi and Smart Contracts",
+              "• Key DeFi Platforms and Tools",
+              "• Lending and Borrowing in DeFi",
+              "• DeFi Risk Management",
+              "• Case Studies of Successful DeFi Projects",
+              "• Regulatory Considerations for DeFi"
             ]
+            
           },
           {
             id: "what-youll-learn",
             label: "Who Needs It?",
             content: [
-              "💼 Financial professionals wanting to explore decentralized finance.",
-              "📊 Investors looking for alternatives to traditional financial products.",
-              "🌍 Tech-savvy individuals interested in blockchain and DeFi ecosystems.",
-              "📈 Developers seeking to build DeFi applications."
+              "• Financial professionals wanting to explore decentralized finance.",
+              "• Investors looking for alternatives to traditional financial products.",
+              "• Tech-savvy individuals interested in blockchain and DeFi ecosystems.",
+              "• Developers seeking to build DeFi applications."
             ]
+            
           },
           {
             id: "testimonials",
             label: "Requirements",
             content: [
-              "Basic understanding of blockchain and cryptocurrencies.",
-              "Interest in decentralized systems and finance.",
-              "No prior coding knowledge required, but familiarity with blockchain will be helpful."
+              "• Basic understanding of blockchain and cryptocurrencies.",
+              "• Interest in decentralized systems and finance.",
+              "• No prior coding knowledge required, but familiarity with blockchain will be helpful."
             ]
+            
           }
         ],
         certification: "Upon completion, you'll receive a certification in decentralized finance recognized by leading financial institutions.",
-        fees: "CHF 1,200 (excluding examination fee). Discounts available for early registrations."
+        fees: "CHF 2,649 (excluding examination fee). Discounts available for early registrations.",
+          feesDesc: "The total cost is <strong>CHF 2,649</strong> excluding the ICO examination fee. Please check your individual options for cost deduction, whether you are a private participant or a company."
+
       }
     },
     {
@@ -354,12 +375,12 @@ const DigitalWealthManagement = () => {
         overview: "Sustainable impact investing focuses on making investment decisions that benefit society and the environment while ensuring financial returns. This course will teach you how to identify impactful investments and measure their success.",
         instructor: "Emily Johnson",
         instructorIcon: "/assets/images/logocut.png",
-        enrollmentCount: "8,200 already enrolled",
+        enrollmentCount: "710 already enrolled",
         rating: "4.9 ★",
-        ratingLabel: "(2,100 reviews)",
+        ratingLabel: "(210 reviews)",
         level: "Advanced",
         levelLabel: "Experience in finance and investing required",
-        duration: "7 hours",
+        duration: "5x4 hours",
         pacing: "Self-paced",
         pacingLabel: "Learn at your own pace",
         tabs: [
@@ -376,36 +397,41 @@ const DigitalWealthManagement = () => {
             id: "courses",
             label: "Content of the Course",
             content: [
-              "🌍 Introduction to Sustainable Investing",
-              "📊 Analyzing Social Impact Metrics",
-              "💡 Identifying Long-Term Growth Opportunities",
-              "📈 Case Studies: Successful Sustainable Investments",
-              "🔍 How to Evaluate ESG Performance",
-              "📜 Regulatory Guidelines for Sustainable Investing"
+              "• Introduction to Sustainable Investing",
+              "• Analyzing Social Impact Metrics",
+              "• Identifying Long-Term Growth Opportunities",
+              "• Case Studies: Successful Sustainable Investments",
+              "• How to Evaluate ESG Performance",
+              "• Regulatory Guidelines for Sustainable Investing"
             ]
+            
           },
           {
             id: "what-youll-learn",
             label: "Who Needs It?",
             content: [
-              "💼 Impact investors aiming to prioritize social and environmental impact.",
-              "📊 Financial analysts looking to incorporate ESG factors into investment portfolios.",
-              "🌍 Entrepreneurs and business leaders interested in creating sustainable businesses.",
-              "🎓 Students or professionals seeking knowledge in sustainable investment practices."
+              "• Impact investors aiming to prioritize social and environmental impact.",
+              "• Financial analysts looking to incorporate ESG factors into investment portfolios.",
+              "• Entrepreneurs and business leaders interested in creating sustainable businesses.",
+              "• Students or professionals seeking knowledge in sustainable investment practices."
             ]
+            
           },
           {
             id: "testimonials",
             label: "Requirements",
             content: [
-              "Understanding of basic investment concepts and finance.",
-              "Interest in sustainable development and social impact.",
-              "No prior experience in sustainable investing required."
+              "• Understanding of basic investment concepts and finance.",
+              "• Interest in sustainable development and social impact.",
+              "• No prior experience in sustainable investing required."
             ]
+            
           }
         ],
         certification: "Upon completion, you'll receive a certification in sustainable impact investing.",
-        fees: "CHF 1,500 (excluding examination fee). Discounts available for early registrations."
+        fees: "CHF 2,649 (excluding examination fee). Discounts available for early registrations.",
+          feesDesc: "The total cost is <strong>CHF 2,649</strong> excluding the ICO examination fee. Please check your individual options for cost deduction, whether you are a private participant or a company."
+
       }
     },
     {
@@ -421,12 +447,12 @@ const DigitalWealthManagement = () => {
         overview: "The rise of cryptocurrency has also brought an increase in scams. This course will teach you how to spot fraudulent activities and leverage forensic tools to recover assets and mitigate risks.",
         instructor: "James Smith",
         instructorIcon: "/assets/images/logocut.png",
-        enrollmentCount: "12,000 already enrolled",
+        enrollmentCount: "890 already enrolled",
         rating: "4.5 ★",
-        ratingLabel: "(1,200 reviews)",
+        ratingLabel: "(430 reviews)",
         level: "Advanced",
         levelLabel: "Experience with crypto trading and security recommended",
-        duration: "6 hours",
+        duration: "5x4 hours",
         pacing: "Self-paced",
         pacingLabel: "Learn at your own pace",
         tabs: [
@@ -443,35 +469,40 @@ const DigitalWealthManagement = () => {
             id: "courses",
             label: "Content of the Course",
             content: [
-              "🔒 Introduction to Crypto Scams and Fraud",
-              "🔍 Identifying Scam Schemes and Red Flags",
-              "🛠 Forensic Tools for Crypto Asset Recovery",
-              "📉 Risk Management in Crypto Trading",
-              "📜 Legal Considerations and Reporting Scams"
+              "• Introduction to Crypto Scams and Fraud",
+              "• Identifying Scam Schemes and Red Flags",
+              "• Forensic Tools for Crypto Asset Recovery",
+              "• Risk Management in Crypto Trading",
+              "• Legal Considerations and Reporting Scams"
             ]
+            
           },
           {
             id: "what-youll-learn",
             label: "Who Needs It?",
             content: [
-              "💼 Crypto traders who want to protect their investments.",
-              "🔍 Security professionals looking to develop expertise in crypto forensics.",
-              "🎓 Crypto beginners wanting to learn how to avoid scams.",
-              "⚖️ Legal and regulatory experts interested in fraud detection and asset recovery."
+              "• Crypto traders who want to protect their investments.",
+              "• Security professionals looking to develop expertise in crypto forensics.",
+              "• Crypto beginners wanting to learn how to avoid scams.",
+              "• Legal and regulatory experts interested in fraud detection and asset recovery."
             ]
+            
           },
           {
             id: "testimonials",
             label: "Requirements",
             content: [
-              "Basic knowledge of cryptocurrency and blockchain.",
-              "Interest in crypto security and fraud prevention.",
-              "No prior forensic experience required."
+              "• Basic knowledge of cryptocurrency and blockchain.",
+              "• Interest in crypto security and fraud prevention.",
+              "• No prior forensic experience required."
             ]
+            
           }
         ],
         certification: "Upon completion, you'll receive a certification in crypto scams detection and forensic services.",
-        fees: "CHF 1,700 (excluding examination fee). Discounts available for early registrations."
+        fees: "CHF 2,649 (excluding examination fee). Discounts available for early registrations.",
+        feesDesc: "The total cost is <strong>CHF 2,649</strong> excluding the ICO examination fee. Please check your individual options for cost deduction, whether you are a private participant or a company."
+
       }
     }
     
@@ -485,7 +516,7 @@ const DigitalWealthManagement = () => {
     // Only scroll and highlight on desktop (where fixed card is visible)
     if (window.innerWidth > 768) {
       const targetCard = document.getElementById(`ssc-service-${index}`);
-      const scrollContainer = document.querySelector('.ssc-scroll-container');
+      const scrollContainer = document.querySelector('.web-scroll-container');
 
       if (targetCard && scrollContainer) {
         const cardOffset = targetCard.offsetLeft;
@@ -530,11 +561,11 @@ const DigitalWealthManagement = () => {
         </div>
 
         {/* Scrollable Services */}
-        <div className="ssc-scroll-container">
+        <div className="web-scroll-container">
           {cards.map((card, index) => (
             <div
               key={index}
-              id={`ssc-service-${index}`}
+              id={`dem-service-${index}`}
               className={`ssc-scroll-card ${index === activeIndex ? 'ssc-active' : ''}`}
             >
               <img src={card.image} alt={card.title} className="ssc-card-image" />
@@ -549,7 +580,7 @@ const DigitalWealthManagement = () => {
                 <Link
                   to="/course-details"
                   state={{ course: card.details }} // Pass course details as state
-                  className="ssc-learn-more"
+                  className="ba-learn-more"
                 >
                   Learn More →
                 </Link>

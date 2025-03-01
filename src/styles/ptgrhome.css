@@ -1,0 +1,116 @@
+.ptgr-token-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  min-height: 50vh; /* Reduced height for a compact design */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  color: rgba(255, 255, 255, 0.95); /* Brighter white text for better contrast */
+  text-align: center;
+}
+
+.ptgr-token-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation for the content */
+}
+
+.ptgr-token-heading {
+  font-family: "Montserrat", sans-serif; /* Modern font for heading */
+  font-size: 64px; /* Increased font size */
+  font-weight: 800; /* Bold weight */
+  margin-bottom: 20px; /* Space between heading and "Coming Soon" */
+  color: #fff; /* Pure white for heading */
+  text-transform: uppercase; /* Uppercase text for a bold look */
+  letter-spacing: 2px; /* Slight spacing for better readability */
+  animation: slideInDown 1s ease-in-out; /* Slide-in animation for heading */
+}
+
+.coming-soon-message {
+  font-family: "Montserrat", sans-serif; /* Consistent font */
+  font-size: 5em; /* Increased font size */
+  font-weight: 700; /* Semi-bold weight */
+  color: #e9ad03; /* Golden color to match the theme */
+  animation: pulse 2s infinite, fadeIn 1.5s ease-in-out; /* Pulsing and fade-in animation */
+  margin-bottom: 30px; /* Space between "Coming Soon" and the next message */
+}
+
+.stay-tuned-message {
+  font-size: 1.8em; /* Increased font size */
+  font-weight: 400;
+  color: rgba(231, 231, 231, 0.9); /* Slightly transparent white */
+  line-height: 1.6;
+  animation: fadeInUp 1.5s ease-in-out; /* Fade-in animation for the message */
+}
+
+.switzerland-text {
+  font-weight: 600; /* Bold weight for Switzerland */
+  color: #db2727; /* Golden color to highlight Switzerland */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Space between text and flag icon */
+}
+
+.flag-icon {
+  width: 24px; /* Adjust flag icon size */
+  height: auto;
+  vertical-align: middle; /* Align flag icon with text */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

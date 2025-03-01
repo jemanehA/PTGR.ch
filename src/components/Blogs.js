@@ -6,7 +6,7 @@ import '../styles/Blogs.css';
 const Blogs = () => {
   return (
     <div className="container blogs-container">
-      <h1 className="neon-text">PTGR AG Crypto Insights</h1>
+      <h1>PTGR AG Crypto Insights</h1>
       <div className="row">
         {blogs.map((blog) => (
           <div key={blog.id} className="col-md-4 mb-4">
@@ -30,9 +30,11 @@ const Blogs = () => {
                 </div>
                 <h3 className="card-title">{blog.title}</h3>
                 <p className="card-excerpt">{blog.excerpt}</p>
-                <Link to={`/blog/${blog.slug}`} className="card-button">
-                  Read More
-                </Link>
+                <div className="button-container">
+                  <Link to={`/blog/${blog.slug}`} className="ba-learn-more">
+                    Learn More
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

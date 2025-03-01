@@ -12,7 +12,7 @@ export default function InfoCards() {
       title: "WALLET",
       description: "Crypto Wallet Consulting",
       list: [
-        "Minimum investment: not required",
+        "Minimum investm: not required",
         "Personal consultation and education (app. 3 hours)",
         "Initial portfolio set up of centralized & decentralized wallet",
       ],

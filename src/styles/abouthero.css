@@ -32,16 +32,7 @@
   }
   
   /* Video Background */
-  .about-hero-video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire area */
-    z-index: 0; /* Ensure it stays behind the content */
-  }
-  
+
   /* Content Container */
   .about-hero-content {
     position: relative;
@@ -166,19 +157,7 @@
   }
   
   /* Bouncing Circle */
-  .about-bouncing-circle {
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translate(-50%, 50%); /* Center it properly */
-    width: 100px;
-    height: 100px;
-    background-color: #ffffff; /* White color */
-    border-radius: 50%;
-    border: 8px solid #2f3e4e; /* Dark blue border */
-    z-index: 3; /* Ensures it's above other elements */
-    /* animation: bounceUpDown 5.5s infinite ease-in-out; */
-  }
+ 
   
   /* Bouncing Animation (Optional) */
   @keyframes bounceUpDown {
