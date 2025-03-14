@@ -10,16 +10,7 @@ function Header() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("English");
-  const [showPopup, setShowPopup] = useState(false);
-
-  const handleMouseLeave = () => {
-    setShowPopup(false);
-  };
-
-
-  const handleMouseEnter = () => {
-    setShowPopup(true);
-  };
+  
 
 
   const toggleDropdown = () => {
@@ -195,7 +186,6 @@ function Header() {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="productsDropdown">
                 <li><Link className="dropdown-item" to="/Digital">Strategic Digital Asset Advisory (SDAA)</Link></li>
-                <li><Link className="dropdown-item" to="/iso">ICO & Token Management Service</Link></li>
 
 
 <li><Link className="dropdown-item" to="/family">Family Crypto Savings Program</Link></li>
@@ -212,19 +202,22 @@ function Header() {
 <li><Link className="dropdown-item" to="/BlockchainApplicationCourses">Blockchain Application Course</Link></li>
 <li><Link className="dropdown-item" to="/WEB3">Web 3.0 Power Sessions</Link></li>
 <li><Link className="dropdown-item" to="/SelfStudy">Self-Study Online Program</Link></li>
-<li><Link className="dropdown-item" to="/swis">Swisscom Education Program</Link></li>
 
                 </ul>
               </li>
               <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" onClick={handleWeb3Click} id="SW3SDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              SW3C
-                </a>
-                
-              <ul className="dropdown-menu" aria-labelledby="SW3SDropdown">
-                <li><Link className="dropdown-item" to="/WS">Strategic Web 3.0 Consultancy</Link></li>
-                </ul>
-              </li>
+  <a 
+    className="nav-link dropdown-toggle" 
+    onClick={handleWeb3Click} 
+    id="SW3SDropdown" 
+    role="button" 
+    data-bs-toggle="dropdown" 
+    aria-expanded="false"
+  >
+    <span className="sw3c-text">SW3C</span>
+    <span className="sw3c-hover-text ">Strategic Web 3.0 Consultancy</span>
+  </a>
+</li>
               {/* <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="ptgrTokenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   PTGR Token
@@ -303,7 +296,6 @@ function Header() {
     Strategic Digital Asset Advisory (SDAA)
   </a>
 </li>
-<li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/iso')}>ICO & Token Management Service</a></li>
 <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/family')}>Family Crypto Savings Program</a></li>
 <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/Forensic')}>Forensic Services</a></li>
               <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/preiso')}>Pre-ICO Deals</a></li>
@@ -330,7 +322,6 @@ function Header() {
               <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/BlockchainApplicationCourses')}>Blockchain Application Course</a></li>
               <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/WEB3')}>Web 3.0 Power Sessions</a></li>
               <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/SelfStudy')}>Self-Study Online Program</a></li>
-              <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/swis')}>Swisscom Education Program</a></li>
             </ul>
           </div>
         </li>
