@@ -1,219 +1,246 @@
 /* Container */
 .ssc-container {
-    margin: 0 auto;
-    margin-bottom: 20px;
-    margin-top: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 50px;
+
+  top: 0; /* Stick to the top of the viewport */
+  background: white; /* Add a background to avoid content overlap */
+  z-index: 100; /* Ensure it stays above other content */
+}
+
+/* Row Layout */
+.ssc-row {
+  display: flex;
+  gap: 20px;
+  align-items: stretch; /* Ensure all cards stretch to the same height */
+}
+
+/* Fixed Left Card */
+.ssc-fixed-card {
+  flex: 0 0 250px; /* Fixed width for the left card */
+  background: #ebecec; /* Brand color for the fixed card */ /* #ebecec e3f2fd */ 
+  padding: 20px;
+  border-radius: 8px 0 0 8px; /* Only top-left and bottom-left corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: rgb(28, 72, 138); /* White text for better contrast */
+  height: auto; /* Stretch to match the tallest card */
+  border: solid 1px black;
+}
+
+.ssc-card-image {
+  width: 100%; /* Cover the entire width of the card */
+  height: 100px; /* Fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+.web-card-image {
+  width: 100%; /* Cover the entire width of the card */
+  height: 150px; /* Fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.ssc-fixed-card ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.ssc-fixed-card li {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.ssc-fixed-card li.ssc-active {
+  font-weight: bold;
+  color: #86210f; /* Highlight active item with a contrasting color */
+  transform: scale(1.05);
+}
+
+/* Scrollable Services */
+.ssc-scroll-container {
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding-bottom: 10px;
+ 
+}
+
+.ssc-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.ssc-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.ssc-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+
+.web-scroll-container {
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding-bottom: 10px;
   
-    top: 0; /* Stick to the top of the viewport */
-    background: white; /* Add a background to avoid content overlap */
-    z-index: 100; /* Ensure it stays above other content */
-  }
-  
-  /* Row Layout */
+}
+
+.web-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.web-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.web-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Scrollable Card */
+.ssc-scroll-card {
+  flex: 0 0 350px; /* Increased width for desktop */
+  background: white;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #1b3e9e; /* Add a 1px solid border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, background 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.ssc-scroll-card:hover {
+  background: var(--primary-color);
+  transform: translateY(-10px); /* Move the card up by 10px */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: Add a stronger shadow on hover */
+  color: #fff;
+} 
+
+.ssc-scroll-card:hover .ssc-card-content p {
+color: #fff;
+}
+
+
+ 
+.ssc-scroll-card.ssc-active {
+  background: var(--primary-color);
+  color: #fff;
+  transform: translateY(-10px);
+}
+
+.ssc-active .ssc-card-content p {
+  color: #fff;
+}
+
+.ssc-card-content ul {
+  padding-left: 20px; /* Add some padding for better readability */
+  list-style-type: disc; /* Add bullet points */
+}
+
+.ssc-card-content ul li {
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+  margin-bottom: 8px; /* Add spacing between list items */
+}
+.ssc-card-content p {
+  white-space: normal; /* Allow paragraph text to wrap */
+  color: #2d2d2e;
+  word-wrap: break-word; /* Break long words if necessary */
+  margin-bottom: 12px; /* Add spacing below paragraphs */
+}
+.ssc-card-content h5 {
+  white-space: normal; /* Allow paragraph text to wrap */
+  word-wrap: break-word; /* Break long words if necessary */
+  margin-bottom: 12px; /* Add spacing below paragraphs */
+}
+
+.ssc-card-content {
+  padding: 15px;
+  flex: 1; /* Ensure content stretches to fill the card */
+  display: flex;
+  flex-direction: column;
+}
+
+.ssc-card-content h5 {
+  font-weight: bold; /* Make the text bold */
+  font-weight: 700;
+}
+
+.ssc-learn-more {
+  text-align: right;
+  color: #1b4672; /* Brand color for "Learn More" */
+  cursor: pointer;
+  border: 2px solid #194169;
+  width: fit-content;
+  margin-left: auto; 
+  margin-top: auto; /* Push "Learn More" to the bottom of the card */
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.ssc-learn-more:hover {
+  background: #194169;
+  color: #fff;
+} 
+
+.ssc-scroll-card:hover  .ssc-learn-more, .ssc-scroll-card.ssc-active .ssc-learn-more {
+  color: #fff; /* Brand color for "Learn More" */
+  border: 2px solid #fff;
+}
+
+.ssc-scroll-card:hover .ssc-learn-more:hover {
+  background: #fff;
+  color: var(--primary-color);
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
   .ssc-row {
-    display: flex;
-    gap: 20px;
-    align-items: stretch; /* Ensure all cards stretch to the same height */
+    flex-direction: column;
   }
-  
-  /* Fixed Left Card */
+
+  /* Hide the fixed card on small devices */
   .ssc-fixed-card {
-    flex: 0 0 250px; /* Fixed width for the left card */
-    background: #ebecec; /* Brand color for the fixed card */
-    padding: 20px;
-    border-radius: 8px 0 0 8px; /* Only top-left and bottom-left corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: rgb(28, 72, 138); /* White text for better contrast */
-    height: auto; /* Stretch to match the tallest card */
-    border: solid 1px black;
+    display: none;
   }
-  
-  .ssc-card-image {
-    width: 100%; /* Cover the entire width of the card */
-    height: 100px; /* Fixed height for the image */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-  }
-  .web-card-image {
-    width: 100%; /* Cover the entire width of the card */
-    height: 150px; /* Fixed height for the image */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-  }
-  
-  .ssc-fixed-card ul {
-    padding-left: 0;
-    list-style-type: none;
-  }
-  
-  .ssc-fixed-card li {
-    padding: 10px;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  
-  .ssc-fixed-card li.ssc-active {
-    font-weight: bold;
-    color: #86210f; /* Highlight active item with a contrasting color */
-    transform: scale(1.05);
-  }
-  
-  /* Scrollable Services */
+
+  /* Stack cards vertically on small devices */
   .ssc-scroll-container {
-    flex: 1; /* Takes up remaining space */
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    padding-bottom: 10px;
-   
-  }
-  
-  .ssc-scroll-container::-webkit-scrollbar {
-    height: 8px;
-  }
-  
-  .ssc-scroll-container::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-  }
-  
-  .ssc-scroll-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-
-  .web-scroll-container {
-    flex: 1; /* Takes up remaining space */
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    padding-bottom: 10px;
-    
-  }
-  
-  .web-scroll-container::-webkit-scrollbar {
-    height: 8px;
-  }
-  
-  .web-scroll-container::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-  }
-  
-  .web-scroll-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  
-  /* Scrollable Card */
-  .ssc-scroll-card {
-    flex: 0 0 350px; /* Increased width for desktop */
-    background: white;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    border: 1px solid #1b3e9e; /* Add a 1px solid border */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-right: 16px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out, background 0.3s;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .ssc-scroll-card:hover {
-    transform: translateY(-10px); /* Move the card up by 10px */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: Add a stronger shadow on hover */
-  }
-  
-  .ssc-scroll-card.ssc-active {
-    background: #e3f2fd;
-    transform: translateY(-10px);
-  }
-  
-  .ssc-card-content ul {
-    padding-left: 20px; /* Add some padding for better readability */
-    list-style-type: disc; /* Add bullet points */
-  }
-  
-  .ssc-card-content ul li {
+    flex-direction: column; /* Stack cards vertically */
+    overflow: auto; /* Allow vertical scrolling */
     white-space: normal; /* Allow text to wrap */
-    word-wrap: break-word; /* Break long words if necessary */
-    margin-bottom: 8px; /* Add spacing between list items */
   }
-  .ssc-card-content p {
-    white-space: normal; /* Allow paragraph text to wrap */
-    color: #2d2d2e;
-    word-wrap: break-word; /* Break long words if necessary */
-    margin-bottom: 12px; /* Add spacing below paragraphs */
+  .web-scroll-container {
+    flex-direction: column; /* Stack cards vertically */
+    overflow: auto; /* Allow vertical scrolling */
+    white-space: normal; /* Allow text to wrap */
   }
-  .ssc-card-content h5 {
-    white-space: normal; /* Allow paragraph text to wrap */
-    word-wrap: break-word; /* Break long words if necessary */
-    margin-bottom: 12px; /* Add spacing below paragraphs */
+
+  .ssc-scroll-card {
+    width: 100%; /* Full width for each card */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 16px; /* Add spacing between stacked cards */
+    flex: 0 0 auto; /* Reset flex for mobile */
   }
-  
-  .ssc-card-content {
-    padding: 15px;
-    flex: 1; /* Ensure content stretches to fill the card */
-    display: flex;
-    flex-direction: column;
+
+  /* Remove active card highlight on mobile */
+  .ssc-scroll-card.ssc-active {
+    background: white;
+    transform: none;
   }
-  
-  .ssc-card-content h5 {
-    font-weight: bold; /* Make the text bold */
-    font-weight: 700;
-  }
-  
-  .ssc-learn-more {
-    text-align: right;
-    color: #1b4672; /* Brand color for "Learn More" */
-    cursor: pointer;
-    border: 2px solid #194169;
-    width: fit-content;
-    margin-left: auto; 
-    margin-top: auto; /* Push "Learn More" to the bottom of the card */
-    padding: 12px 24px;
-    font-size: 1rem;
-    border-radius: 6px;
-    transition: background 0.3s ease, color 0.3s ease;
-  }
-  .ssc-learn-more:hover {
-    background: #194169;
-    color: #fff;
-  }
-  /* Responsive */
-  @media (max-width: 768px) {
-    .ssc-row {
-      flex-direction: column;
-    }
-  
-    /* Hide the fixed card on small devices */
-    .ssc-fixed-card {
-      display: none;
-    }
-  
-    /* Stack cards vertically on small devices */
-    .ssc-scroll-container {
-      flex-direction: column; /* Stack cards vertically */
-      overflow: auto; /* Allow vertical scrolling */
-      white-space: normal; /* Allow text to wrap */
-    }
-    .web-scroll-container {
-      flex-direction: column; /* Stack cards vertically */
-      overflow: auto; /* Allow vertical scrolling */
-      white-space: normal; /* Allow text to wrap */
-    }
-  
-    .ssc-scroll-card {
-      width: 100%; /* Full width for each card */
-      margin-right: 0; /* Remove right margin */
-      margin-bottom: 16px; /* Add spacing between stacked cards */
-      flex: 0 0 auto; /* Reset flex for mobile */
-    }
-  
-    /* Remove active card highlight on mobile */
-    .ssc-scroll-card.ssc-active {
-      background: white;
-      transform: none;
-    }
-  }
+}
+

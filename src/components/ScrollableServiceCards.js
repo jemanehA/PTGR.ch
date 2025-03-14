@@ -187,10 +187,10 @@ const ScrollableServiceCards = () => {
           services={cards}
         />
       ) : (
-        <div className="ssc-row">
+        <div className="ssc-row"> 
           <div className="ssc-fixed-card">
             <h3>Explore Our Services</h3>
-            <ul>
+            <ul> 
               {cards.map((card, index) => (
                 <li
                   key={index}
