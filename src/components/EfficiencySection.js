@@ -62,11 +62,11 @@ const EfficiencySection = () => {
                 <p>Loading video...</p>
               </div>
             )}
+            <div className="ptgr-video-title">Message from Our CEO</div>
             <video ref={videoRef} controls>
-              <source src="/assets/images/video/Test3.MP4" type="video/mp4" />
+              <source src="/assets/images/video/Test_1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="ptgr-video-title">Message from Our CEO</div>
           </div>
         </div>
       </div>

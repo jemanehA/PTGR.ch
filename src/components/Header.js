@@ -10,6 +10,17 @@ function Header() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("English");
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleMouseLeave = () => {
+    setShowPopup(false);
+  };
+
+
+  const handleMouseEnter = () => {
+    setShowPopup(true);
+  };
+
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -22,6 +33,10 @@ function Header() {
   const handleWeb3Click = (e) => {
     e.preventDefault(); 
     navigate('/WS'); 
+  };
+  const handleHomeClick = (e) => {
+    e.preventDefault(); 
+    navigate('/'); 
   };
   const handleEducationClick = (e) => {
     e.preventDefault(); // Prevent default link behavior
@@ -167,7 +182,14 @@ function Header() {
 {/* desktop Menu */}
           <div className="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
             <ul className="navbar-nav ms-auto">
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" onClick={handleHomeClick} id="home" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home
+                </a>
+
+              </li>
               <li className="nav-item dropdown">
+
                 <a className="nav-link dropdown-toggle" onClick={handleServiceClick} id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Services
                 </a>
@@ -196,9 +218,12 @@ function Header() {
               </li>
               <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" onClick={handleWeb3Click} id="SW3SDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Strategic Web 3.0 Consultancy
+              SW3C
                 </a>
-
+                
+              <ul className="dropdown-menu" aria-labelledby="SW3SDropdown">
+                <li><Link className="dropdown-item" to="/WS">Strategic Web 3.0 Consultancy</Link></li>
+                </ul>
               </li>
               {/* <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="ptgrTokenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

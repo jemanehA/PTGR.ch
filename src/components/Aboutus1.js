@@ -251,9 +251,9 @@ const videoRef = useRef(null); // Ref for the video element
 
       {/* Key to Success Section */}
       <div className="partnerss">
-        <div className="container py-5">
-          <div className="row text-center mb-5">
-            <h2 className="subtitle">Our Key to Success</h2>
+        <div className="container max-md:py-5">
+          <div className="row text-center">
+            <h2 className="section-title">Our Key to Success</h2>
           </div>
           <div className="row align-items-center">
             <div className="col-md-6">

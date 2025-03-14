@@ -18,7 +18,7 @@ const AboutSection = () => {
 
   const features = [
     {
-      image: '/assets/images/reliable.jpeg', // Replace with your image path
+      image: '/assets/images/reliable-card.jpg', // Replace with your image path
       title: 'Reliable',
       description:
         'Our team is known for delivering reliable results and ensuring client satisfaction. We provide tailored strategies and expert advice to help you succeed with your digital assets.',
@@ -32,7 +32,7 @@ const AboutSection = () => {
         align: 'left', // Add alignment property
     },
     {
-      image: '/assets/images/independent.jpeg', // Replace with your image path
+      image: '/assets/images/independent-card.jpg', // Replace with your image path
       title: 'Independent',
       description:
         'Known for trust, reliability, and integrity, we deliver tailored strategies and expert guidance to help you succeed with your digital assets. Professionalism and transparency drive everything we do.',

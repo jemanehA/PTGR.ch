@@ -6,7 +6,7 @@ import '../styles/detaiBlogs.css';
 const BlogDetail = () => {
   const { slug } = useParams();
   const blog = blogs.find(blog => blog.slug === slug);
-  const relatedPosts = blogs.filter(b => blog.relatedPosts.includes(b.id));
+  const relatedPosts = blogs.filter(b => blog?.relatedPosts?.includes(b.id));
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -123,7 +123,7 @@ const BlogDetail = () => {
         <aside className="bd-related-posts">
           <h3 className="bd-related-title">Recommended Reads</h3>
           <div className="bd-related-grid">
-            {relatedPosts.map(post => (
+            {relatedPosts?.map(post => (
               <Link 
                 key={post.id} 
                 to={`/blog/${post.slug}`}
