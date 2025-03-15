@@ -1,67 +1,65 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import Header from './components/Header';
-import Header1 from './components/Header1';
 import Footer from './components/Footer';
-import Footer1 from './components/Footer1';
-import Home from './pages/home';
-import CPM from './pages/cpm';
-import PSRO from './pages/sro';
-import CourseDetails from './components/CourseDetails';
-import Performance from './pages/performance';
-import Digital from './pages/digitalasset';
-import Service from './pages/digitalasset';
-import Forensic from './pages/Forensic';
-import ISO from './pages/iso';
-import PREISOS from './pages/preiso';
-import CRYD from './pages/crypo';
-import WEB3 from './pages/web3';
-import About from './pages/Aboutus';
-import Family from './pages/Family';
-
-import WS from './components/isows'
-import Eventlist from './components/Eventlist';
-import WS1 from './pages/WS1';
-import ISOsetup from './pages/ICOSetup';
-import Metaverspage from './pages/metaverspage';
-import CustodyPag from './pages/custodypage';
-import TokenizatoPage from './pages/tokenizationpage';
-import JobPage from './pages/Jobs';
-import Event from './pages/Event';
-import News from './pages/News';
-import Blockchain from './pages/Blockchain';
-import Swis from './pages/Swiscom';
-import SelfStudy from './components/selfstudy';
-import Blogs from './components/Blogs';
-import BlogDetail from './components/BlogDetail';
-import TermsAndConditions from './components/TermsAndConditions';
-import CookiePolicy from './components/CookiePolicy';
-import DataPolicy from './components/Datapolicy';
-import Disclaimer from './components/Disclaimer';
-import Imprint from './components/Imprint';
-import Partners from './components/Partners';
-import PaymentDetails from './components/PaymentDetails';
-import VerifyEmail from './components/VerifyEmail';
-import ChatBox from './components/ChatBox';
-import CursorFollower from './components/CursorFollower';
-import ContactUsForm from './components/ContactForm';
-import BookConsultations from './components/BookConsultations';
-import Web3cards from './components/web3cards';
-import BusinessAnalytics from './components/BusinessAnalytics';
-import DigitalWealthManagement from './components/DigitalWealthManagement';
-import Blockchainpage from './components/Blockchainpage';
-import Education from './components/Education';
-import PaymentForm from './components/PaymentForm';
-import BlogsMain from './components/Blogsmain';
-import EventDetail from './components/EventDetail';
-import ServiceDetail from './components/ServiceDetail';
-import Bloglist from './components/Bloglist';
-import NewsHome from './components/NewsHome';
-import PTGRToken from './pages/PTGRtoken';
-import TestPaypal from './pages/test';
-
 import './styles/force.css';
 import './crypto.css';
+import Home from "./pages/home"
+
+
+const CPM = lazy(() => import('./pages/cpm'));
+const PSRO = lazy(() => import('./pages/sro'));
+const CourseDetails = lazy(() => import('./components/CourseDetails'));
+const Performance = lazy(() => import('./pages/performance'));
+const Digital = lazy(() => import('./pages/digitalasset'));
+const Service = lazy(() => import('./pages/digitalasset'));
+const Forensic = lazy(() => import('./pages/Forensic'));
+const ISO = lazy(() => import('./pages/iso'));
+const PREISOS = lazy(() => import('./pages/preiso'));
+const CRYD = lazy(() => import('./pages/crypo'));
+const WEB3 = lazy(() => import('./pages/web3'));
+const About = lazy(() => import('./pages/Aboutus'));
+const Family = lazy(() => import('./pages/Family'));
+const WS = lazy(() => import('./components/isows'));
+const Eventlist = lazy(() => import('./components/Eventlist'));
+const WS1 = lazy(() => import('./pages/WS1'));
+const ISOsetup = lazy(() => import('./pages/ICOSetup'));
+const Metaverspage = lazy(() => import('./pages/metaverspage'));
+const CustodyPag = lazy(() => import('./pages/custodypage'));
+const TokenizatoPage = lazy(() => import('./pages/tokenizationpage'));
+const JobPage = lazy(() => import('./pages/Jobs'));
+const Event = lazy(() => import('./pages/Event'));
+const News = lazy(() => import('./pages/News'));
+const Blockchain = lazy(() => import('./pages/Blockchain'));
+const Swis = lazy(() => import('./pages/Swiscom'));
+const SelfStudy = lazy(() => import('./components/selfstudy'));
+const Blogs = lazy(() => import('./components/Blogs'));
+const BlogDetail = lazy(() => import('./components/BlogDetail'));
+const TermsAndConditions = lazy(() => import('./components/TermsAndConditions'));
+const CookiePolicy = lazy(() => import('./components/CookiePolicy'));
+const DataPolicy = lazy(() => import('./components/Datapolicy'));
+const Disclaimer = lazy(() => import('./components/Disclaimer'));
+const Imprint = lazy(() => import('./components/Imprint'));
+const Partners = lazy(() => import('./components/Partners'));
+const PaymentDetails = lazy(() => import('./components/PaymentDetails'));
+const VerifyEmail = lazy(() => import('./components/VerifyEmail'));
+const ChatBox = lazy(() => import('./components/ChatBox'));
+const CursorFollower = lazy(() => import('./components/CursorFollower'));
+const ContactUsForm = lazy(() => import('./components/ContactForm'));
+const BookConsultations = lazy(() => import('./components/BookConsultations'));
+const Web3cards = lazy(() => import('./components/web3cards'));
+const BusinessAnalytics = lazy(() => import('./components/BusinessAnalytics'));
+const DigitalWealthManagement = lazy(() => import('./components/DigitalWealthManagement'));
+const Blockchainpage = lazy(() => import('./components/Blockchainpage'));
+const Education = lazy(() => import('./components/Education'));
+const PaymentForm = lazy(() => import('./components/PaymentForm'));
+const BlogsMain = lazy(() => import('./components/Blogsmain'));
+const EventDetail = lazy(() => import('./components/EventDetail'));
+const ServiceDetail = lazy(() => import('./components/ServiceDetail'));
+const Bloglist = lazy(() => import('./components/Bloglist'));
+const NewsHome = lazy(() => import('./components/NewsHome'));
+const PTGRToken = lazy(() => import('./pages/PTGRtoken'));
+const TestPaypal = lazy(() => import('./pages/test'));
 
 const Login = ({ onLogin }) => {
   const [password, setPassword] = useState('');
@@ -86,47 +84,48 @@ const Login = ({ onLogin }) => {
 
   return (
     <div
-    className="login_area"
-    style={{
-      backgroundImage: "url('/assets/images/swissback.jpg')",
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'fixed'
-    }}
-    
-  >
-    <div className="logincontainer">
-      <div className="container text-center mt-5">
-        <div className='logincon'>
-        <h2 className="wearecoming">We're Almost There!</h2>
-        <p className="underconstruction">Our page is under construction to bring you a better experience. Stay tuned!</p>
-        <div className="card mx-auto show" id="loginForm">
-          <h3 className="hh">Login</h3>
-          <form onSubmit={handleLogin}>
-            <div className="mb-3 text-start">
-              <label htmlFor="password" className="form-label">Password</label>
-              <div className="input-group">
-                <input
-                  type={passwordType}
-                  name="password"
-                  className="form-control"
-                  id="password"
-                  placeholder="Enter your password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <span className="input-group-text" style={{ cursor: 'pointer' }} onClick={togglePassword}>
-                  <i className={`fas ${passwordType === 'password' ? 'fa-eye' : 'fa-eye-slash'}`} />
-                </span>
-              </div>
-              {errorMessage && <p className="text-danger mt-2">{errorMessage}</p>}
+      className="login_area"
+      style={{
+        backgroundImage: "url('/assets/images/swissback.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      <div className="logincontainer">
+        <div className="container text-center mt-5">
+          <div className='logincon'>
+            <h2 className="wearecoming">We're Almost There!</h2>
+            <p className="underconstruction">Our page is under construction to bring you a better experience. Stay tuned!</p>
+            <div className="card mx-auto show" id="loginForm">
+              <h3 className="hh">Login</h3>
+              <form onSubmit={handleLogin}>
+                <div className="mb-3 text-start">
+                  <label htmlFor="password" className="form-label">Password</label>
+                  <div className="input-group">
+                    <input
+                      type={passwordType}
+                      name="password"
+                      className="form-control"
+                      id="password"
+                      placeholder="Enter your password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <span className="input-group-text" style={{ cursor: 'pointer' }} onClick={togglePassword}>
+                      <i className={`fas ${passwordType === 'password' ? 'fa-eye' : 'fa-eye-slash'}`} />
+                    </span>
+                  </div>
+                  {errorMessage && <p className="text-danger mt-2">{errorMessage}</p>}
+                </div>
+                <button type="submit" className="btn-custom w-100">Login</button>
+              </form>
             </div>
-            <button type="submit" className="btn-custom w-100">Login</button>
-          </form>
+          </div>
         </div>
-      </div></div>
-    </div></div>
+      </div>
+    </div>
   );
 };
 
@@ -167,7 +166,6 @@ const App = () => {
     { path: '/educationcertificate', element: <CRYD /> },
     { path: '/web3', element: <WEB3 /> },
     { path: '/Aboutus', element: <About /> },
-    
     { path: '/Digital', element: <Digital /> },
     { path: '/Service', element: <Service /> },
     { path: '/family', element: <Family /> },
@@ -194,7 +192,6 @@ const App = () => {
     { path: '/Imprint', element: <Imprint /> },
     { path: '/Partners', element: <Partners /> },
     { path: '/SelfStudy', element: <SelfStudy /> },
-    
     { path: '/payment-details', element: <PaymentDetails /> },
     { path: '/verify-email', element: <VerifyEmail /> },
     { path: '/ContactUsForm', element: <ContactUsForm /> },
@@ -206,38 +203,40 @@ const App = () => {
       <div className="app-container">
         <Header ref={headerRef} />
         <div className="main-content" style={{ paddingTop: `${headerHeight}px` }}>
-          <Routes>
-            <Route path="/login" element={<Login onLogin={handleLogin} />} />
-            <Route path="/CursorFollower" element={<CursorFollower />} />
-            {routes.map((route, index) => (
-              <Route
-                key={index}
-                path={route.path}
-                element={
-                  route.private ? (
-                    <PrivateRoute
-                      element={route.element}
-                      isAuthenticated={isAuthenticated}
-                    />
-                  ) : (
-                    route.element
-                  )
-                }
-              />
-            ))}
-            <Route path="/blog/:slug" element={<BlogDetail />} />
-            <Route path="/ServiceDetail" element={<ServiceDetail />} />
-            <Route path="/blogmenu" element={<BlogsMain />} />
-            <Route path="/Bloglist" element={<Bloglist />} />
-            <Route path="/NewsHome" element={<NewsHome />} />
-            
-            <Route path="/paypaltest" element={<TestPaypal />} />
-            <Route path="/event/:id" element={<EventDetail />} />
-          </Routes>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/login" element={<Login onLogin={handleLogin} />} />
+              <Route path="/CursorFollower" element={<CursorFollower />} />
+              {routes.map((route, index) => (
+                <Route
+                  key={index}
+                  path={route.path}
+                  element={
+                    route.private ? (
+                      <PrivateRoute
+                        element={route.element}
+                        isAuthenticated={isAuthenticated}
+                      />
+                    ) : (
+                      route.element
+                    )
+                  }
+                />
+              ))}
+              <Route path="/blog/:slug" element={<BlogDetail />} />
+              <Route path="/ServiceDetail" element={<ServiceDetail />} />
+              <Route path="/blogmenu" element={<BlogsMain />} />
+              <Route path="/Bloglist" element={<Bloglist />} />
+              <Route path="/NewsHome" element={<NewsHome />} />
+              <Route path="/paypaltest" element={<TestPaypal />} />
+              <Route path="/event/:id" element={<EventDetail />} />
+            </Routes>
+          </Suspense>
         </div>
-         <Footer />
-        
-        <ChatBox />
+        <Footer />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ChatBox />
+        </Suspense>
       </div>
     </Router>
   );

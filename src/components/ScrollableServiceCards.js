@@ -10,7 +10,7 @@ const ScrollableServiceCards = () => {
   const cards = [
     { 
       image: '/assets/images/wallett.png', 
-      title: "WALLET", 
+      title: "Wallet", 
       description: "Crypto Wallet Consulting", 
       list: ["Set-up of centralized & decentralized wallet", "Explanation of Wallet basics", "Personal consultation and education (app. 2 hours)"],
       detailContent:'<h3>Service</h3><ul><li>Set-up of centralized & decentralized wallet</li><li>Explanation of Wallet basics</li><li>Personal consultation and education (app. 2 hours)</li></ul>',
@@ -18,7 +18,7 @@ const ScrollableServiceCards = () => {
     },
     { 
       image: '/assets/images/Professional-Crypto-Consulting-.webp', 
-      title: "STARTER", 
+      title: "Starter", 
       description: "Crypto Consulting", 
       list: ["Set-up process", "Personal consultation and education (app. 3 hours)", "Ideal coin allocation"] ,
       detailContent: '<h3>Service</h3><ul><li>Set-up process</li><li>Personal consultation and education (app. 3 hours)</li><li>Ideal coin allocation</li></ul><b>Recommended Investment</b>: CHF 10.000</span>',
@@ -27,7 +27,7 @@ const ScrollableServiceCards = () => {
     },
     { 
       image: '/assets/images/Strategic-Crypto-Consulting.webp', 
-      title: "BASIC", 
+      title: "Basic", 
       description: "Professional Crypto Consulting", 
       list: [
         "Set-up process",
@@ -46,7 +46,7 @@ const ScrollableServiceCards = () => {
 
     { 
       image: '/assets/images/win.jpg', 
-      title: "ADVANCED", 
+      title: "Advanced", 
       description: "Professional Crypto Consulting", 
       list: [
         "Set-up process",
@@ -68,7 +68,7 @@ const ScrollableServiceCards = () => {
     },
     { 
       image: '/assets/images/Professional-Crypto-Consulting-.webp', 
-      title: "PRO", 
+      title: "Pro", 
       description: "Professional Crypto Consulting", 
       list: [
         "Set-up process",
@@ -92,7 +92,7 @@ const ScrollableServiceCards = () => {
     },
     { 
       image: '/assets/images/Strategic-Crypto-Consulting.webp', 
-      title: "PRO S", 
+      title: "Pro S", 
       description: "Professional Crypto Consulting", 
       list: [
         "Set-up process",
@@ -119,7 +119,7 @@ const ScrollableServiceCards = () => {
 
     { 
       image: '/assets/images/Strategic-Crypto-Consulting.webp', 
-      title: "PARTNERSHIP", 
+      title: "Partnership", 
       description: "Consulting & Cooperation", 
       list: [
         "Set-up process",
