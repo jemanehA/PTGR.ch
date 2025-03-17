@@ -103,7 +103,7 @@ const Isows1 = () => {
           <div className="col-xl-6 offset-xl-1 col-lg-7 afterheading-right">
             <div className="afterheading-content">
               <p className="afterheading-highlight">
-                Empowering your digital journey with innovative solutions in ICO setup, tokenization, custody, payments, and metaverse technologies.
+                Empowering your digital journey with innovative solutions in Blockchain & IT Solutions, Payment & Custody Solutions, RWA Tokenization, Strategic ICO Solutions, and Metaverse technologies.
               </p>
               <p className="afterheading-description">
                 We are the one-stop shop destination for all our clients who need advanced digital asset services for their physical assets. Our main service offerings are the ones listed below.

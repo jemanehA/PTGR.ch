@@ -65,7 +65,7 @@ const SW3CDetails = ({ service }) => {
       {/* Introduction Paragraphs */}
       <p
         dangerouslySetInnerHTML={{ __html: service.description }}
-        className="text-lg my-4"
+        className="text-lg my-4 w-[80%] mx-auto"
       ></p>
 
       {/* Tabs */}
@@ -121,6 +121,18 @@ const SW3CDetails = ({ service }) => {
           </div>
         ))}
       </div>
+       <div className="ico-token-cta" style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              paddingBottom:'30px'
+      
+            }}>
+                  <Link to={`/BookConsultations?consultationType=${service.bookType}`}>
+                  <button className="cta-button">Ready to Launch? Book a Consultation</button>
+                </Link>
+                  </div>
     </div>
   );
 };
