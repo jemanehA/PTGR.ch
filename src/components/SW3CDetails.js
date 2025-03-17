@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const SW3CDetails = ({ service }) => {
-  const [activeTab, setActiveTab] = useState(service.subServices[0]?.id);
+  const [activeTab, setActiveTab] = useState();
   const cardRefs = useRef({}); // Ref to store card DOM elements
   const isInitialRender = useRef(true); // Ref to track initial render
 
@@ -13,10 +13,8 @@ const SW3CDetails = ({ service }) => {
   // Scroll to the active card whenever the activeTab changes (but not on initial render)
   useEffect(() => {
     if (isInitialRender.current) {
-      // Skip scrolling on initial render
       isInitialRender.current = false;
     } else {
-      // Scroll to the active card on tab change
       if (cardRefs.current[activeTab]) {
         cardRefs.current[activeTab].scrollIntoView({
           behavior: 'smooth', // Smooth scrolling
