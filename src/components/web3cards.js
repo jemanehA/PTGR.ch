@@ -13,7 +13,7 @@ const Web3cards = forwardRef((props, ref) => {
     {
       id: 'web3-blockchain-it',
       image: '/assets/images/blockchain-it.jpg',
-      title: 'Web 3.0 - Blockchain & IT',
+      title: 'Blockchain & IT Solutions',
       description:
         'We provide expert consulting to seamlessly integrate blockchain into existing enterprise IT infrastructure. Our approach marries deep technical expertise with strategic insight, aligning innovative blockchain solutions with core business objectives. The result is a robust, future-ready digital foundation that drives competitive advantage.',
     },
