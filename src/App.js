@@ -62,6 +62,7 @@ import TestPaypal from './pages/test';
 
 import './styles/force.css';
 import './crypto.css';
+import SW3CDetails from './components/SW3CDetails';
 
 const Login = ({ onLogin }) => {
   const [password, setPassword] = useState('');
@@ -194,7 +195,7 @@ const App = () => {
     { path: '/Imprint', element: <Imprint /> },
     { path: '/Partners', element: <Partners /> },
     { path: '/SelfStudy', element: <SelfStudy /> },
-    
+    {path: '/sw3c-details', element: <SW3CDetails />},
     { path: '/payment-details', element: <PaymentDetails /> },
     { path: '/verify-email', element: <VerifyEmail /> },
     { path: '/ContactUsForm', element: <ContactUsForm /> },

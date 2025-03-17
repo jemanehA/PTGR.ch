@@ -171,7 +171,7 @@ function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
 {/* desktop Menu */}
-          <div className="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+          <div className=" navbar-collapse d-none d-lg-block" id="navbarNav">
             <ul className="navbar-nav ms-auto">
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" onClick={handleHomeClick} id="home" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -19,7 +19,7 @@
 /* Fixed Left Card */
 .ssc-fixed-card {
   flex: 0 0 250px; /* Fixed width for the left card */
-  background: #ebecec; /* Brand color for the fixed card */ /* #ebecec e3f2fd */ 
+  background: #ebecec; /* Brand color for the fixed card */
   padding: 20px;
   border-radius: 8px 0 0 8px; /* Only top-left and bottom-left corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -64,7 +64,6 @@
   scroll-behavior: smooth;
   white-space: nowrap;
   padding-bottom: 10px;
- 
  
 }
 
@@ -122,26 +121,13 @@
 }
 
 .ssc-scroll-card:hover {
-  background: var(--primary-color);
   transform: translateY(-10px); /* Move the card up by 10px */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: Add a stronger shadow on hover */
-  color: #fff;
-} 
-
-.ssc-scroll-card:hover .ssc-card-content p {
-color: #fff;
 }
 
-
- 
 .ssc-scroll-card.ssc-active {
-  background: var(--primary-color);
-  color: #fff;
+  background: #e3f2fd;
   transform: translateY(-10px);
-}
-
-.ssc-active .ssc-card-content p {
-  color: #fff;
 }
 
 .ssc-card-content ul {
@@ -194,20 +180,7 @@ color: #fff;
 .ssc-learn-more:hover {
   background: #194169;
   color: #fff;
-} 
-
-.ssc-scroll-card:hover  .ssc-learn-more, .ssc-scroll-card.ssc-active .ssc-learn-more {
-  color: #fff; /* Brand color for "Learn More" */
-  border: 2px solid #fff;
 }
-
-.ssc-scroll-card:hover .ssc-learn-more:hover {
-  background: #fff;
-  color: var(--primary-color);
-}
-
-
-
 /* Responsive */
 @media (max-width: 768px) {
   .ssc-row {
@@ -244,4 +217,3 @@ color: #fff;
     transform: none;
   }
 }
-
