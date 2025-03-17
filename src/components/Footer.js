@@ -113,9 +113,11 @@ function Footer() {
               </div>
             </div>
             <div className='col-md-5 text-start pt-4'>
+              <div>
               <h4 className='mb-3'>About Us</h4>
-              <p>We are a team of experts from the fields of investment banking, private banking, portfolio management, trading, IT, risk management as well as blockchain and cryptoassets.</p>
-<p>Follow us</p>
+              <p>We are a team of experts from the fields of investment banking, private banking, portfolio management, trading, IT, risk management as well as blockchain and cryptoassets.</p> </div>
+<div className='mt-4'>
+  <h5>Follow us</h5>
 <p >Become part of this big change, stay tuned with us</p>
 <div className="d-flex gap-2">
 <a href="https://www.facebook.com/profile.php?id=100088835256574" className="text-white" target="_blank" title="Facebook"><i className="fab fa-facebook-f fa-lg"></i></a>
@@ -123,7 +125,7 @@ function Footer() {
 <a href="https://t.me/PTGRAG_NEWS_CHANNEL" className="text-white" target="_blank" title="Telegram"><i className="fab fa-telegram-plane fa-lg"></i></a>
 <a href="https://www.instagram.com/ptgr_ag/" className="text-white" target="_blank" title="Instagram"><i className="fab fa-instagram fa-lg"></i></a>
 <a href="https://www.tiktok.com/@ptgr_future_of_finance" className="text-white" target="_blank" title="TikTok"><i className="fab fa-tiktok fa-lg"></i></a>
-</div>
+</div> </div>
 </div>
             <div className='col-md-2 text-start pt-4'>
               <h4 className='mb-3'>Quick Links</h4>

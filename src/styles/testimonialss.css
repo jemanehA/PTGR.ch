@@ -50,8 +50,8 @@
   
   /* Profile avatar */
   .newtestimonial-avatar {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid #194169;
@@ -118,8 +118,8 @@
     }
   
     .newtestimonial-avatar {
-      width: 40px; /* Further reduced size for mobile */
-      height: 40px; /* Further reduced size for mobile */
+      width: 100px; /* Further reduced size for mobile */
+      height: 100px; /* Further reduced size for mobile */
     }
   
     .newtestimonial-name {
