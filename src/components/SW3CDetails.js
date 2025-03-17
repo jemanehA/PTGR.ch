@@ -1,11 +1,26 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const SW3CDetails = () => {
-  const [activeTab, setActiveTab] = useState('decentralized-identity');
+  const [activeTab, setActiveTab] = useState('strategic-blockchain-consulting');
   const cardRefs = useRef({}); // Ref to store card DOM elements
   const isInitialRender = useRef(true); // Ref to track initial render
 
   const subServices = [
+    {
+      id: 'strategic-blockchain-consulting',
+      title: 'Strategic Blockchain Consulting',
+      description: 'Our intern experts and collaborations with business and IT leaders formulate blockchain strategies that drive measurable business value. Our consulting approach identifies high-impact use cases where blockchain can reduce operational costs and eliminate inefficiencies. In many cases, these solutions also unlock new capabilities and streamline workflows. By aligning blockchain initiatives with your broader corporate strategy, we ensure that adoption is both cost-optimizing and transformative for your enterprise.',
+      whatWeDo: [
+        'Develop a customized blockchain strategy aligned with business goals.',
+        'Identify high-impact use cases that reduce costs and drive efficiency.',
+        'Assess feasibility, implementation roadmaps, and technology selection.',
+      ],
+      benefits: [
+        'Optimized Operations – Eliminate inefficiencies and streamline processes.',
+        'Cost Savings – Reduce transaction and data management expenses.',
+        'Competitive Advantage – Leverage blockchain for secure and scalable digital transformation.',
+      ],
+    },
     {
       id: 'decentralized-identity',
       title: 'Decentralized Identity & Data Management',
@@ -36,21 +51,7 @@ const SW3CDetails = () => {
         'Future-Ready Systems – Scalable solutions that grow with business needs.',
       ],
     },
-    {
-      id: 'strategic-blockchain-consulting',
-      title: 'Strategic Blockchain Consulting',
-      description: 'Our intern experts and collaborations with business and IT leaders formulate blockchain strategies that drive measurable business value. Our consulting approach identifies high-impact use cases where blockchain can reduce operational costs and eliminate inefficiencies. In many cases, these solutions also unlock new capabilities and streamline workflows. By aligning blockchain initiatives with your broader corporate strategy, we ensure that adoption is both cost-optimizing and transformative for your enterprise.',
-      whatWeDo: [
-        'Develop a customized blockchain strategy aligned with business goals.',
-        'Identify high-impact use cases that reduce costs and drive efficiency.',
-        'Assess feasibility, implementation roadmaps, and technology selection.',
-      ],
-      benefits: [
-        'Optimized Operations – Eliminate inefficiencies and streamline processes.',
-        'Cost Savings – Reduce transaction and data management expenses.',
-        'Competitive Advantage – Leverage blockchain for secure and scalable digital transformation.',
-      ],
-    },
+    
   ];
 
   const handleTabClick = (id) => {
@@ -74,14 +75,23 @@ const SW3CDetails = () => {
   }, [activeTab]);
 
   return (
-    <div className="m-[40px] p-[40px]">
-      <img className="w-full rounded-lg h-[400px] object-cover" src="/assets/images/blockchain-it.jpg" alt="blockchain-it" />
-      <div className="">
-        <h2 className="text-center mt-4 text-darkBlue">Web 3.0 – Blockchain & IT</h2>
-        <p className="text-lg">
-          Our intern Experts and collaborations with business and IT leaders formulate blockchain strategies that drive measurable business value. Our consulting approach identifies high-impact use cases where blockchain can reduce operational costs and eliminate inefficiencies. In many cases, these solutions also unlock new capabilities and streamline workflows. By aligning blockchain initiatives with your broader corporate strategy, we ensure that adoption is both cost-optimizing and transformative for your enterprise.
+    <div className=" rounded-lg  mx-[40px]  p-[40px]">
+    
+    <div 
+  className="w-full h-[400px]  flex justify-center items-center rounded-lg bg-cover bg-center"
+  style={{ backgroundImage: "url('/assets/images/blockchain-it-2.jpg')" }}
+>
+  <h1 className="text-center text-white text-4xl font-bold">Blockchain & IT Solutions</h1>
+</div>
+        <p className="text-lg my-4">
+        In today's rapidly evolving digital landscape, Web 3.0 technologies – particularly blockchain – are emerging as catalysts for profound business transformation. Forward-looking enterprises recognize that blockchain is more than a novel IT innovation; it is a strategic enabler that can drive efficiency, enhance trust, and unlock new value. This convergence of blockchain with enterprise IT is redefining how organizations operate, compete, and grow in a cost-efficient and secure manner.
+
         </p>
-      </div>
+
+        <p className="text-lg my-4">
+        At PTGR AG, we combine strategic foresight with deep technical expertise to help organizations harness the power of blockchain for tangible business results. Our consulting approach mirrors the rigor of leading global firms, ensuring every blockchain initiative aligns with your overarching business goals and IT environment. From high-level strategy development to seamless system integration, we offer a comprehensive suite of services that empowers enterprises to achieve cost-effective, secure, and future-ready operations.
+
+        </p>
 
       {/* Tabs */}
       <h3 className="mt-8 text-center text-darkBlue mb-4 mx-auto border-b-2 w-[200px] border-darkBlue">Our services</h3>
@@ -113,7 +123,8 @@ const SW3CDetails = () => {
                 : 'border-3 border-darkBlue'
             }`}
           >
-            <h2 className="text-xl font-bold mb-4">{service.title}</h2>
+            <h2 className="text-xl font-bold mb-2">{service.title}</h2>
+            <p>{service.description}</p>
             <h3 className="text-lg font-semibold mb-2">What We Do</h3>
             <ul className="list-disc list-inside mb-4">
               {service.whatWeDo.map((item, index) => (
