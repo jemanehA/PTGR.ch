@@ -261,6 +261,7 @@
 /* Dropdown Menu */
 .collapse {
   transition: max-height 0.4s ease-in-out;
+  visibility: visible !important;
 }
 
 .dropdown-item {

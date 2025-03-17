@@ -341,7 +341,28 @@ function Header() {
         </li>
 
 
-              <li><a className="nav-link-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/WS')}>Strategic Web 3.0 Consultancy</a></li>
+              <li><a className="nav-link-mobile collapsed" 
+            href="#" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#sw3cCollapsible" 
+            aria-expanded="false"
+            aria-controls="sw3cCollapsible"
+            data-bs-dismiss="offcanvas" >Strategic Web 3.0 Consultancy <span className="arrow">▼</span></a>
+              <ul className="list-unstyled-mobile ps-3" id="sw3cCollapsible">
+                <li><a className="dropdown-item-mobile" to="/sw3c/blockchain-and-it-solutions">Blockchain & IT Solutions
+                </a></li>
+                <li><a className="dropdown-item-mobile" to="/sw3c/digital-payment-and-custody-solutions">Digital Payment & Custody Solutions
+
+                </a></li>
+<li><a className="dropdown-item-mobile" to="/sw3c/rwa-tokenization">RWA Tokenization
+</a></li>
+<li><a className="dropdown-item-mobile" to="/sw3c/strategic-ico-consulting">Strategic ICO Solutions
+</a></li>
+<li><a className="dropdown-item-mobile" to="/sw3c/metaverse">Metaverse
+</a></li>
+
+                </ul>
+              </li>
          
      
        
