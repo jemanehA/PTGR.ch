@@ -36,7 +36,7 @@ const Web3cards = forwardRef((props, ref) => {
     },
     {
       id: 'web3-strategic-ico',
-      link: "/strategic-ico-consultings",
+      link: "/strategic-ico-consulting",
       image: '/assets/images/ico.webp',
       title: 'Web 3.0 - Strategic ICO Solutions',
       description:
