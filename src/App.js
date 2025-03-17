@@ -18,7 +18,6 @@ import CRYD from './pages/crypo';
 import WEB3 from './pages/web3';
 import About from './pages/Aboutus';
 import Family from './pages/Family';
-
 import WS from './components/isows'
 import Eventlist from './components/Eventlist';
 import WS1 from './pages/WS1';
@@ -59,10 +58,14 @@ import Bloglist from './components/Bloglist';
 import NewsHome from './components/NewsHome';
 import PTGRToken from './pages/PTGRtoken';
 import TestPaypal from './pages/test';
-
 import './styles/force.css';
 import './crypto.css';
 import SW3CDetails from './components/SW3CDetails';
+import BlockchainAndItSolutions from './pages/sw3c/blockchain-and-it-solutions';
+import DigitalPaymentAndCustodySolutions from './pages/sw3c/digital-payment-and-custody-solutions';
+import RWATokenization from './pages/sw3c/RWA-tokenization';
+import StrategicICOConsulting from './pages/sw3c/strategic-ICO-consulting';
+import MetaverseDevelopmentConsulting from './pages/sw3c/metaverse';
 
 const Login = ({ onLogin }) => {
   const [password, setPassword] = useState('');
@@ -168,7 +171,6 @@ const App = () => {
     { path: '/educationcertificate', element: <CRYD /> },
     { path: '/web3', element: <WEB3 /> },
     { path: '/Aboutus', element: <About /> },
-    
     { path: '/Digital', element: <Digital /> },
     { path: '/Service', element: <Service /> },
     { path: '/family', element: <Family /> },
@@ -177,7 +179,7 @@ const App = () => {
     { path: '/custodyage', element: <CustodyPag /> },
     { path: '/Tokenizatoage', element: <TokenizatoPage /> },
     { path: '/JobPage', element: <JobPage /> },
-    { path: '/WS', element: <WS /> },
+  
     { path: '/homeWS', element: <WS1 /> },
     { path: '/eventlist', element: <Eventlist /> },
     { path: '/PTGRToken', element: <PTGRToken /> },
@@ -195,7 +197,12 @@ const App = () => {
     { path: '/Imprint', element: <Imprint /> },
     { path: '/Partners', element: <Partners /> },
     { path: '/SelfStudy', element: <SelfStudy /> },
-    {path: '/sw3c-details', element: <SW3CDetails />},
+    { path: '/WS', element: <WS /> },
+    {path: '/sw3c/blockchain-and-it-solutions', element: <BlockchainAndItSolutions />},
+    {path: '/sw3c/digital-payment-and-custody-solutions', element: <DigitalPaymentAndCustodySolutions />},
+    {path: '/sw3c/rwa-tokenization', element: <RWATokenization/>},
+    {path: '/sw3c/strategic-ico-consulting', element: <StrategicICOConsulting />},
+    {path: '/sw3c/metaverse', element: <MetaverseDevelopmentConsulting />},
     { path: '/payment-details', element: <PaymentDetails /> },
     { path: '/verify-email', element: <VerifyEmail /> },
     { path: '/ContactUsForm', element: <ContactUsForm /> },

@@ -12,6 +12,7 @@ const Web3cards = forwardRef((props, ref) => {
   const cards = [
     {
       id: 'web3-blockchain-it',
+      link: "/blockchain-and-it-solutions",
       image: '/assets/images/blockchain-it.jpg',
       title: 'Blockchain & IT Solutions',
       description:
@@ -19,6 +20,7 @@ const Web3cards = forwardRef((props, ref) => {
     },
     {
       id: 'web3-payment-custody',
+      link: "/digital-payment-and-custody-solutions",
       image: '/assets/images/custdy.webp',
       title: 'Web 3.0 - Payment & Custody Solutions',
       description:
@@ -26,6 +28,7 @@ const Web3cards = forwardRef((props, ref) => {
     },
     {
       id: 'web3-rwa-tokenization',
+      link: "/rwa-tokenization",
       image: '/assets/images/preiso.jpeg',
       title: 'Web 3.0 - RWA Tokenization',
       description:
@@ -33,6 +36,7 @@ const Web3cards = forwardRef((props, ref) => {
     },
     {
       id: 'web3-strategic-ico',
+      link: "/strategic-ico-consultings",
       image: '/assets/images/ico.webp',
       title: 'Web 3.0 - Strategic ICO Solutions',
       description:
@@ -40,6 +44,7 @@ const Web3cards = forwardRef((props, ref) => {
     },
     {
       id: 'web3-metaverse',
+      link: "/metaverse",
       image: '/assets/images/metavers.webp',
       title: 'Web 3.0 - Metaverse',
       description:
@@ -100,7 +105,7 @@ const Web3cards = forwardRef((props, ref) => {
               <div className="ssc-card-content">
                 <h5>{card.title}</h5>
                 <p>{card.description}</p>
-                <div onClick={() => navigate("/sw3c-details")} className="ssc-learn-more" >
+                <div onClick={() => navigate(`/sw3c${card.link}`)} className="ssc-learn-more" >
                     Learn More →
                   </div>
               </div>

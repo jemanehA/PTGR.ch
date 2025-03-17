@@ -217,6 +217,20 @@ function Header() {
     <span className="sw3c-text">SW3C</span>
     <span className="sw3c-hover-text ">Strategic Web 3.0 Consultancy</span>
   </a>
+  <ul className="dropdown-menu" aria-labelledby="SW3SDropdown">
+                <li><Link className="dropdown-item" to="/sw3c/blockchain-and-it-solutions">Blockchain & IT Solutions
+                </Link></li>
+                <li><Link className="dropdown-item" to="/sw3c/digital-payment-and-custody-solutions">Digital Payment & Custody Solutions
+
+                </Link></li>
+<li><Link className="dropdown-item" to="/sw3c/rwa-tokenization">RWA Tokenization
+</Link></li>
+<li><Link className="dropdown-item" to="/sw3c/strategic-ico-consulting">Strategic ICO Solutions
+</Link></li>
+<li><Link className="dropdown-item" to="/sw3c/metaverse">Metaverse
+</Link></li>
+
+                </ul>
 </li>
               {/* <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="ptgrTokenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

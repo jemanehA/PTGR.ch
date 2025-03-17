@@ -280,6 +280,7 @@ const BookConsultations = () => {
                   <option value="Forensic Service">Forensic Service</option>
                   <option value="Certified Crypto Expert Course">Certified Crypto Expert Course</option>
                   <option value="Blockchain Application Course">Blockchain Application Course</option>
+                  <option value="Blockchain And IT Solutions">Blockchain And IT Solutions</option>
                   <option value="Web 3.0 Power Sessions">Web 3.0 Power Sessions</option>
                   <option value="Self-Study Online Program">Self-Study Online Program</option>
                   <option value="Swisscom Education Program">Swisscom Education Program</option>
