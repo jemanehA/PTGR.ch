@@ -74,7 +74,7 @@ const SW3CDetails = () => {
   }, [activeTab]);
 
   return (
-    <div className="m-[20px] p-[20px]">
+    <div className="m-[40px] p-[40px]">
       <img className="w-full rounded-lg h-[400px] object-cover" src="/assets/images/blockchain-it.jpg" alt="blockchain-it" />
       <div className="">
         <h2 className="text-center mt-4 text-darkBlue">Web 3.0 – Blockchain & IT</h2>
