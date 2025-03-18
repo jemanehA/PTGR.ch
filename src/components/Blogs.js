@@ -3,7 +3,7 @@ import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { format, parseISO, isValid } from 'date-fns';
 import '../styles/Blogs.css';
 
-const Blogs = ({blogs}) => {
+const Blogs = ({blogs, type}) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false); // Loading state
@@ -50,7 +50,7 @@ const Blogs = ({blogs}) => {
 
   return (
     <div className="container blogs-container">
-      <h1>PTGR AG Crypto Insights</h1>
+      <h1>PTGR AG {type}</h1>
 
       {/* Category Tabs */}
       {/* <div className="category-tabs">

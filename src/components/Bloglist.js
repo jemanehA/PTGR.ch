@@ -103,7 +103,7 @@ const Bloglist = () => {
 
 
 <div ref={eventsSectionRef}>
-<Blogs blogs={blogs}/>
+<Blogs type='Blogs' blogs={blogs}/>
       </div>
 
 </div>

@@ -403,7 +403,10 @@ function Header() {
     </a>
     <div className="collapse collapse" id="NewsCollapse">
     <ul className="list-unstyled-mobile ps-3">
-    <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/NewsHome')}>Blogs</a></li>
+    <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/NewsHome')}>News</a></li>
+  
+    <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/Bloglist')}>Blogs</a></li>
+    <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/insights')}>Insights</a></li>
     <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/Events')}>Events</a></li>
    </ul></div>
   </div>

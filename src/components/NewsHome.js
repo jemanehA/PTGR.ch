@@ -103,7 +103,7 @@ const NewsHome = () => {
 
 
 <div >
-<Blogs blogs={news}/>
+<Blogs type='News' blogs={news}/>
       </div>
 
 </div>
