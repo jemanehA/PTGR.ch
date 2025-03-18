@@ -70,7 +70,7 @@ const SW3CDetails = ({ service }) => {
       <h3 className="mt-8 text-center text-darkBlue mb-8 mx-auto border-b-[3px] w-[200px] border-darkBlue">
         Our services
       </h3>
-      <div className="flex flex-wrap  space-x-4 justify-center">
+      <div className="flex flex-wrap  w-full md:w-[80%] mx-auto space-x-4 justify-center">
         {service.subServices.map((service) => (
           <div
             key={service.id}
