@@ -22,7 +22,7 @@ const Web3cards = forwardRef((props, ref) => {
       id: 'web3-payment-custody',
       link: "/digital-payment-and-custody-solutions",
       image: '/assets/images/custdy.webp',
-      title: 'Web 3.0 - Payment & Custody Solutions',
+      title: 'Payment & Custody Solutions',
       description:
         'We deliver secure, scalable cryptocurrency payment and asset custody solutions that fuel financial innovation and foster trust. Our services range from seamless payment processing integration to institutional-grade digital asset safeguarding. We empower businesses to embrace digital finance with confidence.',
     },
@@ -30,7 +30,7 @@ const Web3cards = forwardRef((props, ref) => {
       id: 'web3-rwa-tokenization',
       link: "/rwa-tokenization",
       image: '/assets/images/preiso.jpeg',
-      title: 'Web 3.0 - RWA Tokenization',
+      title: 'RWA Tokenization',
       description:
         'We enable clients to convert real-world assets into digital tokens on the blockchain, unlocking liquidity and making high-value investments more accessible and efficient. Our secure, transparent tokenization strategies broaden investor access and streamline asset management. The result is greater liquidity, efficiency, and inclusivity in traditionally illiquid markets.',
     },
@@ -38,7 +38,7 @@ const Web3cards = forwardRef((props, ref) => {
       id: 'web3-strategic-ico',
       link: "/strategic-ico-consulting",
       image: '/assets/images/ico.webp',
-      title: 'Web 3.0 - Strategic ICO Solutions',
+      title: 'Strategic ICO Solutions',
       description:
         'As trusted advisors, we guide clients through every phase of an Initial Coin Offering (ICO) - from strategic planning and regulatory compliance to execution and market positioning. Our holistic approach ensures each ICO is structured for long-term success. We align innovative token strategies with investor confidence and stringent regulatory standards to maximize market impact and credibility.',
     },
@@ -46,7 +46,7 @@ const Web3cards = forwardRef((props, ref) => {
       id: 'web3-metaverse',
       link: "/metaverse",
       image: '/assets/images/metavers.webp',
-      title: 'Web 3.0 - Metaverse',
+      title: 'Metaverse',
       description:
         'We help organizations establish a strategic presence in the metaverse, where virtual and immersive experiences are redefining customer engagement. Our team blends advanced technical expertise, business strategy, and creative vision to build tailored digital solutions. This forward-looking approach positions your organization at the forefront of this new digital frontier.',
     },

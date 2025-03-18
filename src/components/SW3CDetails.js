@@ -25,7 +25,7 @@ const SW3CDetails = ({ service }) => {
   }, [activeTab]);
 
   return (
-    <div className="rounded-lg mx-[40px] p-[40px]">
+    <div className="rounded-lg mx-3 p-3 md:mx-[40px] md:p-[40px]">
       {/* Breadcrumb Navigation */}
       <div className="text-sm mb-4">
         <Link to="/" className="text-darkBlue hover:underline">
@@ -52,7 +52,7 @@ const SW3CDetails = ({ service }) => {
           <h1 className="text-white text-4xl font-bold">{service.title}</h1>
           <div className="mt-4">
             <Link to={`/BookConsultations?consultationType=${service.bookType}`}>
-              <div className="px-4 py-2 cursor-pointer text-center font-bold border-white hover:bg-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white">
+              <div className="px-4 py-2 w-fit mx-auto cursor-pointer text-center font-bold border-white hover:bg-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white">
                 Ready to Launch? Book a Consultation
               </div>
             </Link>
@@ -63,19 +63,19 @@ const SW3CDetails = ({ service }) => {
       {/* Introduction Paragraphs */}
       <p
         dangerouslySetInnerHTML={{ __html: service.description }}
-        className="text-lg my-4 w-[80%] mx-auto"
+        className="text-lg my-4 w-full md:w-[80%] mx-auto"
       ></p>
 
       {/* Tabs */}
       <h3 className="mt-8 text-center text-darkBlue mb-8 mx-auto border-b-[3px] w-[200px] border-darkBlue">
         Our services
       </h3>
-      <div className="flex space-x-4 justify-center">
+      <div className="flex flex-wrap  space-x-4 justify-center">
         {service.subServices.map((service) => (
           <div
             key={service.id}
             onClick={() => handleTabClick(service.id)}
-            className={`px-4 py-2 font-normal cursor-pointer text-center border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out ${
+            className={`px-4 py-2 font-normal cursor-pointer text-center mb-4 border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out ${
               activeTab === service.id
                 ? 'bg-darkBlue text-white'
                 : 'text-darkBlue hover:bg-darkBlue hover:text-white'
@@ -87,12 +87,12 @@ const SW3CDetails = ({ service }) => {
       </div>
 
       {/* Sub-Service Cards */}
-      <div className="mt-8 space-y-6">
+      <div className="mt-4 space-y-6">
         {service.subServices.map((service) => (
           <div
             key={service.id}
             ref={(el) => (cardRefs.current[service.id] = el)} // Store card ref
-            className={`p-6 rounded-lg mx-auto w-[80%] transition-all duration-300 ease-in-out ${
+            className={`p-6 rounded-lg mx-auto w-full md:w-[80%] transition-all duration-300 ease-in-out ${
               activeTab === service.id
                 ? 'border-3 border-darkBlue bg-lightBlue'
                 : 'border-3 border-darkBlue'
