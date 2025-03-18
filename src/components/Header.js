@@ -348,6 +348,7 @@ function Header() {
             aria-expanded="false"
             aria-controls="sw3cCollapsible"
             data-bs-dismiss="offcanvas" >Strategic Web 3.0 Consultancy <span className="arrow">▼</span></a>
+               <div className="collapse-mobile collapse" id="sw3cCollapsible">
               <ul className="list-unstyled-mobile ps-3" id="sw3cCollapsible">
                 <li><a className="dropdown-item-mobile" to="/sw3c/blockchain-and-it-solutions">Blockchain & IT Solutions
                 </a></li>
@@ -362,6 +363,7 @@ function Header() {
 </a></li>
 
                 </ul>
+                </div>
               </li>
          
      
