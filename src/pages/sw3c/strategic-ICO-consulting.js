@@ -263,19 +263,20 @@ const StrategicICODetails = () => {
         {phases.map((phase, index) => (
           <>
           {index === 6 ?  (
-            <li key={index} className="relative border-darkBlue w-[60%] md:mx-auto py-3 px-2 rounded-lg  md:col-span-2 lg:col-span-3  ">
+            <li key={index} className="relative border-darkBlue md:border-[3px] md:mt-5 lg:mt-4 2xl:mt-0 mb-20  w-[60%] md:mx-auto py-3 px-2 rounded-lg  md:col-span-2 lg:col-span-3  ">
             <div className="flex items-center">
-              <div className="z-10 flex items-center text-2xl md:mx-auto font-bold justify-center w-10 h-10 rounded-full ring-0 ring-darkBlue text-darkBlue sm:ring-1 shrink-0">
+              <div className="z-10 flex items-center  text-2xl md:mx-auto font-bold justify-center w-10 h-10 rounded-full ring-0 ring-darkBlue text-darkBlue sm:ring-1 shrink-0">
                 {phase.step}
               </div>
-             
+              <div className="sm:flex md:hidden w-full bg-gray-200 h-0.5"></div>
             </div>
-            <div className="mt-3 text-left md:text-center sm:pe-8">
+            <div className="mt-3 text-left flex flex-col md:items-center w-full md:text-center sm:pe-8">
               <h3 className="text-lg font-semibold w-full  text-darkBlue">{phase.title}</h3>
               <p className="text-base font-normal w-full  text-gray-500">{phase.description}</p>
+             
               <div
                 onClick={() => handleTabClick(phase.subServiceId)} // Link to subservice
-                className="px-4 py-2 font-normal hover:bg-opacity-90 w-fit md:mx-auto cursor-pointer   border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white bg-darkBlue hover:text-white"
+                className="px-4 py-2 font-normal hover:bg-opacity-90 w-fit  md:ml-9 cursor-pointer   border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white bg-darkBlue hover:text-white"
               >
                 Learn More
               </div>
@@ -286,7 +287,7 @@ const StrategicICODetails = () => {
               <div className="z-10 flex items-center text-2xl font-bold justify-center w-10 h-10 rounded-full ring-0 ring-darkBlue text-darkBlue sm:ring-1 shrink-0">
                 {phase.step}
               </div>
-              <div className="sm:flex w-full bg-gray-200 h-0.5"></div>
+              <div className="sm:flex w-full  bg-gray-200 h-0.5"></div>
             </div>
             <div className="mt-3 sm:pe-8">
               <h3 className="text-lg font-semibold text-darkBlue">{phase.title}</h3>
