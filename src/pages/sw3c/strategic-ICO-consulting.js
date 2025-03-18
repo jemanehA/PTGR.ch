@@ -261,7 +261,7 @@ const StrategicICODetails = () => {
       {/* Phases List */}
       <ol className="items-center w-full md:w-[80%] mx-auto sm:grid md:grid-cols-2 lg:grid-cols-3 gap-y-4">
         {phases.map((phase, index) => (
-          <li key={index} className="relative mb-6 sm:mb-0">
+          <li key={index} className="relative h-[240px] mb-6 sm:mb-0">
             <div className="flex items-center">
               <div className="z-10 flex items-center text-2xl font-bold justify-center w-10 h-10 rounded-full ring-0 ring-darkBlue text-darkBlue sm:ring-1 shrink-0">
                 {phase.step}
