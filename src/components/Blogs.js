@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams, useNavigate } from 'react-router-dom';
-import { format, parseISO, isValid } from 'date-fns';
+import { format, isValid } from 'date-fns';
 import '../styles/Blogs.css';
 
-const Blogs = ({blogs, type}) => {
+const Blogs = ({ blogs, type }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false); // Loading state
@@ -20,10 +20,17 @@ const Blogs = ({blogs, type}) => {
     return () => clearTimeout(timer);
   }, [selectedCategory, currentPage]);
 
+  // Sort blogs by publishedDate (latest to oldest)
+  const sortedBlogs = [...blogs].sort((a, b) => {
+    const dateA = new Date(a.publishedDate);
+    const dateB = new Date(b.publishedDate);
+    return dateB - dateA; // Sort in descending order (latest first)
+  });
+
   // Filter blogs based on the selected category
   const filteredBlogs = selectedCategory === 'All'
-    ? blogs
-    : blogs.filter(blog => blog.category === selectedCategory);
+    ? sortedBlogs
+    : sortedBlogs.filter(blog => blog.category === selectedCategory);
 
   const totalPages = Math.ceil(filteredBlogs.length / itemsPerPage);
 
@@ -44,7 +51,7 @@ const Blogs = ({blogs, type}) => {
   };
 
   const formatDate = (dateString) => {
-    const date = parseISO(dateString);
+    const date = new Date(dateString);
     return isValid(date) ? format(date, 'MMM dd, yyyy') : 'Date unavailable';
   };
 
@@ -53,32 +60,34 @@ const Blogs = ({blogs, type}) => {
       <h1>PTGR AG {type}</h1>
 
       {/* Category Tabs */}
-      {/* <div className="category-tabs">
-        <button
-          className={`tab ${selectedCategory === 'All' ? 'active' : ''}`}
-          onClick={() => handleCategoryChange('All')}
-        >
-          All
-        </button>
-        <button
-          className={`tab ${selectedCategory === 'News' ? 'active' : ''}`}
-          onClick={() => handleCategoryChange('News')}
-        >
-          News
-        </button>
-        <button
-          className={`tab ${selectedCategory === 'Blogs' ? 'active' : ''}`}
-          onClick={() => handleCategoryChange('Blogs')}
-        >
-          Blogs
-        </button>
-        <button
-          className={`tab ${selectedCategory === 'Insights' ? 'active' : ''}`}
-          onClick={() => handleCategoryChange('Insights')}
-        >
-          Insights
-        </button>
-      </div> */}
+      {type === "News" && (
+        <div className="category-tabs">
+          <button
+            className={`tab ${selectedCategory === 'All' ? 'active' : ''}`}
+            onClick={() => handleCategoryChange('All')}
+          >
+            All
+          </button>
+          <button
+            className={`tab ${selectedCategory === 'News' ? 'active' : ''}`}
+            onClick={() => handleCategoryChange('News')}
+          >
+            News
+          </button>
+          <button
+            className={`tab ${selectedCategory === 'Blogs' ? 'active' : ''}`}
+            onClick={() => handleCategoryChange('Blogs')}
+          >
+            Blogs
+          </button>
+          <button
+            className={`tab ${selectedCategory === 'Insights' ? 'active' : ''}`}
+            onClick={() => handleCategoryChange('Insights')}
+          >
+            Insights
+          </button>
+        </div>
+      )}
 
       {/* Loading Indicator */}
       {isLoading && (

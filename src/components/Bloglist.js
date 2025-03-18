@@ -3,11 +3,13 @@ import React, { useState,useEffect,useRef } from "react";
 import '../styles/EventComponnent.css'; // Import the CSS file for styling
 import { Link ,useLocation} from 'react-router-dom';  // Ensure Link is imported
 import Blogs from "./Blogs";
-import blogs from "../assets/blogs.json"
+import blogs from "../assets/blogs1.json"
 
 const Bloglist = () => {
   const location = useLocation();
   const eventsSectionRef = useRef(null);
+
+  const blogList = blogs.filter(blog=> blog.category === "Blogs")
 
   useEffect(() => {
     if (location.state?.scrollPos) {
@@ -90,7 +92,7 @@ const Bloglist = () => {
     <div class="col-xl-6 offset-xl-1 col-lg-7 afterheading-right">
       <div class="afterheading-content">
         <p class="afterheading-highlight">
-        Stay Updated with the Latest in Crypto and Blockchain.
+        Stay Updated with the Latest in Crypto and Web 3.0.
    </p>
         <p class="afterheading-description">
         We regularly share valuable insights through our blog, where we cover important updates and trends in the crypto market. Each month, we dive deep into the latest changes, highlight key investment strategies, and discuss how you can profit from the evolving landscape of digital assets and blockchain technology.</p>
@@ -103,7 +105,7 @@ const Bloglist = () => {
 
 
 <div ref={eventsSectionRef}>
-<Blogs type='Blogs' blogs={blogs}/>
+<Blogs type='Blogs' blogs={blogList}/>
       </div>
 
 </div>
