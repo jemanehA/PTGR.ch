@@ -87,7 +87,7 @@ const SW3CDetails = ({ service }) => {
       </div>
 
       {/* Sub-Service Cards */}
-      <div className="mt-4 space-y-6">
+      <div className=" space-y-6">
         {service.subServices.map((service) => (
           <div
             key={service.id}
