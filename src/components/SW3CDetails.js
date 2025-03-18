@@ -29,7 +29,7 @@ const SW3CDetails = ({ service }) => {
   }, [activeTab]);
 
   return (
-    <div className="rounded-lg mx-3 p-3 md:mx-[40px] md:p-[40px]">
+    <div className="rounded-lg  p-3 md:mx-[40px] md:p-[40px]">
       {/* Breadcrumb Navigation */}
       <div className="text-sm mb-4">
         <Link to="/" className="text-darkBlue hover:underline">
@@ -53,10 +53,10 @@ const SW3CDetails = ({ service }) => {
 
         {/* Content */}
         <div className="relative z-10 text-center">
-          <h1 className="text-white text-4xl font-bold">{service.title}</h1>
-          <div className="mt-4">
+          <h1 className="text-white text-4xl font-bold ">{service.title}</h1>
+          <div className="mt-4 flex w-full justify-center">
             <Link to={`/BookConsultations?consultationType=${service.bookType}`}>
-              <div className="px-4 py-2 w-fit mx-auto cursor-pointer text-center font-bold border-white hover:bg-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white">
+              <div className="px-4 py-2  w-fit mx-4  cursor-pointer text-center font-bold border-white hover:bg-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white">
                 Ready to Launch? Book a Consultation
               </div>
             </Link>
@@ -74,12 +74,12 @@ const SW3CDetails = ({ service }) => {
       <h3 className="mt-8 text-center text-darkBlue mb-8 mx-auto border-b-[3px] w-[200px] border-darkBlue">
         Our services
       </h3>
-      <div className="flex flex-wrap  w-full md:w-[80%] mx-auto space-x-4 justify-center">
+      <div className="flex flex-wrap  w-full md:w-[80%] mx-auto gap-x-4 justify-center">
         {service.subServices.map((service) => (
           <div
             key={service.id}
             onClick={() => handleTabClick(service.id)}
-            className={`px-4 py-2 font-normal cursor-pointer text-center mb-4 border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out ${
+            className={`px-4 py-2 font-normal  cursor-pointer w-full md:w-fit text-center mb-4 border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out ${
               activeTab === service.id
                 ? 'bg-darkBlue text-white'
                 : 'text-darkBlue hover:bg-darkBlue hover:text-white'
@@ -103,7 +103,7 @@ const SW3CDetails = ({ service }) => {
             }`}
           >
             <h2 className="text-xl font-bold mb-2">{service.title}</h2>
-            <p>{service.description}</p>
+            <p className='text-justify md:text-left'>{service.description}</p>
             <h3 className="text-lg font-semibold mb-2">Our Approach</h3>
             <ul className="list-disc list-inside mb-4">
               {service.whatWeDo.map((item, index) => (

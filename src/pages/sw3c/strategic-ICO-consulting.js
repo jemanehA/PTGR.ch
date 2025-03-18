@@ -216,7 +216,7 @@ const StrategicICODetails = () => {
   }, [activeTab]);
 
   return (
-    <div className="rounded-lg mx-3 p-3 md:mx-[40px] md:p-[40px]">
+    <div className="rounded-lg  p-3 md:mx-[40px] md:p-[40px]">
       {/* Breadcrumb Navigation */}
       <div className="text-sm mb-4">
         <Link to="/" className="text-darkBlue hover:underline">
@@ -239,16 +239,16 @@ const StrategicICODetails = () => {
         <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
 
         {/* Content */}
-        <div className="relative z-10 text-center">
-          <h1 className="text-white text-4xl font-bold">{service.title}</h1>
-          <div className="mt-4">
-            <Link to={`/BookConsultations?consultationType=${service.bookType}`}>
-              <div className="px-4 py-2 w-fit mx-auto cursor-pointer text-center font-bold border-white hover:bg-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white">
-                Ready to Launch? Book a Consultation
+       <div className="relative z-10 text-center">
+                <h1 className="text-white text-4xl font-bold ">{service.title}</h1>
+                <div className="mt-4 flex w-full justify-center">
+                  <Link to={`/BookConsultations?consultationType=${service.bookType}`}>
+                    <div className="px-4 py-2  w-fit mx-4  cursor-pointer text-center font-bold border-white hover:bg-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white">
+                      Ready to Launch? Book a Consultation
+                    </div>
+                  </Link>
+                </div>
               </div>
-            </Link>
-          </div>
-        </div>
       </div>
 
       {/* Introduction Paragraphs */}
@@ -321,7 +321,7 @@ const StrategicICODetails = () => {
             }`}
           >
             <h2 className="text-xl font-bold mb-2">{service.title}</h2>
-            <p>{service.description}</p>
+            <p className='text-justify md:text-left'>{service.description}</p>
             <h3 className="text-lg font-semibold mb-2">Our Approach</h3>
             <ul className="list-disc list-inside mb-4">
               {service.whatWeDo.map((item, index) => (

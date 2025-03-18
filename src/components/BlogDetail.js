@@ -29,7 +29,7 @@ const BlogDetail = () => {
       <div className="bd-layout">
         {/* Main Content */}
         <main className="bd-main">
-          <Link to="/Bloglist" className="bd-back-btn">
+          <Link to="/NewsHome" className="bd-back-btn">
             &larr; All Articles
           </Link>
 
