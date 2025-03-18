@@ -254,7 +254,7 @@ const StrategicICODetails = () => {
       ></p>
 
       {/* Tabs */}
-      <h3 className="mt-8 text-center text-darkBlue mb-8 mx-auto border-b-[3px] w-[450px] border-darkBlue">
+      <h3 className="mt-8 text-center text-darkBlue mb-8 mx-auto border-b-[3px] w-full md:w-[450px] border-darkBlue">
         ICO Project Guidance - Phases
       </h3>
 
