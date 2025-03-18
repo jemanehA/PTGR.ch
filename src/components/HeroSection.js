@@ -78,12 +78,13 @@ const HeroSection = () => {
         playsInline
         style={{ display: 'none' }} // Hide video initially
       >
-        <source src="/assets/images/video/Aboutus5.MP4" type="video/mp4" />
+        <source src="/assets/images/video/swiss_video1.MP4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Fallback Background Color */}
       <div className="background-fallback" ref={fallbackRef}></div>
+      <div className="video-overlay-asset"></div>
 
       {/* Content */}
       <div className="container">

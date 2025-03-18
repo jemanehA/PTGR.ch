@@ -197,6 +197,10 @@ const StrategicICODetails = () => {
     ],
   };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  
   // Scroll to the active card whenever the activeTab changes (but not on initial render)
   useEffect(() => {
     if (isInitialRender.current) {
