@@ -66,6 +66,7 @@ import DigitalPaymentAndCustodySolutions from './pages/sw3c/digital-payment-and-
 import RWATokenization from './pages/sw3c/RWA-tokenization';
 import StrategicICOConsulting from './pages/sw3c/strategic-ICO-consulting';
 import MetaverseDevelopmentConsulting from './pages/sw3c/metaverse';
+import Insights from './components/Insights';
 
 const Login = ({ onLogin }) => {
   const [password, setPassword] = useState('');
@@ -237,6 +238,7 @@ const App = () => {
             <Route path="/ServiceDetail" element={<ServiceDetail />} />
             <Route path="/blogmenu" element={<BlogsMain />} />
             <Route path="/Bloglist" element={<Bloglist />} />
+            <Route path="/insights" element={<Insights />} />
             <Route path="/NewsHome" element={<NewsHome />} />
             
             <Route path="/paypaltest" element={<TestPaypal />} />

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { format, parseISO, isValid } from 'date-fns';
-import blogs from '../assets/blogs1.json';
 import '../styles/Blogs.css';
 
-const Blogs = () => {
+const Blogs = ({blogs}) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false); // Loading state
@@ -54,7 +53,7 @@ const Blogs = () => {
       <h1>PTGR AG Crypto Insights</h1>
 
       {/* Category Tabs */}
-      <div className="category-tabs">
+      {/* <div className="category-tabs">
         <button
           className={`tab ${selectedCategory === 'All' ? 'active' : ''}`}
           onClick={() => handleCategoryChange('All')}
@@ -79,7 +78,7 @@ const Blogs = () => {
         >
           Insights
         </button>
-      </div>
+      </div> */}
 
       {/* Loading Indicator */}
       {isLoading && (

@@ -259,6 +259,7 @@ function Header() {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="NewDropdown">
                 <li><Link className="dropdown-item" to="/Bloglist">Blogs</Link></li>
+                <li><Link className="dropdown-item" to="/insights">Insights</Link></li>
                 <li><Link className="dropdown-item" to="/Events">Events</Link></li>
                 </ul>
    
@@ -350,16 +351,16 @@ function Header() {
             data-bs-dismiss="offcanvas" >Strategic Web 3.0 Consultancy <span className="arrow">▼</span></a>
                <div className="collapse-mobile collapse" id="sw3cCollapsible">
               <ul className="list-unstyled-mobile ps-3" id="sw3cCollapsible">
-                <li><a className="dropdown-item-mobile" to="/sw3c/blockchain-and-it-solutions">Blockchain & IT Solutions
+                <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/sw3c/blockchain-and-it-solutions')} >Blockchain & IT Solutions
                 </a></li>
-                <li><a className="dropdown-item-mobile" to="/sw3c/digital-payment-and-custody-solutions">Digital Payment & Custody Solutions
+                <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/sw3c/digital-payment-and-custody-solutions')} >Digital Payment & Custody Solutions
 
                 </a></li>
-<li><a className="dropdown-item-mobile" to="/sw3c/rwa-tokenization">RWA Tokenization
+<li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation("/sw3c/rwa-tokenization")} >RWA Tokenization
 </a></li>
-<li><a className="dropdown-item-mobile" to="/sw3c/strategic-ico-consulting">Strategic ICO Solutions
+<li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation("/sw3c/strategic-ico-consulting")} >Strategic ICO Solutions
 </a></li>
-<li><a className="dropdown-item-mobile" to="/sw3c/metaverse">Metaverse
+<li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/sw3c/metaverse')} >Metaverse
 </a></li>
 
                 </ul>

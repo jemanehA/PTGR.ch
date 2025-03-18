@@ -3,6 +3,7 @@ import React, { useState,useEffect,useRef } from "react";
 import '../styles/EventComponnent.css'; // Import the CSS file for styling
 import { Link ,useLocation} from 'react-router-dom';  // Ensure Link is imported
 import Blogs from "./Blogs";
+import news from "../assets/news.json"
 
 const NewsHome = () => {
   const location = useLocation();
@@ -102,7 +103,7 @@ const NewsHome = () => {
 
 
 <div >
-<Blogs/>
+<Blogs blogs={news}/>
       </div>
 
 </div>

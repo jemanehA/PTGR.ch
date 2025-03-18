@@ -3,9 +3,9 @@ import React, { useState,useEffect,useRef } from "react";
 import '../styles/EventComponnent.css'; // Import the CSS file for styling
 import { Link ,useLocation} from 'react-router-dom';  // Ensure Link is imported
 import Blogs from "./Blogs";
-import blogs from "../assets/blogs.json"
+import insights from "../assets/insights.json"
 
-const Bloglist = () => {
+const Insights = () => {
   const location = useLocation();
   const eventsSectionRef = useRef(null);
 
@@ -103,11 +103,11 @@ const Bloglist = () => {
 
 
 <div ref={eventsSectionRef}>
-<Blogs blogs={blogs}/>
+<Blogs blogs={insights}/>
       </div>
 
 </div>
   );
 };
 
-export default Bloglist;
+export default Insights;
