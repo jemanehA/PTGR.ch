@@ -74,10 +74,10 @@ const Blogs = () => {
           Blogs
         </button>
         <button
-          className={`tab ${selectedCategory === 'Weekly Insights' ? 'active' : ''}`}
-          onClick={() => handleCategoryChange('Weekly Insights')}
+          className={`tab ${selectedCategory === 'Insights' ? 'active' : ''}`}
+          onClick={() => handleCategoryChange('Insights')}
         >
-          Weekly Insights
+          Insights
         </button>
       </div>
 
