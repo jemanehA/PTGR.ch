@@ -198,9 +198,9 @@ const StrategicICODetails = () => {
   };
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-  
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   // Scroll to the active card whenever the activeTab changes (but not on initial render)
   useEffect(() => {
     if (isInitialRender.current) {
@@ -216,7 +216,7 @@ const StrategicICODetails = () => {
   }, [activeTab]);
 
   return (
-    <div className="rounded-lg  p-3 md:mx-[40px] md:p-[40px]">
+    <div className="rounded-lg p-3  md:mx-[40px] md:p-[40px]">
       {/* Breadcrumb Navigation */}
       <div className="text-sm mb-4">
         <Link to="/" className="text-darkBlue hover:underline">
@@ -239,16 +239,16 @@ const StrategicICODetails = () => {
         <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
 
         {/* Content */}
-       <div className="relative z-10 text-center">
-                <h1 className="text-white text-4xl font-bold ">{service.title}</h1>
-                <div className="mt-4 flex w-full justify-center">
-                  <Link to={`/BookConsultations?consultationType=${service.bookType}`}>
-                    <div className="px-4 py-2  w-fit mx-4  cursor-pointer text-center font-bold border-white hover:bg-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white">
-                      Ready to Launch? Book a Consultation
-                    </div>
-                  </Link>
-                </div>
+        <div className="relative z-10 text-center">
+          <h1 className="text-white text-4xl font-bold">{service.title}</h1>
+          <div className="mt-4 flex w-full justify-center">
+            <Link to={`/BookConsultations?consultationType=${service.bookType}`}>
+              <div className="px-4 py-2 w-fit mx-4 cursor-pointer text-center font-bold border-white hover:bg-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white">
+                Ready to Launch? Book a Consultation
               </div>
+            </Link>
+          </div>
+        </div>
       </div>
 
       {/* Introduction Paragraphs */}
@@ -263,83 +263,72 @@ const StrategicICODetails = () => {
       </h3>
 
       {/* Phases List */}
-      <ol className="items-center w-full md:w-[80%] mx-auto sm:grid md:grid-cols-2 lg:grid-cols-3 gap-y-4">
-        {phases.map((phase, index) => (
-          <>
-          {index === 6 ?  (
-            <li key={index} className="relative border-darkBlue md:border-[3px] md:mt-5 lg:mt-4 2xl:mt-0 mb-20  w-[60%] md:mx-auto py-3 px-2 rounded-lg  md:col-span-2 lg:col-span-3  ">
-            <div className="flex items-center">
-              <div className="z-10 flex items-center  text-2xl md:mx-auto font-bold justify-center w-10 h-10 rounded-full ring-0 ring-darkBlue text-darkBlue sm:ring-1 shrink-0">
-                {phase.step}
-              </div>
-              <div className="sm:flex md:hidden w-full bg-gray-200 h-0.5"></div>
-            </div>
-            <div className="mt-3 text-left flex flex-col md:items-center w-full md:text-center sm:pe-8">
-              <h3 className="text-lg font-semibold w-full  text-darkBlue">{phase.title}</h3>
-              <p className="text-base font-normal w-full  text-gray-500">{phase.description}</p>
-             
-              <div
-                onClick={() => handleTabClick(phase.subServiceId)} // Link to subservice
-                className="px-4 py-2 font-normal hover:bg-opacity-90 w-fit  md:ml-9 cursor-pointer   border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white bg-darkBlue hover:text-white"
-              >
-                Learn More
-              </div>
-            </div>
-          </li>
-          ) : (<li key={index} className="relative h-[240px] mb-6 sm:mb-0">
-            <div className="flex items-center">
-              <div className="z-10 flex items-center text-2xl font-bold justify-center w-10 h-10 rounded-full ring-0 ring-darkBlue text-darkBlue sm:ring-1 shrink-0">
-                {phase.step}
-              </div>
-              <div className="sm:flex w-full  bg-gray-200 h-0.5"></div>
-            </div>
-            <div className="mt-3 sm:pe-8">
-              <h3 className="text-lg font-semibold text-darkBlue">{phase.title}</h3>
-              <p className="text-base font-normal text-gray-500">{phase.description}</p>
-              <div
-                onClick={() => handleTabClick(phase.subServiceId)} // Link to subservice
-                className="px-4 py-2 font-normal hover:bg-opacity-90 w-fit cursor-pointer text-center mb-4 border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white bg-darkBlue hover:text-white"
-              >
-                Learn More
-              </div>
-            </div>
-          </li>)}
-          </>
-        ))}
-      </ol>
+      <div className="grid grid-cols-1 md:grid-cols-3">
+        {/* Sticky Phases List */}
+        <div className="md:sticky md:overflow-y-auto md:overflow-x-visible mb-4 top-4 md:h-screen">
+  <div className="flex">
+    {/* Left Column for Step Numbers */}
+ 
 
-      {/* Sub-Service Cards */}
-      <div className="space-y-6">
-        {service.subServices.map((service) => (
-          <div
-            key={service.id}
-            ref={(el) => (cardRefs.current[service.id] = el)} // Store card ref
-            className={`p-6 rounded-lg mx-auto w-full md:w-[80%] transition-all duration-300 ease-in-out ${
-              activeTab === service.id
-                ? 'border-3 border-darkBlue bg-lightBlue'
-                : 'border-3 border-darkBlue'
-            }`}
-          >
-            <h2 className="text-xl font-bold mb-2">{service.title}</h2>
-            <p className='text-justify md:text-left'>{service.description}</p>
-            <h3 className="text-lg font-semibold mb-2">Our Approach</h3>
-            <ul className="list-disc list-inside mb-4">
-              {service.whatWeDo.map((item, index) => (
-                <li key={index} className="mb-2">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <h3 className="text-lg font-semibold mb-2">Your Benefits</h3>
-            <ul className="list-disc list-inside">
-              {service.benefits.map((benefit, index) => (
-                <li key={index} className="mb-2">
-                  {benefit}
-                </li>
-              ))}
-            </ul>
+    {/* Right Column for Phase Details */}
+    <ol className="relative mt-1 md:h-screen border-gray-200 flex-1">
+      {phases.map((phase, index) => (
+        <li key={index} className="relative h-fit mb-10 ">
+        <div className="flex items-center">
+          <div className="z-10 flex items-center text-2xl font-bold justify-center w-10 h-10 rounded-full ring-0 ring-darkBlue text-darkBlue sm:ring-1 shrink-0">
+            {phase.step}
           </div>
-        ))}
+          <div className="sm:flex w-full  bg-gray-200 h-0.5"></div>
+        </div>
+        <div className="mt-3 sm:pe-8">
+          <h3 className="text-lg font-semibold text-darkBlue">{phase.title}</h3>
+          <p className="text-base font-normal text-gray-500">{phase.description}</p>
+          <div
+            onClick={() => handleTabClick(phase.subServiceId)} // Link to subservice
+            className="px-4 py-2 font-normal hover:bg-opacity-90 w-fit cursor-pointer text-center mb-4 border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white bg-darkBlue hover:text-white"
+          >
+            Learn More
+          </div>
+        </div>
+      </li>
+      ))}
+    </ol>
+  </div>
+</div>
+
+        {/* Sub-Service Cards */}
+        <div className="space-y-6 col-span-2">
+          {service.subServices.map((service) => (
+            <div
+              key={service.id}
+              ref={(el) => (cardRefs.current[service.id] = el)} // Store card ref
+              className={`p-6 rounded-lg mx-auto w-full md:w-[80%] transition-all duration-300 ease-in-out ${
+                activeTab === service.id
+                  ? 'border-3 border-darkBlue bg-lightBlue'
+                  : 'border-3 border-darkBlue'
+              }`}
+            >
+              <h2 className="text-xl font-bold mb-2">{service.title}</h2>
+              <p className='text-justify md:text-left'>{service.description}</p>
+              <h3 className="text-lg font-semibold mb-2">Our Approach</h3>
+              <ul className="list-disc list-inside mb-4">
+                {service.whatWeDo.map((item, index) => (
+                  <li key={index} className="mb-2">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <h3 className="text-lg font-semibold mb-2">Your Benefits</h3>
+              <ul className="list-disc list-inside">
+                {service.benefits.map((benefit, index) => (
+                  <li key={index} className="mb-2">
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* CTA Button */}

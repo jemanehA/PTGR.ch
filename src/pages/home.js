@@ -55,7 +55,7 @@ function Home() {
     <h2 class="ptgr-token-heading">PTGR Token</h2>
     <p class="coming-soon-message">Coming Soon</p>
     <p class="stay-tuned-message">
-    Stay tuned for the best token in the world <div className='mt-4'>Made in  
+    Stay tuned for the best token in the world <div className='mt-2'>Made in  
   <span class="switzerland-text">
     &nbsp;Switzerland &nbsp; 
     <img src="/assets/images/swizerlandflag.png" alt="Switzerland Flag" class="flag-icon" />
