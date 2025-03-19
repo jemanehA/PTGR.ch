@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const SW3CDetails = ({ service }) => {
-  const [activeTab, setActiveTab] = useState();
+  const [activeTab, setActiveTab] = useState(service.subServices?.[0]?.id);
   const cardRefs = useRef({}); // Ref to store card DOM elements
   const isInitialRender = useRef(true); // Ref to track initial render
 
@@ -10,9 +10,7 @@ const SW3CDetails = ({ service }) => {
     setActiveTab(id);
   };
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth"});
-  }, []); 
+  
 
   // Scroll to the active card whenever the activeTab changes (but not on initial render)
   useEffect(() => {
@@ -27,6 +25,10 @@ const SW3CDetails = ({ service }) => {
       }
     }
   }, [activeTab]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth"});
+  }, []); 
 
   return (
     <div className="rounded-lg  p-3 md:mx-[40px] md:p-[40px]">
