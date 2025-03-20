@@ -182,7 +182,8 @@ function Header() {
               <li className="nav-item dropdown">
 
                 <a className="nav-link dropdown-toggle" onClick={handleServiceClick} id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Services
+                <span className="das-text">DAS</span>
+                <span className="das-hover-text ">Digital Asset Service</span>
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="productsDropdown">
                 <li><Link className="dropdown-item" to="/Digital">Strategic Digital Asset Advisory (SDAA)</Link></li>
@@ -299,7 +300,7 @@ function Header() {
             aria-expanded="false"
             aria-controls="servicesCollapse"
           >
-            Services<span className="arrow">▼</span>
+            Digital Asset Services<span className="arrow">▼</span>
           </a>
           <div className="collapse-mobile collapse" id="servicesCollapse"  >
             <ul className="list-unstyled-mobile ps-3">

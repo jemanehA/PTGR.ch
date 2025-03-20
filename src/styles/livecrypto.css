@@ -114,38 +114,38 @@
   }
   
 
-  .sw3c-hover-text {
+  .sw3c-hover-text, .das-hover-text {
     display: none;
   }
   
   /* Show the hover text and hide the default text on hover */
-  .nav-item.dropdown:hover .sw3c-text {
+  .nav-item.dropdown:hover .sw3c-text, .nav-item.dropdown:hover .das-text{
     display: none;
   }
   
-  .nav-item.dropdown:hover .sw3c-hover-text {
+  .nav-item.dropdown:hover .sw3c-hover-text, .nav-item.dropdown:hover .das-hover-text{
     display: inline;
   }
 
   /* Default styles for the text */
 .sw3c-text,
-.sw3c-hover-text {
+.sw3c-hover-text. .das-hover-text, .das-text {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 /* Hide the hover text by default */
-.sw3c-hover-text {
+.sw3c-hover-text, .das-hover-text {
   opacity: 0;
   visibility: hidden;
 }
 
 /* Show the hover text and hide the default text on hover */
-.nav-item.dropdown:hover .sw3c-text {
+.nav-item.dropdown:hover .sw3c-text , .nav-item.dropdown:hover .das-text {
   opacity: 0;
   visibility: hidden;
 }
-
-.nav-item.dropdown:hover .sw3c-hover-text {
+ 
+.nav-item.dropdown:hover .sw3c-hover-text, .nav-item.dropdown:hover .das-hover-text {
   opacity: 1;
   visibility: visible;
 }
