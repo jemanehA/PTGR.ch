@@ -195,7 +195,7 @@ const PreIcoDeals = () => {
 
           <div className="ico-token-cta" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', paddingBottom: '40px' }}>
         <Link to="/BookConsultations?consultationType=Pre-ICO Deals">
-          <button className="cta-button">Ready to Launch? Request a Consultation</button>
+          <button className="cta-button">Request Consultation Now</button>
         </Link>
           </div>
 

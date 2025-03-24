@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  padding: 20px 20px;
   color: rgba(255, 255, 255, 0.95); /* Brighter white text for better contrast */
   text-align: center;
 }
@@ -33,13 +33,33 @@
 
 .coming-soon-message {
   font-family: "Montserrat", sans-serif; /* Consistent font */
-  font-size: 5em; /* Increased font size */
+  font-size: 4em; /* Increased font size */
   font-weight: 700; /* Semi-bold weight */
-  color: #e9ad03; /* Golden color to match the theme */
+  background: linear-gradient(to right, #FFD700, #FFA500); /* Golden to metallic golden gradient */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent */
   animation: pulse 2s infinite, fadeIn 1.5s ease-in-out; /* Pulsing and fade-in animation */
   margin-bottom: 30px; /* Space between "Coming Soon" and the next message */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5)
 }
 
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .stay-tuned-message {
   font-size: 1.8em; /* Increased font size */
   font-weight: 400;
@@ -113,4 +133,23 @@
   50% {
     transform: translateY(-10px);
   }
+}
+
+/* Container for the image to enable 3D transformations */
+.ptgr-token-content {
+  perspective: 1000px; /* Adds depth for the flip effect */
+}
+
+/* Style for the image */
+.ptgr-token-img {
+  margin:auto;
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+  transition: transform 0.6s ease-in-out; /* Smooth transition */
+  transform-style: preserve-3d; /* Ensures the child elements are rendered in 3D space */
+}
+
+/* Flip effect on hover */
+.ptgr-token-content:hover img {
+  transform: rotateY(180deg); /* Rotates the image 180 degrees on the Y-axis */
 }

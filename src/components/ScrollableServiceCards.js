@@ -190,7 +190,7 @@ const ScrollableServiceCards = () => {
         <div className="ssc-row"> 
           <div className="ssc-fixed-card">
             <h3>Explore Our Services</h3>
-            <ul> 
+            <ul className='uppercase'> 
               {cards.map((card, index) => (
                 <li
                   key={index}
@@ -214,7 +214,7 @@ const ScrollableServiceCards = () => {
                 className={`ssc-scroll-card ${index === activeIndex ? 'ssc-active' : ''}`}
               >
                 <div className="ssc-card-content">
-                  <h5>{card.title}</h5>
+                  <h5 className='uppercase'>{card.title}</h5>
                   <p>{card.description}</p>
                   <ul>
                     {card.list.slice(0, 6).map((item, i) => (

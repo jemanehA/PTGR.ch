@@ -125,6 +125,20 @@ const ForensicServices = () => {
       <div className="container menudisplay breadcrumb">
         <Link to="/" ><span className="homemenu">Home</span></Link> <span className="separators">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</span> <span className="current-page">Forensic Services</span>
       </div>
+       <div className="text-sm mt-2 mx-2 md:mx-4 mb-2 md:mb-4">
+              <Link to="/" className="text-darkBlue hover:underline">
+                Home
+              </Link>
+              <span className="mx-2">/</span>
+              <Link to="/Service" className="text-darkBlue hover:underline">
+                Digital Asset Services
+              </Link>
+              <span className="mx-2">/</span>
+              <Link to="/Forensic" className="text-darkBlue hover:underline">
+                Forensic Services
+              </Link>
+             
+            </div>
       <div className="container afterheading-section">
         <div className="row">
           <div className="col-xl-5 col-lg-5 afterheading-left">
@@ -157,7 +171,7 @@ const ForensicServices = () => {
             PTGR AG has a record of supporting customers in forensic services. We have documented cases where we assisted clients in tracking and documenting significant fraud-related losses, resulting in successful asset recovery. Our thorough investigation and legally compliant reports enabled clients to pursue justice confidently, providing additional evidence for court cases.
           </p>
           <p>
-            If you’re a victim of potential crypto fraud or financial loss due to a scam, PTGR AG can provide tailored guidance and offer their assistance. Contact us for a consultation or to discuss a customized forensic report to support your case in court.
+            If you are a victim of potential crypto fraud or financial loss due to a scam, PTGR AG can provide tailored guidance and offer its support. Contact us for a consultation.
           </p>
         </div>
       </div>
@@ -189,7 +203,7 @@ const ForensicServices = () => {
 
           <div className="ico-token-cta" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', paddingBottom: '40px' }}>
         <Link to="/BookConsultations?consultationType=Forensic Services">
-          <button className="cta-button">Ready to Launch? Request a Consultation</button>
+          <button className="cta-button">Request Consultation Now</button>
         </Link>
           </div>
         </div>

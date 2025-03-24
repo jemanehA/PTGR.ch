@@ -85,7 +85,7 @@ const ServiceDetailView = ({ service, onBack, onSelectService, services }) => {
         {/* Book Consultation Button */}
         <div className="" style={{textAlign:'center'}}>
                   <Link to={`/BookConsultations?consultationType=${service.title}Strategic Digital Asset Advisory`}>
-  <button className="cta-button">Ready to Launch? Request a Consultation</button>
+  <button className="cta-button">Request Consultation Now</button>
 </Link>
         </div>
           </div>

@@ -119,7 +119,7 @@ const Web3cards = forwardRef((props, ref) => {
         style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', marginBottom: '30px', marginTop: '30px' }}
       >
         <Link to={`/BookConsultations?consultationType=${cards[activeIndex].title}`}>
-          <button className="cta-button">Ready to Launch? Request a Consultation</button>
+          <button className="cta-button">Request Consultation Now</button>
         </Link>
       </div>
     </div>

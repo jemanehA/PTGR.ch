@@ -354,6 +354,14 @@ p {
   .topspan {
     display: none;
 }
+
+.afterheading-highlight {
+  font-size: 1.1rem;
+  color: #333;
+  
+
+
+}
 }
 
 @media (max-width: 576px) {

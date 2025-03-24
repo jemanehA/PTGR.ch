@@ -14,7 +14,7 @@ const chatData = {
       ]
     },
     {
-      text: "You want to educate yourself in digital assets, 3.0 and blockchain?",
+      text: "You want to educate yourself in digital assets, Web3.0 and blockchain?",
       followUp: [
         "Basics of blockchain technology.",
         "Understanding NFTs and their market.",

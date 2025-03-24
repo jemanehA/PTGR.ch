@@ -478,6 +478,8 @@
 .navbar-nav-mobile {
   list-style: none;
   padding-left: 0;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .nav-item-mobile {

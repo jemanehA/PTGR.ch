@@ -126,7 +126,7 @@ return (
 <li><Link to="/Terms"> Conditions</Link></li>
 <li><Link to="/CookiePolicy"> Cookie Policy</Link></li>
 <li><Link to="/Datapolicy"> Data Policy</Link></li>
-<li><Link to="/Disclaimer"> Disclaimery</Link></li>
+<li><Link to="/Disclaimer"> Disclaimer</Link></li>
 <li><Link to="/Imprint"> Imprint</Link></li>
 </ul>
 </div>

@@ -73,7 +73,7 @@ const Imprint = () => {
     <p><strong>Place of Jurisdiction:</strong> Zug, Switzerland</p>
 
     <div className="interm-copyright">
-      <p>&copy; 2023 PTGR AG. All rights reserved.</p>
+      <p>&copy; 2022 - {new Date().getFullYear()} PTGR AG. All rights reserved.</p>
       <p>All texts, graphics, and content are protected by copyright. Reproduction or use of any part of this content without written consent from PTGR AG is prohibited.</p>
     </div>
   </div>

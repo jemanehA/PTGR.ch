@@ -90,7 +90,7 @@ function Footer() {
           </div>
           <div className="col-md-4 newsletter-right">
   <div className="half-bottom-image-container">
-    <img src="/assets/images/log1.png" alt="Newsletter Illustration" className="half-bottom-image" />
+    <img src="/assets/images/log1.png" alt="Newsletter Illustration" className=" half-bottom-image" />
   </div>
 </div>
         </div>
@@ -134,7 +134,7 @@ function Footer() {
 <li><Link to="/Terms"> Conditions</Link></li>
 <li><Link to="/CookiePolicy"> Cookie Policy</Link></li>
 <li><Link to="/Datapolicy"> Data Policy</Link></li>
-<li><Link to="/Disclaimer"> Disclaimery</Link></li>
+<li><Link to="/Disclaimer"> Disclaimer</Link></li>
 <li><Link to="/Imprint"> Imprint</Link></li>
               </ul>
             </div>
