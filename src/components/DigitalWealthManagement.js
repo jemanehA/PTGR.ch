@@ -436,11 +436,11 @@ const DigitalWealthManagement = () => {
     },
     {
       image: "/assets/images/fore.jpg",
-      title: "Crypto Scams & Forensic Services",
+      title: "Crypto Scams & Forensic",
       description: "Identify and avoid crypto scams while leveraging forensic services.",
       list: ["Scam identification", "Forensic tools", "Risk mitigation"],
       details: {
-        title: "Crypto Scams & Forensic Services",
+        title: "Crypto Scams & Forensic",
         link: "/crypto-scams-forensic-services",
         description: "Learn how to identify crypto scams and use forensic tools to mitigate risks and recover assets in the rapidly evolving cryptocurrency market.",
         videoUrl: "/assets/images/video/CryptoScams.MP4",

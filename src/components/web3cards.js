@@ -22,7 +22,7 @@ const Web3cards = forwardRef((props, ref) => {
       id: 'web3-payment-custody',
       link: "/digital-payment-and-custody-solutions",
       image: '/assets/images/custdy.webp',
-      title: 'Payment & Custody Solutions',
+      title: 'Digital Payment & Custody Solutions',
       description:
         'We deliver secure, scalable cryptocurrency payment and asset custody solutions that fuel financial innovation and foster trust. Our services range from seamless payment processing integration to institutional-grade digital asset safeguarding. We empower businesses to embrace digital finance with confidence.',
     },

@@ -67,6 +67,7 @@ import RWATokenization from './pages/sw3c/RWA-tokenization';
 import StrategicICOConsulting from './pages/sw3c/strategic-ICO-consulting';
 import MetaverseDevelopmentConsulting from './pages/sw3c/metaverse';
 import Insights from './components/Insights';
+import WalletService from './components/WalletServices';
 
 const Login = ({ onLogin }) => {
   const [password, setPassword] = useState('');
@@ -163,6 +164,7 @@ const App = () => {
     { path: '/performance', element: <Performance /> },
     { path: '/education', element: <Education /> },
     { path: '/forensic', element: <Forensic /> },
+    {path: "/wallet-services", element: <WalletService />},
     { path: '/iso', element: <ISO /> },
     { path: '/BusinessAnalytics', element: <BusinessAnalytics /> },
     { path: '/DigitalWealthManagement', element: <DigitalWealthManagement /> },
@@ -174,6 +176,7 @@ const App = () => {
     { path: '/Aboutus', element: <About /> },
     { path: '/Digital', element: <Digital /> },
     { path: '/Service', element: <Service /> },
+    
     { path: '/family', element: <Family /> },
     { path: '/isosetup', element: <ISOsetup /> },
     { path: '/metaVereage', element: <Metaverspage /> },

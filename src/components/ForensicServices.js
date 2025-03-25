@@ -125,7 +125,7 @@ const ForensicServices = () => {
       <div className="container menudisplay breadcrumb">
         <Link to="/" ><span className="homemenu">Home</span></Link> <span className="separators">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</span> <span className="current-page">Forensic Services</span>
       </div>
-       <div className="text-sm mt-2 mx-2 md:mx-4 mb-2 md:mb-4">
+       <div className="text-sm mt-2 mx-4 mb-2 md:mb-4">
               <Link to="/" className="text-darkBlue hover:underline">
                 Home
               </Link>
