@@ -169,12 +169,12 @@ const WalletService = () => {
             In our wallet shop, we offer hardware wallets designed to meet the security needs of both private individuals and businesses. Our offering includes various quantity packages, allowing clients to choose the solution that best fits their requirements — from single-device purchases for personal use to bulk orders tailored for corporate environments.
           </p>
           <div className='w-full flex justify-end'>
-          <div
+          {/* <div
            
             className="px-4 py-2 font-normal hover:bg-opacity-90 w-fit cursor-pointer text-center mb-4 border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out  bg-darkBlue  text-white"
           >
           Our Wallet Shop
-          </div>
+          </div> */}
           </div>
         </div>
       </div>
