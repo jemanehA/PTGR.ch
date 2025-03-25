@@ -50,7 +50,7 @@ const Isouws = () => {
         paddingBottom:'30px',
       }}>
             <Link to="/BookConsultations">
-            <button className="cta-button">Ready to Launch? Book a Consultation</button>
+            <button className="cta-button">Book a Consultation Now</button>
           </Link>
             </div>
             {/* Custom Modal */}

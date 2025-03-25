@@ -50,7 +50,7 @@ const Custody = () => {
         paddingBottom:'40px'
       }}>
           <Link to="/BookConsultations">
-            <button className="cta-button">Ready to Launch? Book a Consultation</button>
+            <button className="cta-button">Book a Consultation Now</button>
           </Link>
             </div>
       {/* Custom Modal */}

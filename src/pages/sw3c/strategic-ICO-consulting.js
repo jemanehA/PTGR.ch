@@ -244,7 +244,7 @@ const StrategicICODetails = () => {
           <div className="mt-4 flex w-full justify-center">
             <Link to={`/BookConsultations?consultationType=${service.bookType}`}>
               <div className="px-4 py-2 w-fit mx-4 cursor-pointer text-center font-bold border-white hover:bg-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white">
-                Ready to Launch? Book a Consultation
+                Book a Consultation Now
               </div>
             </Link>
           </div>
@@ -343,7 +343,7 @@ const StrategicICODetails = () => {
         }}
       >
         <Link to={`/BookConsultations?consultationType=${service.bookType}`}>
-          <button className="cta-button">Ready to Launch? Book a Consultation</button>
+          <button className="cta-button">Book a Consultation Now</button>
         </Link>
       </div>
     </div>
