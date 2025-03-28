@@ -7,6 +7,39 @@ const WalletService = () => {
   const [inView, setInView] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const features = [
+    {
+      title: 'Smartcard-Based Design',
+      description: 'Both Tangem and the PTGR Wallet are built using a contactless smartcard format, ensuring ease of use, portability, and durability. Users can access their assets via NFC with a simple tap on their smartphone.',
+      icon: 'fas fa-id-card',
+    },
+    {
+      title: 'Maximum Security (EAL6+)',
+      description: 'The wallets are powered by chips certified at EAL6+, one of the highest international security standards for microcontrollers. This ensures robust protection against physical tampering and software-level threats.',
+      icon: 'fas fa-shield-alt',
+    },
+    {
+      title: 'True Self-Custody, No Risk',
+      description: 'The non-extractable private keys are generated randomly and stored solely within the secure chip of each card, never exposed to external devices or servers. Neither Tangem nor PTGR has access to users\' wallets, reinforcing full user sovereignty.',
+      icon: 'fas fa-lock',
+    },
+    {
+      title: 'Multi-Card Backup Architecture',
+      description: 'Users can set up multiple PTGR Wallet cards as backup devices. Each card independently serves as a secure access key, enhancing both redundancy and reliability. The use of a seed phrase is optional.',
+      icon: 'fas fa-copy',
+    },
+    {
+      title: 'Independently Audited',
+      description: 'The underlying Tangem technology has been rigorously audited by industry-leading cybersecurity firms such as Kudelski Security and Riscure, validating the integrity of its cryptographic architecture.',
+      icon: 'fas fa-search',
+    },
+    {
+      title: 'Mobile-First Experience',
+      description: 'The wallets operate seamlessly with the Tangem app on iOS and Android, requiring no cables, Bluetooth, or batteries—just a secure tap using NFC.',
+      icon: 'fas fa-mobile-alt',
+    }
+  ];
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -98,7 +131,7 @@ const WalletService = () => {
           playsInline
           style={{ display: 'none' }}
         >
-          <source src="/assets/images/video/Forencis.MP4" type="video/mp4" />
+          <source src="/assets/images/video/wallet-service-bg.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
   
@@ -108,11 +141,11 @@ const WalletService = () => {
           <div className="digital-assets-content">
             <h1>
               <span className="swatch-white">
-                <strong className='text-center'>Secure Your Digital Asset.</strong>
+                <strong className='text-center'>The PTGR Wallet</strong> <h2>Next-Gen Hardware Wallet for Secure Crypto Management</h2>
               </span>
             </h1>
             <p style={{ color: 'white' }}>
-              We provide secure hardware wallet solutions and expert guidance for managing your digital assets safely.
+              Advanced hardware wallet solutions and secure asset management for businesses and institutions
             </p>
           </div>
         </div>
@@ -143,8 +176,9 @@ const WalletService = () => {
           <div className="col-xl-5 col-lg-5 afterheading-left">
             <div className="afterheading-title">
               <h2 className="afterheading-main-title">
-                <span className="topspan">Wallet Service</span><br />
-                Secure Storage and Management of Digital Assets
+                <span className="topspan">Secure Digital Asset</span>
+                <span className="topspan">Management Solutions</span><br />
+                Hardware Wallets & Institutional Storage
               </h2>
             </div>
           </div>
@@ -238,6 +272,47 @@ const WalletService = () => {
 </div>
       </div>
 
+      <div className="container py-5 features-section">
+      <div className="text-center mb-5">
+      <h2 className="section-title mb-1">The PTGR Wallet</h2>
+      <h3 className='text- mb-4'>Powered by Tangem</h3>
+         <div className='w-[100%]  mx-auto'>
+          <p className="lead text-left">
+            Tangem wallets are cutting-edge hardware wallets engineered for secure storage and management of cryptocurrencies. Their innovative smartcard-based design offers a sleek, portable, and user-friendly alternative to traditional hardware wallets, enabling seamless interaction with digital assets via mobile devices.
+          </p>
+          <p className="lead text-left">
+            As part of its commitment to advancing secure and decentralized finance, PTGR AG has partnered with Tangem to launch its own branded hardware wallet—the PTGR Wallet. This collaboration combines Tangem's state-of-the-art security infrastructure with PTGR's mission to provide accessible, self-custodial solutions to a growing digital economy.
+          </p>
+          </div>
+        </div>
+
+        <div className="row g-4 justify-content-center">
+  {features.map((feature, index) => (
+    <div 
+      className={`col-12 col-md-6 col-lg-4 ${features.length % 2 !== 0 && index >= features.length - 2 ? 'offset-lg-2' : ''}`} 
+      key={index}
+    >
+      <div className="feature-card">
+        <div className="cardabout">
+          <i className={`${feature.icon} custom-icon`} style={{ fontSize: '2rem' }}></i>
+          <h5 className="card-title">{feature.title}</h5>
+          <p className="card-text text-justify">{feature.description}</p>
+        </div>
+      </div>
+    </div>
+  ))}
+ 
+</div>
+<div className='mt-4 mx-auto w-fit'>
+<a
+target='blank'
+ href='https://tangem.com'
+className="px-4 py-2  font-normal hover:bg-opacity-90 w-fit cursor-pointer text-center mb-4 border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out text-white bg-darkBlue hover:text-white"
+>
+Learn More
+</a>
+</div>
+      </div>
       {isModalOpen && (
         <div className="book-custom-modal">
           <div className="book-modal-content">
