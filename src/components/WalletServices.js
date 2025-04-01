@@ -191,7 +191,8 @@ const WalletService = () => {
           </p>
           <div className='w-full flex justify-end'>
           <Link
-           to="https://wallet.ptgr.ch"
+          to={"https://wallet.ptgr.ch"}
+          target='_blank'
             className="px-4 py-2 font-normal hover:bg-opacity-90 w-fit cursor-pointer text-center mb-4 border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out  bg-darkBlue  text-white"
           >
           Go to Wallet Shop
