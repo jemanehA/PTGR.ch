@@ -37,31 +37,32 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 90px 0;
+  padding-bottom: 90px;
   color: #fff;
   overflow: hidden;
 }
 
 .digital-assets-content {
-  max-width: 50%;
+  text-align: center;
+  max-width: 100%;
   opacity: 1; /* Ensure content is visible by default */
 }
 
 .digital-assets-content h1 {
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 60px;
-  line-height: 70px;
+  font-size: 80px;
+  line-height: 90px;
   margin-bottom: 20px;
   opacity: 1; /* Ensure heading is visible by default */
   transform: translateX(0); /* Reset transform */
 }
 
 .digital-assets-content p {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 20px;
+  margin: auto;
+  font-size: 16px;
   line-height: 30px;
   margin-bottom: 30px;
+  max-width: 60%;
   opacity: 1; /* Ensure paragraph is visible by default */
   transform: translateX(0); /* Reset transform */
 }

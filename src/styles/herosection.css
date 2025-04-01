@@ -283,7 +283,8 @@ a {
     }
 }
 .ptgrbtn {
-    background-color: #5c011e;
+    margin: auto;
+    background-color: var(--color-rainbow-indigo);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;

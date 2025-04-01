@@ -301,7 +301,7 @@
 
 /* About Section */
 .about-section {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--color-isabelline);
   backdrop-filter: blur(10px);
   padding: 30px;
   border-radius: 12px;

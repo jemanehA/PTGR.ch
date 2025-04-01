@@ -42,10 +42,7 @@ const AboutSection = () => {
 
   return (
     <section className="about-section">
-      {/* Watermark Image */}
-      <div className="watermark">
-        <img src="/assets/images/watermark1.png" alt="Watermark" />
-      </div>
+      
 
       <div className="container">
         {/* Section Title and Description */}

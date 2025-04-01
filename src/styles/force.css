@@ -1,6 +1,6 @@
 /* Force a specific font for the entire document */
 body{
-  font-family: sans-serif !important; /* Using sans-serif font */
+  font-family: "Inter", sans-serif; /* Using sans-serif font */
   font-weight: 400; /* Normal weight */
   -webkit-font-smoothing: antialiased; /* Improves text rendering in WebKit browsers */
   -moz-osx-font-smoothing: grayscale; /* Improves text rendering in Firefox on macOS */
@@ -10,7 +10,7 @@ body{
   overflow-x: hidden !important;
   }
   nav, main, section, article, aside, footer, h1, h2, h3, h4, h5, h6, p, br, hr, ul, ol, li, dl, dt, dd, div, span, video, audio, source, track, iframe, embed, object, param, canvas, svg, table, caption, thead, tbody, tfoot, tr, th, td, form, input, textarea, button, select, option, optgroup, fieldset, legend, label, datalist, output, progress, meter, details, summary, dialog, template, slot, blockquote, cite, q, abbr, address, b, strong{
-    font-family: sans-serif !important; /* Using sans-serif font */
+    font-family: "Bai Jamjuree", sans-serif; /* Using sans-serif font */
     
 }
 .breadcrumb {

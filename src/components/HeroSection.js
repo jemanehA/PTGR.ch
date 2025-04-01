@@ -87,7 +87,7 @@ const HeroSection = () => {
       <div className="video-overlay-asset"></div>
 
       {/* Content */}
-      <div className="container">
+      <div className="container flex justify-center w-full">
         <div className="digital-assets-content">
           <h1>
             <span className="swatch-white">

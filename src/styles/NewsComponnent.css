@@ -7,7 +7,7 @@
   
   .newsletter-title {
     font-size: 2.5rem;
-    color: #163962; /* Your branding color */
+    color: #163962; 
     font-weight: bold;
     margin-bottom: 20px;
   }
@@ -97,8 +97,8 @@
     }
   }
   body{
-    font-family: "Inter",Impact, 'Montserrat', sans-serif !important;
+    font-family: "Inter", sans-serif !important;
   }
   h1, h2, h3, h4, h5, h6 ,p{
-    font-family: 'Montserrat', sans-serif !important; /* Heading font */
-}
+    font-family: "Bai Jamjuree", sans-serif !important; /* Heading font */
+} 
