@@ -118,24 +118,11 @@ const WalletService = () => {
       </style>
 
       <section
-        id="digital-assets-section"
-        className={`digital-assets-section ${inView ? 'in-view' : ''}`}
-      >
-        <video
-          id="background-video"
-          className="background-video"
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          style={{ display: 'none' }}
-        >
-          <source src="/assets/images/video/wallet-service-bg.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-  
-        <div className="background-fallback" ref={fallbackRef}></div>
+  id="digital-assets-section"
+  className={`digital-assets-section ${inView ? 'in-view' : ''}  relative w-full h-[60vh] overflow-hidden bg-cover bg-center`}
+  style={{ backgroundImage: "url('/assets/images/ptgr-wallet-bg.png')" }}
+>
+<div className="absolute inset-0 bg-black bg-opacity-50"></div>
   
         <div className="container">
           <div className="digital-assets-content">
@@ -203,12 +190,12 @@ const WalletService = () => {
             In our wallet shop, we offer hardware wallets designed to meet the security needs of both private individuals and businesses. Our offering includes various quantity packages, allowing clients to choose the solution that best fits their requirements — from single-device purchases for personal use to bulk orders tailored for corporate environments.
           </p>
           <div className='w-full flex justify-end'>
-          {/* <div
-           
+          <Link
+           to="https://wallet.ptgr.ch"
             className="px-4 py-2 font-normal hover:bg-opacity-90 w-fit cursor-pointer text-center mb-4 border-darkBlue border-2 rounded-md transition-all duration-300 ease-in-out  bg-darkBlue  text-white"
           >
-          Our Wallet Shop
-          </div> */}
+          Go to Wallet Shop
+          </Link>
           </div>
         </div>
       </div>
