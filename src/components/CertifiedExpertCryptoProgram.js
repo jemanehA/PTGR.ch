@@ -162,7 +162,7 @@ const Blockchainpage = () => {
         <Link to="/" ><span className="homemenu">Home</span></Link> <span className="separators">&nbsp;&nbsp;&gt;&nbsp;&nbsp;</span> <span className="current-page">Education</span>
       </div>
       <AfterHeadingSection />
-
+    
       <div ref={perRef}>
         <BusinessAnalytics />
       </div>
@@ -172,6 +172,19 @@ const Blockchainpage = () => {
       <div>
         <DigitalWealthManagement />
       </div>
+      
+
+      <div style={{ border: 0, margin: "40px 0" }}>
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=en.et%23holiday%40group.v.calendar.google.com&ctz=Africa%2FNairobi"
+        style={{ border: 0, margin: '0 auto', display: 'block' }}
+        width="60%"
+        height="400"
+        frameBorder="0"
+        scrolling="no"
+        title="Google Calendar"
+      ></iframe>
+    </div>
     </div>
   );
 };

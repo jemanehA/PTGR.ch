@@ -87,6 +87,7 @@ const Education = () => {
       </div>
 
       <AfterHeadingSection />
+     
 
       <div>
         <BusinessAnalytics id="Educations" />
@@ -97,6 +98,17 @@ const Education = () => {
       <div>
         <DigitalWealthManagement />
       </div>
+      <div style={{ border: 0, margin: "40px 0" }}>
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=042e0a2fc6c792405d4ed7e2bf594eaadf3015c21ebecf54f15824da2fec810d%40group.calendar.google.com&ctz=Africa%2FNairobi"
+        style={{ border: 0, margin: '0 auto', display: 'block' }}
+        width="60%"
+        height="400"
+        frameBorder="0"
+        scrolling="no"
+        title="Google Calendar"
+      ></iframe>
+    </div>
     </div>
   );
 };

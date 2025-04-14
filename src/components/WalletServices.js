@@ -119,7 +119,7 @@ const WalletService = () => {
 
       <section
   id="digital-assets-section"
-  className={`digital-assets-section ${inView ? 'in-view' : ''}  relative w-full h-[60vh] overflow-hidden bg-cover bg-center`}
+  className={`digital-assets-section ${inView ? 'in-view' : ''}  relative w-full h-[60vh] overflow-hidden bg-contain  md:bg-cover bg-center`}
   style={{ backgroundImage: "url('/assets/images/ptgr-wallet-bg.png')" }}
 >
 <div className="absolute inset-0 bg-black bg-opacity-50"></div>

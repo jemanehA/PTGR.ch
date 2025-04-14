@@ -316,7 +316,7 @@ function Header() {
 <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/family')}>Family Crypto Savings Program</a></li>
 <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/Forensic')}>Forensic Services</a></li>
               <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/preiso')}>Pre-ICO Deals</a></li>
-              <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/wallet-services')}>WalletService</a></li>
+              <li><a className="dropdown-item-mobile" data-bs-dismiss="offcanvas" onClick={() => handleNavigation('/wallet-services')}>Wallet Service</a></li>
 
             </ul>
           </div>
